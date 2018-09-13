@@ -1,0 +1,38 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Fonts
+$font-stack: "Nunito", sans-serif;
+
+// Breakpoints (Sass map)
+$breakpoints: (
+  "xs": 599px, // smartphone width; not in use due to mobile-first design
+  "sm": 600px, // tablet portrait
+  "med": 900px, // tablet landscape
+  "lg": 1200px, // desktop
+);
+
+// Colors
+$dark-text-color: #555;
+$light-text-color: #fff;
+$color-primary: #d7d9ce;
+$color-secondary: #6d1a36;
+$color-tertiary: #2274a5;
+$color-accent: #13505b;
+$success-color: #32aaf1;
+$error-color: #b92c5c;
+$warning-color: #2393a7;
+$nav-icon-color: #a6a6b9;
+$link-color-active: #6d1a36;
+$background-color: #d7d9ce;
+$border-color: darken($background-color, 20);
+$btn-color-default: #6d1a36;
+$btn-color-cancel: #b2b2b2;
+$form-color: lighten($border-color, 20);
+
+// Border
+$border-line: 2px solid $border-color;
+
+//Transitions
+$cub-bez: cubic-bezier(.5,-0.5,.5,1.5);

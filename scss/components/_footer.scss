@@ -1,0 +1,14 @@
+/* ======================================
+    Footer Styles
+   ====================================== */
+
+footer {
+  background-color: $color-primary;
+  color: $dark-text-color;
+  @include flexbox($dir:row, $just:center);
+  align-items: center;
+  height: fit-content;
+  height: -moz-fit-content;
+  width: 100%;
+
+}

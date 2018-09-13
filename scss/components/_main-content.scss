@@ -1,0 +1,14 @@
+/* ======================================
+    Portfolio Styles
+   ====================================== */
+
+h2 {
+  text-transform: uppercase;
+}
+
+.main-content {
+  background-image: linear-gradient(
+    45deg,
+    $color-secondary, $color-tertiary);
+  color: $light-text-color;
+}

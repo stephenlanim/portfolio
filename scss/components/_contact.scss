@@ -1,0 +1,22 @@
+/* ======================================
+    Contact Styles
+   ====================================== */
+
+.contact {
+  @include flexbox($dir:column, $just:center);
+  align-items: center;
+  text-align: center;
+  height: fit-content;
+  height: -moz-fit-content;
+  width: 100%;
+  @include transition;
+
+  & a:hover,
+  & a:active{
+    color: $color-secondary;
+  }
+
+  & address {
+    font-size: 1.2em;
+  }
+}
