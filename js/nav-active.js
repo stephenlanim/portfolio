@@ -40,8 +40,8 @@
     // Prevent
     event.preventDefault();
 
-    // Animate scrolling to the target within the page body
+    // Animate scrolling to the target within the page body ("top -96" leaves room for sticky navbar)
     $("html, body").animate(
-      { scrollTop: $($(this).attr("href")).offset().top }, 300);
+      { scrollTop: $($(this).attr("href")).offset().top -96}, 300);
 
   });
