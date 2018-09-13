@@ -467,7 +467,7 @@ footer {
 .navbar {
   font-size: 1.2em;
   background-color: #d7d9ce;
-  color: #555;
+  color: #6d1a36;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -487,6 +487,15 @@ footer {
     .navbar {
       flex-direction: row;
       justify-content: space-evenly; } }
+  .navbar a {
+    color: #6d1a36; }
+
+.submenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%; }
 
 @media (min-width: 600px) {
   .brand {
@@ -498,7 +507,44 @@ footer {
   height: 50px;
   margin: 1em; }
 
+/* Hamburger */
+.hamburger {
+  display: inline-block; }
+  @media (min-width: 600px) {
+    .hamburger {
+      display: none; } }
+
+.hamburger .line {
+  width: 50px;
+  height: 5px;
+  background-color: #6d1a36;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.hamburger:hover {
+  cursor: pointer; }
+
+/* ONE */
+#hamburger-1.is-active .line:nth-child(2) {
+  opacity: 0; }
+
+#hamburger-1.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg); }
+
+#hamburger-1.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg); }
+
 .nav-list {
+  display: none;
   align-items: center;
   list-style: none;
   text-align: center;
@@ -527,20 +573,20 @@ footer {
     @media (min-width: 600px) {
       .nav-list a {
         background-color: inherit;
-        color: #555;
+        color: #6d1a36;
         border: none;
         width: auto; }
         .nav-list a:hover, .nav-list a:active, .nav-list a.active {
           background-color: inherit;
           border-radius: 0;
           border-bottom: 3px solid #6d1a36;
-          color: #555; } }
+          color: #6d1a36; } }
 
 /* ======================================
     Header Styles
    ====================================== */
 .header {
-  background-color: #d7d9ce;
+  background-color: #6d1a36;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -557,6 +603,8 @@ footer {
   @media (min-width: 900px) {
     .headline {
       width: 50%; } }
+  .headline h4 {
+    font-size: 2em; }
 
 /* ======================================
     Portfolio Styles
@@ -812,6 +860,7 @@ button {
     Contact Styles
    ====================================== */
 .contact {
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -823,9 +872,11 @@ button {
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease-in; }
+  .contact a {
+    color: inherit; }
   .contact a:hover,
   .contact a:active {
-    color: #6d1a36; }
+    color: #d7d9ce; }
   .contact address {
     font-size: 1.2em; }
 

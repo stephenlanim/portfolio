@@ -83,6 +83,16 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
+	"\/js\/nav-active.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/nav-active-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/README.html": {
 		"cB": 0,
 		"ft": 8192,

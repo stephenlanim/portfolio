@@ -8,7 +8,8 @@
   font-size: 1.2em;
   background-color: $color-primary;
   // background-color: $color-secondary;
-  color: $dark-text-color;
+  // color: $dark-text-color;
+  color: $color-secondary;
   // color: $light-text-color;
   @include sticky-top;
   overflow: visible;
@@ -34,6 +35,16 @@
     justify-content: space-evenly;
   }
 
+  & a {
+    color: $color-secondary;
+  }
+
+}
+
+.submenu {
+  @include flexbox($dir: row, $just:space-between);
+  align-items: center;
+  width: 96%;
 }
 
 .brand {
@@ -52,8 +63,59 @@
   }
 }
 
+/* Hamburger */
+.hamburger {
+  display: inline-block;
+  // cursor: pointer;
+  // position: absolute;
+  // width: 48px;
+  // height: 48px;
+  // transition: all 0.25s;
+
+  @include mq('sm') {
+    display: none;
+  }
+
+}
+.hamburger .line{
+  width: 50px;
+  height: 5px;
+  background-color: $color-secondary;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+
 .nav-list {
   // @include flexbox($dir:column);
+  display: none;
   align-items: center;
   list-style: none;
   text-align: center;
@@ -93,7 +155,7 @@
 
     @include mq('sm') {
       background-color: inherit;
-      color: $dark-text-color;
+      color: $color-secondary;
       border: none;
       width: auto;
       // padding: 1.8em;
@@ -104,7 +166,7 @@
         background-color: inherit;
         border-radius: 0;
         border-bottom: 3px solid $link-color-active;
-        color: $dark-text-color;
+        color: $color-secondary;
       }
 
     }

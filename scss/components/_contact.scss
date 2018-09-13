@@ -3,6 +3,7 @@
    ====================================== */
 
 .contact {
+  color: $light-text-color;
   @include flexbox($dir:column, $just:center);
   align-items: center;
   text-align: center;
@@ -11,9 +12,13 @@
   width: 100%;
   @include transition;
 
+  & a {
+    color: inherit;
+  }
+
   & a:hover,
   & a:active{
-    color: $color-secondary;
+    color: $color-primary;
   }
 
   & address {

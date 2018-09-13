@@ -3,7 +3,7 @@
    ====================================== */
 
 .header {
-  background-color: $color-primary; //fallback
+  background-color: $color-secondary; //fallback
   // background-image: linear-gradient(
   //   45deg,
   //   $color-secondary, $color-tertiary);
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.headline{
+.headline {
   text-align: center;
   padding: 1em;
   width: 90%;
@@ -23,5 +23,8 @@
   }
   @include mq("med") {
     width: 50%;
+  }
+  & h4 {
+    font-size: 2em;
   }
 }
