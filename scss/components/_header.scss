@@ -8,7 +8,7 @@
   // background-image: url(/images/javascript_screenshot.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left;
   background-size: cover;
   color: $light-text-color;
 
@@ -16,6 +16,15 @@
   align-items: center;
 
   position: relative;
+
+  @include mq('sm'){
+    background-position: center center;
+    padding: 3em 1em;
+  }
+
+  @include mq('med'){
+    padding: 6em 1em;
+  }
 }
 
 .headline {
@@ -37,9 +46,10 @@
 }
 
 .credit {
+  display: none;
   align-self: flex-end;
   margin: 1em;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .header-overlay {

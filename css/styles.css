@@ -590,7 +590,7 @@ footer {
   background-image: url(/images/markus-spiske-771011-unsplash.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left;
   background-size: cover;
   color: #fff;
   display: flex;
@@ -598,6 +598,13 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative; }
+  @media (min-width: 600px) {
+    .header {
+      background-position: center center;
+      padding: 3em 1em; } }
+  @media (min-width: 900px) {
+    .header {
+      padding: 6em 1em; } }
 
 .headline {
   text-align: center;
@@ -615,9 +622,9 @@ footer {
     margin: 0; }
 
 .credit {
+  display: none;
   align-self: flex-end;
-  margin: 1em;
-  z-index: 1; }
+  margin: 1em; }
 
 .header-overlay {
   content: "";
