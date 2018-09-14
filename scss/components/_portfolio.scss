@@ -26,6 +26,8 @@
   width: 100%;
   padding: 1em;
 
+  @include shadow;
+
   @include mq('sm') {
     width: 50%;
   }
