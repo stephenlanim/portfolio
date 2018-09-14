@@ -566,17 +566,20 @@ h3 {
 /* ======================================
     Buttons Styles
    ====================================== */
-button {
+.button {
   background-color: #6d1a36;
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
   padding: 1em;
-  margin: 1em 0;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in; }
-  button:hover, buttonfocus {
+  .button:hover, .buttonfocus {
     background-color: #4c1226;
     color: #d7d9ce;
     cursor: pointer;
@@ -626,8 +629,8 @@ button {
   font-size: 1.2em; }
   .project-summary h4 {
     font-size: 1.2em; }
-  .project-summary button {
-    display: block; }
+  .project-summary .button {
+    display: inline-block; }
 
 /* List of project details within modal */
 ul.project-info {
