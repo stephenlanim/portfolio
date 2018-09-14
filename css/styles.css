@@ -331,16 +331,13 @@ a {
 .main-content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "about" "portfolio" "contact"; }
+  grid-template-areas: "portfolio" "contact"; }
 
 .portolfio {
   grid-area: portfolio;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "client-projects" "treehouse-projects"; }
-
-.about {
-  grid-area: about; }
 
 .contact {
   grid-area: contact; }
@@ -601,25 +598,40 @@ footer {
   @media (min-width: 600px) {
     .header {
       background-position: center center;
-      padding: 3em 1em; } }
+      padding: 2em 1em; } }
   @media (min-width: 900px) {
     .header {
-      padding: 6em 1em; } }
+      padding: 4em 1em; } }
 
-.headline {
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 1em;
   width: 90%;
   z-index: 1; }
   @media (min-width: 600px) {
-    .headline {
+    .about {
       width: 80%; } }
   @media (min-width: 900px) {
-    .headline {
-      width: 50%; } }
-  .headline h4 {
+    .about {
+      width: 75%; } }
+  .about h4 {
     font-size: 2em;
     margin: 0; }
+
+.blurb {
+  text-align: center;
+  padding: 0 1em;
+  width: 90%; }
+  @media (min-width: 600px) {
+    .blurb {
+      width: 80%; } }
+  @media (min-width: 900px) {
+    .blurb {
+      width: 70%; } }
 
 .credit {
   display: none;
@@ -653,23 +665,6 @@ h3 {
 /* ======================================
     About Styles
    ====================================== */
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.blurb {
-  text-align: center;
-  padding: 0 1em;
-  width: 90%; }
-  @media (min-width: 600px) {
-    .blurb {
-      width: 80%; } }
-  @media (min-width: 900px) {
-    .blurb {
-      width: 70%; } }
-
 /* ======================================
     Buttons Styles
    ====================================== */

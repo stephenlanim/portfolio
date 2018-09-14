@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "about"
+    // "about"
     "portfolio"
     "contact";
 }
@@ -40,7 +40,7 @@
 }
 
 .about {
-  grid-area: about;
+  // grid-area: about;
 }
 
 .contact {

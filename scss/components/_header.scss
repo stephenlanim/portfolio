@@ -18,15 +18,17 @@
 
   @include mq('sm'){
     background-position: center center;
-    padding: 3em 1em;
+    padding: 2em 1em;
   }
 
   @include mq('med'){
-    padding: 6em 1em;
+    padding: 4em 1em;
   }
 }
 
-.headline {
+.about {
+  @include flexbox($dir:column, $just:center);
+  align-items: center;
   text-align: center;
   padding: 1em;
   width: 90%;
@@ -36,12 +38,29 @@
     width: 80%;
   }
   @include mq("med") {
-    width: 50%;
+    width: 75%;
   }
   & h4 {
     font-size: 2em;
     margin: 0;
   }
+}
+
+.blurb {
+  text-align: center;
+  padding: 0 1em;
+  width: 90%;
+
+  @include mq("sm") {
+    width: 80%;
+  }
+  @include mq("med") {
+    width: 70%;
+  }
+}
+
+.about-links {
+
 }
 
 .credit {

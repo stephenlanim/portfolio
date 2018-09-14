@@ -72,3 +72,10 @@ Deep-Page Navigation:
 06-25-2018: I plan for the navigation to be based on a horizontal navbar. To show the user where they are on the site, I will either need to: 1) have the main-section parent highlight as "active" in the navbar and then also have its subpage "active" in the dropdown or 2) use breadcrumbs on each of the deep pages. I'll need to look up whether either of these techniques are programmable, meaning I can write a script that adds the active class or modifies the breadcrumb to suit the current page, or if I'll have to write out the HTML for the navbar or breadcrumbs for each individual page.
 
 03-14-2018: While working with CSS modals, I discovered that, putting an object in a container, giving the object position:fixed, and sending it behind other objects with z-index is the likely technique a lot of modern websites use to have images change as the user scrolls while the image stays in place.
+
+About Me Copy:
+I'm a front-end web developer in the process of learning the back-end. I'm putting in my 10,000 hours toward mastering the art and craft of web app design and development.
+
+I initially began learning user interface design, HTML, CSS, and Twitter Bootstrap as part of my master of science program in instructional technology, with an emphasis in eLearning development. But after completing some front-end web development projects, I was hooked.
+
+Deciding to go all the way with web development was one of the best decisions I've ever made. I wish I'd discovered my passion and talent for web development ages ago. 

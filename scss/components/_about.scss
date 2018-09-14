@@ -2,25 +2,25 @@
     About Styles
    ====================================== */
 
-.about {
-  @include flexbox($dir:column, $just:center);
-  align-items: center;
-  // background-color: $color-primary;
-}
-
-.blurb {
-  text-align: center;
-  padding: 0 1em;
-  width: 90%;
-
-  @include mq("sm") {
-    width: 80%;
-  }
-  @include mq("med") {
-    width: 70%;
-  }
-}
-
-.about-links {
-
-}
+// .about {
+//   @include flexbox($dir:column, $just:center);
+//   align-items: center;
+//   // background-color: $color-primary;
+// }
+//
+// .blurb {
+//   text-align: center;
+//   padding: 0 1em;
+//   width: 90%;
+//
+//   @include mq("sm") {
+//     width: 80%;
+//   }
+//   @include mq("med") {
+//     width: 70%;
+//   }
+// }
+//
+// .about-links {
+//
+// }
