@@ -667,7 +667,8 @@ h3 {
     Buttons Styles
    ====================================== */
 button {
-  color: #fff;
+  background-color: #6d1a36;
+  color: #d7d9ce;
   border: none;
   border-radius: 5px;
   padding: 1em;
@@ -676,24 +677,11 @@ button {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in; }
-  .message-user button {
-    width: 100%; }
-  .settings button {
-    width: 40%; }
-
-.submit-btn {
-  background-color: #6d1a36;
-  color: #fff; }
-  .submit-btn:hover, .submit-btn:focus {
-    background-color: #1b060d;
-    color: #fff; }
-
-.cancel-btn {
-  background-color: #b2b2b2;
-  color: #555; }
-  .cancel-btn:hover, .cancel-btn:focus {
-    background-color: #7f7f7f;
-    color: #555; }
+  button:hover, buttonfocus {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
 
 /* ======================================
     Portfolio Styles
@@ -712,7 +700,8 @@ button {
   background-color: #d7d9ce;
   border-radius: 5px;
   color: #555;
-  width: 100%; }
+  width: 100%;
+  padding: 1em; }
   @media (min-width: 600px) {
     .project-card {
       width: 50%; } }
@@ -722,6 +711,10 @@ button {
   @media (min-width: 1200px) {
     .project-card {
       width: 25%; } }
+
+.project-summary {
+  line-height: 1.4;
+  font-size: 1.2em; }
 
 /* ======================================
     Animations
@@ -785,9 +778,6 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Regular modal trigger button */
-button.modal-trigger {
-  border-radius: 5px; }
-
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
 .vid-modal-trigger {
   background-color: #fff;
@@ -830,16 +820,22 @@ button.modal-trigger {
 
 /* Just the content window within the modal. */
 .modal-content-window {
-  background-color: #f4f4f4;
-  margin: 5% auto;
+  background-color: #d7d9ce;
+  border-radius: 5px;
+  margin: 120px auto;
   padding: 10px;
-  width: 75%;
+  width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
-  animation-name: modalopen;
-  /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
-  animation-duration: 0.75s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */ }
+  @media (min-width: 600px) {
+    .modal-content-window {
+      width: 70%; } }
+  @media (min-width: 900px) {
+    .modal-content-window {
+      width: 60%; } }
+  @media (min-width: 1200px) {
+    .modal-content-window {
+      width: 50%; } }
 
 /* === .modal-content-window animation === */
 @keyframes modalopen {
@@ -852,50 +848,18 @@ button.modal-trigger {
 
 /* The close button within the modal content window. */
 .close-btn {
-  color: #ccc;
   float: right;
   font-size: 20px;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out; }
 
-.close-btn:hover,
-.close-btn:focus {
-  color: #000;
-  cursor: pointer;
-  transform: scale(1.1);
-  text-decoration: none; }
-
 /* The title in the modal content window. */
 .modal-title {
-  color: #007073;
-  font-size: 2.5em;
+  color: #6d1a36;
+  font-size: 2.0em;
   margin-top: 20px;
   margin-left: 6.5%; }
 
-/* === For smartphone only === */
-@media only screen and (max-width: 599px) {
-  .modal-content-window {
-    width: 95%; } }
-
-/* End of smartphone media query) */
-/*  === For tablet portrait only ===  */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-  .modal-content-window {
-    width: 95%; } }
-
-/* End of tablet portrait media query */
-/* For  === tablet landscape only ===  */
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
-  .modal-content-window {
-    width: 78%; } }
-
-/* End of tablet landscape media query */
-/*  === For desktop up ===  */
-@media only screen and (min-width: 1200px) {
-  .modal-content-window {
-    width: 65%; } }
-
-/* End of desktop media query */
 /* ========================================
   iframe Styles
 =========================================== */

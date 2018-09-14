@@ -24,6 +24,7 @@
   border-radius: 5px;
   color: $dark-text-color;
   width: 100%;
+  padding: 1em;
 
   @include mq('sm') {
     width: 50%;
@@ -36,6 +37,7 @@
   @include mq('lg') {
     width: 25%;
   }
+
 }
 
 .project-thumb {
@@ -46,7 +48,12 @@
 }
 
 .project-summary {
-  
+  line-height: 1.4;
+  font-size: 1.2em;
+}
+
+.modal-card {
+
 }
 
 .project-info {

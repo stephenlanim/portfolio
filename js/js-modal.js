@@ -62,6 +62,8 @@ const $modalTrigger = $("button.modal-trigger");
 // Get any modal overlay
 const $modalDiv = $("div.modal-overlay");
 
+// Get modal content window
+const $modalContent = $("div.modal-content-window");
 
 // -------------------------------
 //   Functions
@@ -70,23 +72,38 @@ const $modalDiv = $("div.modal-overlay");
 // Function for when user clicks modal trigger button
 $($modalTrigger).click(function(){
   // Open the modal corresponding to the clicked trigger
-  $(this).parent().find(".modal-overlay").css({"display": "block"});
+  // $(this).parent().find(".modal-overlay").css({"display": "block"});
+  $(this).parent().find(".modal-overlay").toggle('scale', 300);
 });
 
 // Function for when user clicks close button
 $("button.close-btn").click(function(){
   // Close the modal overlay belonging to the clicked close button
-  $(this).parent().parent().css({"display": "none"});
+  // $(this).parent().parent().css({"display": "none"});
+  $(this).parent().parent().toggle('scale', 300);
 
   // Stop video by replacing src link with same link
   $(this).parent().find("iframe").attr("src", $(this).parent().find("iframe").attr("src"));
 });
 
 // Function for when user clicks the area outside the modal content window (i.e. the modal overlay)
-$($modalDiv).click(function(){
+$($modalDiv).click(function(e){
   // Close the clicked modal overlay
-  $(this).css({"display": "none"});
+  // If the modal content window is NOT the target...
+  if ($modalDiv.is(e.target)) {
+    $(this).toggle('scale', 300);
 
-  // Stop video by replacing src link with same link
-  $(this).parent().find("iframe").attr("src", $(this).parent().find("iframe").attr("src"));
+    // Stop video by replacing src link with same link
+    $(this).parent().find("iframe").attr("src", $(this).parent().find("iframe").attr("src"));
+  }
+
 });
+
+// $($modalDiv).click(function(){
+//   // Close the clicked modal overlay
+//   // $(this).css({"display": "none"});
+//   $(this).toggle('scale', 300);
+//
+//   // Stop video by replacing src link with same link
+//   $(this).parent().find("iframe").attr("src", $(this).parent().find("iframe").attr("src"));
+// });

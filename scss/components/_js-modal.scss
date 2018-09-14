@@ -21,9 +21,18 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Regular modal trigger button */
- button.modal-trigger {
-   border-radius: 5px;
- }
+ // button.modal-trigger {
+ //   // border-radius: 5px;
+ //   background-color: $color-secondary;
+ //   color: $color-primary;
+ //
+ //   &:hover,
+ //   &focus {
+ //     background-color: darken($color-secondary, 20);
+ //     color: $color-primary;
+ //     cursor: pointer;
+ //   }
+ // }
 
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
 .vid-modal-trigger {
@@ -71,16 +80,30 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* Just the content window within the modal. */
 .modal-content-window {
-  background-color: #f4f4f4;
-  margin: 5% auto;
+  background-color: $color-primary;
+  border-radius: 5px;
+  margin: 120px auto;
   padding: 10px;
-  width: 75%;
+  width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17) ;
 
+  @include mq('sm') {
+    width: 70%;
+  }
+
+  @include mq('med') {
+    width: 60%;
+  }
+
+  @include mq('lg') {
+    width: 50%;
+  }
+
+
   /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
-  animation-name:modalopen; /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
-  animation-duration:0.75s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  // animation-name:modalopen; /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  // animation-duration:0.75s;
+  // animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* === .modal-content-window animation === */
@@ -96,64 +119,68 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* The close button within the modal content window. */
 .close-btn {
-  color: #ccc;
+  // background-color: $color-secondary;
+  // color: $color-primary;
   float: right;
   font-size: 20px;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+
+  // &:hover,
+  // &:focus {
+  //   background-color: darken($color-secondary, 20);
+  //   color: $color-primary;
+  //   cursor: pointer;
+  //   // transform: scale(1.1);
+  //   text-decoration: none;
+  // }
 }
 
-.close-btn:hover,
-.close-btn:focus {
-  color: #000;
-  cursor: pointer;
-  transform: scale(1.1);
-  text-decoration: none;
-}
+
 
 /* The title in the modal content window. */
 .modal-title {
-  color: #007073;
-  font-size: 2.5em;
+  color: $color-secondary;
+  font-size: 2.0em;
   margin-top: 20px;
   margin-left: 6.5%;
 }
 
-/* === For smartphone only === */
-@media only screen and (max-width: 599px) {
-
-  .modal-content-window {
-    width: 95%;
-  }
-
-} /* End of smartphone media query) */
-
-/*  === For tablet portrait only ===  */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-
-  .modal-content-window {
-    width: 95%;
-  }
-
-}  /* End of tablet portrait media query */
-
-/* For  === tablet landscape only ===  */
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
-
-  .modal-content-window {
-    width: 78%;
-  }
-
-} /* End of tablet landscape media query */
-
-/*  === For desktop up ===  */
-@media only screen and (min-width: 1200px) {
-
-  .modal-content-window {
-    width: 65%;
-  }
-
-} /* End of desktop media query */
+// /* === For smartphone only === */
+// @media only screen and (max-width: 599px) {
+//
+//   .modal-content-window {
+//     width: 95%;
+//   }
+//
+// } /* End of smartphone media query) */
+//
+// /*  === For tablet portrait only ===  */
+// @media only screen and (min-width: 600px) and (max-width: 899px) {
+//
+//   .modal-content-window {
+//     width: 95%;
+//   }
+//
+// }  /* End of tablet portrait media query */
+//
+// /* For  === tablet landscape only ===  */
+// @media only screen and (min-width: 900px) and (max-width: 1199px) {
+//
+//   .modal-content-window {
+//     width: 78%;
+//   }
+//
+// } /* End of tablet landscape media query */
+//
+// /*  === For desktop up ===  */
+// @media only screen and (min-width: 1200px) {
+//
+//   .modal-content-window {
+//     width: 65%;
+//   }
+//
+// } /* End of desktop media query */
 
 /* ========================================
   iframe Styles
