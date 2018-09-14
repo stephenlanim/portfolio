@@ -354,6 +354,11 @@ a {
 footer {
   grid-area: footer; }
 
+.clearfix {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* ======================================
     Navigation Styles
    ====================================== */
@@ -554,7 +559,7 @@ h3 {
   margin: 0.5em; }
 
 .main-content {
-  background-color: #d7d9ce;
+  background-color: #6d1a36;
   color: #fff;
   padding: 1em; }
 
@@ -562,8 +567,8 @@ h3 {
     Buttons Styles
    ====================================== */
 button {
-  background-color: #d7d9ce;
-  color: #6d1a36;
+  background-color: #6d1a36;
+  color: #d7d9ce;
   border: none;
   border-radius: 5px;
   padding: 1em;
@@ -573,8 +578,8 @@ button {
   transition-duration: 0.2s;
   transition-timing-function: ease-in; }
   button:hover, buttonfocus {
-    background-color: #c4c7b7;
-    color: #6d1a36;
+    background-color: #4c1226;
+    color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
 
@@ -596,9 +601,9 @@ button {
   align-items: stretch; }
 
 .project-card {
-  background-color: #6d1a36;
+  background-color: #d7d9ce;
   border-radius: 5px;
-  color: #d7d9ce;
+  color: #6d1a36;
   width: 100%;
   padding: 1em;
   box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2), -10px 0px 10px 0px rgba(46, 61, 73, 0.2); }
@@ -611,10 +616,18 @@ button {
   @media (min-width: 1200px) {
     .project-card {
       width: 25%; } }
+  .project-card h2,
+  .project-card h3,
+  .project-card h4 {
+    color: #6d1a36; }
 
 .project-summary {
   line-height: 1.4;
   font-size: 1.2em; }
+  .project-summary h4 {
+    font-size: 1.2em; }
+  .project-summary button {
+    display: block; }
 
 /* ======================================
     Animations
@@ -676,6 +689,7 @@ footer {
 .alert {
   color: white;
   border-radius: 5px;
+  line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
   width: calc(100% - 100px);
@@ -691,6 +705,7 @@ footer {
 .confirmation {
   color: white;
   border-radius: 5px;
+  line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
   width: calc(100% - 100px);
@@ -705,6 +720,7 @@ footer {
 .error {
   color: white;
   border-radius: 5px;
+  line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
   width: calc(100% - 100px);
@@ -719,6 +735,7 @@ footer {
 .warning {
   color: white;
   border-radius: 5px;
+  line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
   width: calc(100% - 100px);
@@ -792,10 +809,10 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* Just the content window within the modal. */
 .modal-content-window {
-  background-color: #6d1a36;
+  background-color: #d7d9ce;
   border-radius: 5px;
   margin: 120px auto;
-  padding: 10px;
+  padding: 1em;
   width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
@@ -822,19 +839,25 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
     opacity: 1;
     transform: scale(1); } }
 
-/* The close button within the modal content window. */
-.close-btn {
-  float: right;
-  font-size: 20px;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out; }
+/* The container housing the modal-title and close button. */
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 /* The title in the modal content window. */
 .modal-title {
   color: #d7d9ce;
   font-size: 2.0em;
-  margin-top: 20px;
-  margin-left: 6.5%; }
+  margin: 0; }
+
+/* The close button within the modal content window. */
+.close-btn {
+  font-size: 1.2em;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  margin: 0; }
 
 /* ========================================
   iframe Styles

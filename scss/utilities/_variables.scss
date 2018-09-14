@@ -44,15 +44,23 @@ $about-text-color: #fff;
 // $about-text-color: #555;
 // $about-text-color: $color-secondary;
 
+$main-content-bg-color: $color-secondary;
+$main-content-bg-color: $color-primary;
+
 $portfolio-heading-color: $color-primary;
 // $portfolio-heading-color: $color-secondary;
 // $portfolio-heading-color: $color-tertiary;
 // $portfolio-heading-color: $color-accent;
 
-// $project-text-color: $color-primary;
-$project-text-color: $color-secondary;
+$project-text-color: $color-primary;
+// $project-text-color: $color-secondary;
 // $project-text-color: $color-tertiary;
 // $project-text-color: $color-accent;
+
+// $project-card-color: $color-primary;
+$project-card-color: $color-secondary;
+// $project-card-color: $color-tertiary;
+// $project-card-color: $color-accent;
 
 // $footer-text-color: $color-primary;
 $footer-text-color: $color-secondary;
@@ -66,8 +74,20 @@ $nav-icon-color: #a6a6b9;
 $link-color-active: $color-secondary;
 $background-color: #d7d9ce;
 $border-color: darken($background-color, 20);
-$btn-color-default: #6d1a36;
+
+$btn-color-default: $color-primary;
+// $btn-color-default: $color-secondary;
+// $btn-color-default: $$color-tertiary;
+// $btn-color-default: $color-accent;
+
+// $btn-text-color: $color-primary;
+$btn-text-color: $color-secondary;
+// $btn-text-color: $color-tertiary;
+// $btn-text-color: $color-accent;
+
 $btn-color-cancel: #b2b2b2;
+$btn-cancel-text-color: $light-text-color;
+
 $form-color: lighten($border-color, 20);
 
 // Border

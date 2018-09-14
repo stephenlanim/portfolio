@@ -35,11 +35,12 @@ HTML Object Requirements Per Modal
     <!-- Container Housing Modal Content (white background) -->
     <div class="modal-content-window">
 
-      <!-- Close Button -->
-      <button class="close-btn">&#10006; Close</button>
-      <h2 class="modal-title">[Title]</h2>
-      <!-- Start new line after close button -->
-      <div class="clearfix"></div>
+      <!-- Header section for modal content -->
+      <div class="modal-header">
+        <h4 class="modal-title">[Project Title]</h2>
+        <!-- Close Button -->
+        <button class="close-btn">&#10006; Close</button>
+      </div>
 
       <!-- Embedded Object -->
       <iframe allowfullscreen frameborder=0 src="[URL for embedded video, calendar, form, web page, etc.]"></iframe>
@@ -80,7 +81,7 @@ $($modalTrigger).click(function(){
 $("button.close-btn").click(function(){
   // Close the modal overlay belonging to the clicked close button
   // $(this).parent().parent().css({"display": "none"});
-  $(this).parent().parent().toggle('scale', 300);
+  $(this).parent().parent().parent().toggle('scale', 300);
 
   // Stop video by replacing src link with same link
   $(this).parent().find("iframe").attr("src", $(this).parent().find("iframe").attr("src"));
@@ -92,6 +93,9 @@ $($modalDiv).click(function(e){
   // If the modal content window is NOT the target...
   if ($modalDiv.is(e.target)) {
     $(this).toggle('scale', 300);
+    // $(this).css({"display": "none"});
+    // $(this).find(".modal-content-window").toggle('scale', 300);
+    // $(this).delay(300).toggle('scale', 1);
 
     // Stop video by replacing src link with same link
     $(this).parent().find("iframe").attr("src", $(this).parent().find("iframe").attr("src"));

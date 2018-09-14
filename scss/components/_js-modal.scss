@@ -80,10 +80,10 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* Just the content window within the modal. */
 .modal-content-window {
-  background-color: $color-primary;
+  background-color: $project-card-color;
   border-radius: 5px;
   margin: 120px auto;
-  padding: 10px;
+  padding: 1em;
   width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17) ;
 
@@ -117,14 +117,28 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
     transform: scale(1)}
 }
 
+/* The container housing the modal-title and close button. */
+.modal-header {
+  @include flexbox($dir:row, $just:space-between);
+  align-items: center;
+}
+
+/* The title in the modal content window. */
+.modal-title {
+  color: $color-secondary;
+  font-size: 2.0em;
+  margin: 0;
+}
+
 /* The close button within the modal content window. */
 .close-btn {
   // background-color: $color-secondary;
   // color: $color-primary;
-  float: right;
-  font-size: 20px;
+  // float: right;
+  font-size: 1.2em;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+  margin: 0;
 
   // &:hover,
   // &:focus {
@@ -136,15 +150,6 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   // }
 }
 
-
-
-/* The title in the modal content window. */
-.modal-title {
-  color: $color-secondary;
-  font-size: 2.0em;
-  margin-top: 20px;
-  margin-left: 6.5%;
-}
 
 // /* === For smartphone only === */
 // @media only screen and (max-width: 599px) {

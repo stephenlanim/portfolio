@@ -3,8 +3,8 @@
    ====================================== */
 
 button {
-  background-color: $color-secondary;
-  color: $color-primary;
+  background-color: $btn-color-default;
+  color: $btn-text-color;
   border: none;
   border-radius: 5px;
   padding: 1em;
@@ -14,9 +14,9 @@ button {
 
   &:hover,
   &focus {
-    background-color: darken($color-secondary, 8);
-    // background-color: lighten($color-secondary, 5);
-    color: $color-primary;
+    background-color: darken($btn-color-default, 8);
+    // background-color: lighten($btn-color-default, 5);
+    color: $btn-text-color;
     cursor: pointer;
     text-decoration: none;
   }

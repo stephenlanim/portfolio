@@ -79,3 +79,9 @@
 footer {
   grid-area: footer;
 }
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
