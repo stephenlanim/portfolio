@@ -657,8 +657,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: #d7d9ce; }
+  align-items: center; }
 
 .blurb {
   text-align: center;
@@ -709,169 +708,27 @@ button {
 .portfolio h2 {
   text-align: center; }
 
-.client-projects,
-.treehouse-projects {
+.project-gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: stretch; }
 
-.widgets > div {
-  padding: 2em; }
-
-.switch-field {
-  border: none; }
-  @media (min-width: 600px) {
-    .switch-field {
-      width: 70vw; } }
-  @media (min-width: 900px) {
-    .switch-field {
-      width: 75vw; } }
-  @media (min-width: 1200px) {
-    .switch-field {
-      width: 80vw; } }
-
-.switch-toggle {
-  margin: 1em auto;
+.project-card {
+  background-color: #d7d9ce;
+  border-radius: 5px;
+  color: #555;
   width: 100%; }
   @media (min-width: 600px) {
-    .switch-toggle {
-      margin-left: auto;
-      margin-right: 1em;
-      width: 70%; } }
+    .project-card {
+      width: 50%; } }
   @media (min-width: 900px) {
-    .switch-toggle {
-      margin-left: auto;
-      margin-right: 0;
-      width: 40%; } }
-
-.chart-container {
-  position: relative;
-  margin: auto; }
-
-.daily-traffic,
-.new-members,
-.message-user {
-  border-top: 2px solid #a8ac95;
-  border-right: none; }
-  @media (min-width: 900px) {
-    .daily-traffic,
-    .new-members,
-    .message-user {
-      border-right: 2px solid #a8ac95; } }
-
-.mobile-users,
-.recent-activity,
-.social-stats,
-.settings {
-  border-top: 2px solid #a8ac95; }
-
-#trafficLineGraphHourly {
-  display: none; }
-
-#trafficLineGraphDaily {
-  display: none; }
-
-#trafficLineGraphWeekly {
-  display: block; }
-
-#trafficLineGraphMonthly {
-  display: none; }
-
-.social-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-
-.social-widget {
-  background-color: #d7d9ce;
-  border: 2px solid #a8ac95;
-  border-radius: 6px;
-  padding: 1em;
-  margin: 1em;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  @media (min-width: 600px) {
-    .social-widget {
-      width: 90%; } }
-  @media (min-width: 900px) {
-    .social-widget {
-      width: 45%; } }
+    .project-card {
+      width: 33%; } }
   @media (min-width: 1200px) {
-    .social-widget {
-      width: 30%; } }
-
-.social-text {
-  width: 65%; }
-  .social-text h3 {
-    color: #d7d9ce;
-    font-size: 2em;
-    margin: 0.2em; }
-  .social-text p {
-    font-size: 3.5em;
-    font-weight: lighter;
-    margin: 0.2em; }
-
-.si-container {
-  margin: 0;
-  padding: 0;
-  width: 35%; }
-
-.social-icon {
-  background-color: #d7d9ce;
-  border-radius: 50%;
-  margin-right: 1em;
-  width: 100%;
-  height: 85%; }
-
-.member {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  border-bottom: 1px solid #a8ac95;
-  padding: 1em; }
-  @media (min-width: 1200px) {
-    .member {
-      align-items: flex-start;
-      text-align: left;
-      flex-direction: row; }
-      .member :last-child {
-        margin-left: auto; } }
-  .member:last-child {
-    border-bottom: none; }
-  .member img {
-    border-radius: 50%;
-    width: 30%; }
-    @media (min-width: 1200px) {
-      .member img {
-        margin-right: 1em;
-        width: 10%;
-        height: 50%; } }
-  @media (min-width: 1200px) {
-    .member .member-info,
-    .member .activity-info {
-      width: 70%; } }
-  .member .activity-info {
-    margin-bottom: 0; }
-  .member p {
-    margin-top: 0.5em; }
-  .member a {
-    text-decoration: none;
-    color: #d7d9ce; }
-    .member a:hover, .member afocus {
-      color: #6d1a36; }
-  .member .signup-date,
-  .member .activity-time {
-    color: #2274a5; }
-  .member .angle-bracket {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-top: 0.4em; }
+    .project-card {
+      width: 25%; } }
 
 /* ======================================
     Animations

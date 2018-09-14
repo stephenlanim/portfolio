@@ -3,9 +3,8 @@
    ====================================== */
 
 .header {
-  background-color: $color-secondary; //fallback
+  background-color: $color-secondary; //fallback if image doesn't load
   background-image: url(/images/markus-spiske-771011-unsplash.jpg);
-  // background-image: url(/images/javascript_screenshot.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left;
