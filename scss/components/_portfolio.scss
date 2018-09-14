@@ -4,6 +4,11 @@
 
 .portfolio {
 
+  & h2,
+  & h3 {
+    color: $portfolio-heading-color;
+  }
+
   & h2 {
     text-align: center;
   }
@@ -22,7 +27,7 @@
 .project-card {
   background-color: $color-primary;
   border-radius: 5px;
-  color: $dark-text-color;
+  color: $project-text-color;
   width: 100%;
   padding: 1em;
 

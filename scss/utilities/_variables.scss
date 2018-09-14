@@ -15,15 +15,18 @@ $breakpoints: (
 
 // Colors
 $dark-text-color: #555;
-$light-text-color: #fff;
+// $dark-text-color: #fff;
 
-$color-primary: #d7d9ce;
-// $color-primary: #6d1a36;
+$light-text-color: #fff;
+// $light-text-color: #555;
+
+// $color-primary: #d7d9ce;
+$color-primary: #6d1a36;
 // $color-primary: #2274a5;
 // $color-primary: #13505b;
 
-// $color-secondary: #d7d9ce;
-$color-secondary: #6d1a36;
+$color-secondary: #d7d9ce;
+// $color-secondary: #6d1a36;
 // $color-secondary: #2274a5;
 // $color-secondary: #13505b;
 
@@ -37,11 +40,30 @@ $color-tertiary: #2274a5;
 // $color-accent: #2274a5;
 $color-accent: #13505b;
 
+$about-text-color: #fff;
+// $about-text-color: #555;
+// $about-text-color: $color-secondary;
+
+$portfolio-heading-color: $color-primary;
+// $portfolio-heading-color: $color-secondary;
+// $portfolio-heading-color: $color-tertiary;
+// $portfolio-heading-color: $color-accent;
+
+// $project-text-color: $color-primary;
+$project-text-color: $color-secondary;
+// $project-text-color: $color-tertiary;
+// $project-text-color: $color-accent;
+
+// $footer-text-color: $color-primary;
+$footer-text-color: $color-secondary;
+// $footer-text-color: $color-tertiary;
+// $footer-text-color: $color-accent;
+
 $success-color: #32aaf1;
 $error-color: #b92c5c;
 $warning-color: #2393a7;
 $nav-icon-color: #a6a6b9;
-$link-color-active: #6d1a36;
+$link-color-active: $color-secondary;
 $background-color: #d7d9ce;
 $border-color: darken($background-color, 20);
 $btn-color-default: #6d1a36;

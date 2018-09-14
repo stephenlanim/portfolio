@@ -359,8 +359,8 @@ footer {
    ====================================== */
 .navbar {
   font-size: 1.2em;
-  background-color: #d7d9ce;
-  color: #6d1a36;
+  background-color: #6d1a36;
+  color: #d7d9ce;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -381,7 +381,7 @@ footer {
       flex-direction: row;
       justify-content: space-evenly; } }
   .navbar a {
-    color: #6d1a36; }
+    color: #d7d9ce; }
 
 .submenu {
   display: flex;
@@ -410,7 +410,7 @@ footer {
 .hamburger .line {
   width: 50px;
   height: 5px;
-  background-color: #6d1a36;
+  background-color: #d7d9ce;
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -452,10 +452,10 @@ footer {
     margin: .25em 0;
     padding: 0.5em; }
   .nav-list a {
-    background-color: #6d1a36;
+    background-color: #d7d9ce;
     border-radius: 5px;
     padding: 1em;
-    color: #fff;
+    color: #6d1a36;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
@@ -466,20 +466,20 @@ footer {
     @media (min-width: 600px) {
       .nav-list a {
         background-color: inherit;
-        color: #6d1a36;
+        color: #d7d9ce;
         border: none;
         width: auto; }
         .nav-list a:hover, .nav-list a:active, .nav-list a.active {
           background-color: inherit;
           border-radius: 0;
-          border-bottom: 3px solid #6d1a36;
-          color: #6d1a36; } }
+          border-bottom: 3px solid #d7d9ce;
+          color: #d7d9ce; } }
 
 /* ======================================
     Header Styles
    ====================================== */
 .header {
-  background-color: #6d1a36;
+  background-color: #2274a5;
   background-image: url(/images/markus-spiske-771011-unsplash.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -554,7 +554,7 @@ h3 {
   margin: 0.5em; }
 
 .main-content {
-  background-color: #6d1a36;
+  background-color: #d7d9ce;
   color: #fff;
   padding: 1em; }
 
@@ -562,8 +562,8 @@ h3 {
     Buttons Styles
    ====================================== */
 button {
-  background-color: #6d1a36;
-  color: #d7d9ce;
+  background-color: #d7d9ce;
+  color: #6d1a36;
   border: none;
   border-radius: 5px;
   padding: 1em;
@@ -573,14 +573,18 @@ button {
   transition-duration: 0.2s;
   transition-timing-function: ease-in; }
   button:hover, buttonfocus {
-    background-color: #4c1226;
-    color: #d7d9ce;
+    background-color: #c4c7b7;
+    color: #6d1a36;
     cursor: pointer;
     text-decoration: none; }
 
 /* ======================================
     Portfolio Styles
    ====================================== */
+.portfolio h2,
+.portfolio h3 {
+  color: #6d1a36; }
+
 .portfolio h2 {
   text-align: center; }
 
@@ -592,9 +596,9 @@ button {
   align-items: stretch; }
 
 .project-card {
-  background-color: #d7d9ce;
+  background-color: #6d1a36;
   border-radius: 5px;
-  color: #555;
+  color: #d7d9ce;
   width: 100%;
   padding: 1em;
   box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2), -10px 0px 10px 0px rgba(46, 61, 73, 0.2); }
@@ -644,8 +648,8 @@ button {
     Footer Styles
    ====================================== */
 footer {
-  background-color: #d7d9ce;
-  color: #555;
+  background-color: #6d1a36;
+  color: #d7d9ce;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -788,13 +792,17 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* Just the content window within the modal. */
 .modal-content-window {
-  background-color: #d7d9ce;
+  background-color: #6d1a36;
   border-radius: 5px;
   margin: 120px auto;
   padding: 10px;
   width: 90%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */ }
+  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
+  animation-name: modalopen;
+  /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   @media (min-width: 600px) {
     .modal-content-window {
       width: 70%; } }
@@ -823,7 +831,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* The title in the modal content window. */
 .modal-title {
-  color: #6d1a36;
+  color: #d7d9ce;
   font-size: 2.0em;
   margin-top: 20px;
   margin-left: 6.5%; }

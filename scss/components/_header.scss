@@ -3,13 +3,16 @@
    ====================================== */
 
 .header {
-  background-color: $color-secondary; //fallback if image doesn't load
+  background-color: $color-tertiary; //fallback if image doesn't load
   background-image: url(/images/markus-spiske-771011-unsplash.jpg);
+  // background-image: linear-gradient(
+  //   45deg,
+  //   $color-primary, $color-tertiary);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
-  color: $light-text-color;
+  color: $about-text-color;
 
   @include flexbox($dir:column, $just:center);
   align-items: center;
