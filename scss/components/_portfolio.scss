@@ -60,6 +60,7 @@
   }
 }
 
+/* Project summary within project card */
 .project-summary {
   line-height: 1.4;
   font-size: 1.2em;
@@ -73,6 +74,24 @@
   }
 }
 
-.project-info {
+/* List of project details within modal */
+ul.project-info {
+  padding: 0;
+  // text-align: center;
 
+  & .skill-tags,
+  & .skill-tags li {
+    display: inline-block;
+  }
+  & .skill-tags li {
+    border-radius: 6px;
+    background: $color-tertiary;
+    color: $light-text-color;
+    padding: 5px 10px;
+    margin: 2px;
+  }
+
+  & .skill-tags li:nth-child(even) {
+    background: $color-accent;
+  }
 }

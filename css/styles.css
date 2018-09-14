@@ -573,7 +573,6 @@ button {
   border-radius: 5px;
   padding: 1em;
   margin: 1em 0;
-  text-transform: uppercase;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in; }
@@ -588,7 +587,7 @@ button {
    ====================================== */
 .portfolio h2,
 .portfolio h3 {
-  color: #6d1a36; }
+  color: #d7d9ce; }
 
 .portfolio h2 {
   text-align: center; }
@@ -621,6 +620,7 @@ button {
   .project-card h4 {
     color: #6d1a36; }
 
+/* Project summary within project card */
 .project-summary {
   line-height: 1.4;
   font-size: 1.2em; }
@@ -628,6 +628,21 @@ button {
     font-size: 1.2em; }
   .project-summary button {
     display: block; }
+
+/* List of project details within modal */
+ul.project-info {
+  padding: 0; }
+  ul.project-info .skill-tags,
+  ul.project-info .skill-tags li {
+    display: inline-block; }
+  ul.project-info .skill-tags li {
+    border-radius: 6px;
+    background: #2274a5;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 2px; }
+  ul.project-info .skill-tags li:nth-child(even) {
+    background: #13505b; }
 
 /* ======================================
     Animations

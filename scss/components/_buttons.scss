@@ -9,7 +9,7 @@ button {
   border-radius: 5px;
   padding: 1em;
   margin: 1em 0;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   @include transition($dur: 0.2s);
 
   &:hover,
