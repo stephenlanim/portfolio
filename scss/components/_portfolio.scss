@@ -3,12 +3,15 @@
    ====================================== */
 
 .portfolio {
-
+  
+  & h2 {
+    text-align: center;
+  }
 }
 
 .client-projects,
 .treehouse-projects {
-
+  @include flexbox($dir:row, $just:space-evenly, $wrap:wrap);
 }
 
 .project-card {

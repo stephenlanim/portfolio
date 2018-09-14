@@ -587,16 +587,23 @@ footer {
    ====================================== */
 .header {
   background-color: #6d1a36;
+  background-image: url(/images/markus-spiske-771011-unsplash.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
 
 .headline {
   text-align: center;
   padding: 1em;
-  width: 90%; }
+  width: 90%;
+  z-index: 1; }
   @media (min-width: 600px) {
     .headline {
       width: 80%; } }
@@ -604,17 +611,37 @@ footer {
     .headline {
       width: 50%; } }
   .headline h4 {
-    font-size: 2em; }
+    font-size: 2em;
+    margin: 0; }
+
+.credit {
+  align-self: flex-end;
+  margin: 1em;
+  z-index: 1; }
+
+.header-overlay {
+  content: "";
+  background-color: #000;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0; }
 
 /* ======================================
     Portfolio Styles
    ====================================== */
-h2 {
-  text-transform: uppercase; }
+h2,
+h3 {
+  text-transform: uppercase;
+  margin: 0.5em; }
 
 .main-content {
   background-image: linear-gradient(45deg, #6d1a36, #2274a5);
-  color: #fff; }
+  color: #fff;
+  padding: 1em; }
 
 /* ======================================
     About Styles
@@ -623,11 +650,12 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #d7d9ce; }
 
 .blurb {
   text-align: center;
-  padding: 1em;
+  padding: 0 1em;
   width: 90%; }
   @media (min-width: 600px) {
     .blurb {
@@ -671,6 +699,16 @@ button {
 /* ======================================
     Portfolio Styles
    ====================================== */
+.portfolio h2 {
+  text-align: center; }
+
+.client-projects,
+.treehouse-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
 .widgets > div {
   padding: 2em; }
 

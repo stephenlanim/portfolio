@@ -5,11 +5,12 @@
 .about {
   @include flexbox($dir:column, $just:center);
   align-items: center;
+  background-color: $color-primary;
 }
 
 .blurb {
   text-align: center;
-  padding: 1em;
+  padding: 0 1em;
   width: 90%;
 
   @include mq("sm") {

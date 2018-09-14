@@ -4,19 +4,25 @@
 
 .header {
   background-color: $color-secondary; //fallback
-  // background-image: linear-gradient(
-  //   45deg,
-  //   $color-secondary, $color-tertiary);
+  background-image: url(/images/markus-spiske-771011-unsplash.jpg);
+  // background-image: url(/images/javascript_screenshot.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: $light-text-color;
 
   @include flexbox($dir:column, $just:center);
   align-items: center;
+
+  position: relative;
 }
 
 .headline {
   text-align: center;
   padding: 1em;
   width: 90%;
+  z-index: 1;
 
   @include mq("sm") {
     width: 80%;
@@ -26,5 +32,24 @@
   }
   & h4 {
     font-size: 2em;
+    margin: 0;
   }
+}
+
+.credit {
+  align-self: flex-end;
+  margin: 1em;
+  z-index: 1;
+}
+
+.header-overlay {
+  content: "";
+  background-color: #000;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }

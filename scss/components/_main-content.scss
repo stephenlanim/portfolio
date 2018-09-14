@@ -2,8 +2,10 @@
     Portfolio Styles
    ====================================== */
 
-h2 {
+h2,
+h3 {
   text-transform: uppercase;
+  margin: 0.5em;
 }
 
 .main-content {
@@ -11,4 +13,5 @@ h2 {
     45deg,
     $color-secondary, $color-tertiary);
   color: $light-text-color;
+  padding: 1em;
 }

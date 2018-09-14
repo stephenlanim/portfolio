@@ -38,7 +38,7 @@
   // When a navigation link is clicked...
   $('.nav-list a').click( function(e) {
     // Prevent
-    event.preventDefault();
+    e.preventDefault();
 
     // Animate scrolling to the target within the page body ("top -96" leaves room for sticky navbar)
     $("html, body").animate(
