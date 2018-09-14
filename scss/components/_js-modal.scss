@@ -1,0 +1,253 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This stylesheet can be used for any page that uses JavaScript modals.
+
+Use this document in conjunction with js-modal.js for the scripts that open and close the modal and stop a video inside the modal from playing.
+
+This set of code is a very modified version of the methods used in "Create a Modal With HTML, CSS & JavaScript" by Brad Traversy at https://www.youtube.com/watch?v=6ophW7Ask_0.
+
+You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraversy/pen/zEOrPp to play around with Brad's code on a live page in real time.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ======================================
+  Modal Trigger/Object Styles
+========================================= */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  The styles here are just for styling different types of objects used to trigger a modal.
+
+  The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Regular modal trigger button */
+ button.modal-trigger {
+   border-radius: 5px;
+ }
+
+/* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
+.vid-modal-trigger {
+  background-color: #fff;
+  position: relative;
+  /* margin: 0 auto; */
+  margin-bottom: 10px;
+  /* overflow: hidden; */
+  border: solid 2px #007073;
+  border-radius: 5px;
+  color: #007073;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1.25em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-duration: 0.3s;
+}
+
+.vid-modal-trigger:hover,
+.vid-modal-trigger:focus {
+  box-shadow: #007073 0px 0px 8px;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* ======================================
+  Modal Window Styles
+========================================= */
+
+/* The entire modal overlay including its transparent background. */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Just the content window within the modal. */
+.modal-content-window {
+  background-color: #f4f4f4;
+  margin: 5% auto;
+  padding: 10px;
+  width: 75%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17) ;
+
+  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
+  animation-name:modalopen; /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  animation-duration:0.75s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* === .modal-content-window animation === */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)}
+}
+
+/* The close button within the modal content window. */
+.close-btn {
+  color: #ccc;
+  float: right;
+  font-size: 20px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+/* The title in the modal content window. */
+.modal-title {
+  color: #007073;
+  font-size: 2.5em;
+  margin-top: 20px;
+  margin-left: 6.5%;
+}
+
+/* === For smartphone only === */
+@media only screen and (max-width: 599px) {
+
+  .modal-content-window {
+    width: 95%;
+  }
+
+} /* End of smartphone media query) */
+
+/*  === For tablet portrait only ===  */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+
+  .modal-content-window {
+    width: 95%;
+  }
+
+}  /* End of tablet portrait media query */
+
+/* For  === tablet landscape only ===  */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+
+  .modal-content-window {
+    width: 78%;
+  }
+
+} /* End of tablet landscape media query */
+
+/*  === For desktop up ===  */
+@media only screen and (min-width: 1200px) {
+
+  .modal-content-window {
+    width: 65%;
+  }
+
+} /* End of desktop media query */
+
+/* ========================================
+  iframe Styles
+=========================================== */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Widths and heights are at 16:9 aspect ratio.
+  Dimensions have been sized to fit within a three-column content section on a UNCW web page.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*  === All screen sizes ===  */
+iframe {
+  border: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  /* max-width: 100%; */
+  /* max-height: 100vh; */
+  margin-bottom: 10px;
+}
+
+
+/*  === For smartphone only ===  */
+@media only screen and (max-width: 599px) {
+
+  iframe {
+    width: 448px;
+    height: 252px;
+  }
+
+} /* End of smartphone media query) */
+
+
+/*  === For tablet portrait only ===  */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+
+  iframe {
+    width: 512px;
+    height: 288px;
+  }
+
+}  /* End of tablet portrait media query */
+
+
+/* For  === tablet landscape only ===  */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+
+  iframe {
+    width: 672px;
+    height: 378px;
+  }
+
+} /* End of tablet landscape media query */
+
+
+/*  === For desktop up ===  */
+@media only screen and (min-width: 1200px) {
+
+  iframe {
+    width: 720px;
+    height: 405px;
+  }
+
+} /* End of desktop media query */
+
+
+/* ======================================
+  Modal Window Add-On Classes
+========================================= */
+
+.width-auto {
+  width: auto;
+}
+
+.width-90prcnt {
+  width: 90%;
+}
+
+.width-98prcnt {
+  width: 98%;
+}
+
+.height-80prcnt {
+  height: 80%;
+}
+
+.height-90prcnt {
+  height: 90%;
+}
+
+.height-98prcnt {
+  height: 98%;
+}
+
+.height-auto {
+  height: auto;
+}

@@ -65,7 +65,8 @@ Featured Portfolio Projects:
   - Client.
   - Project type: website redesign, website initial design, e-learning, web app, etc..
   - Project description.
-  - Web development, UX/UI design, project management, and soft skills used.
+  - Web development, UX/UI design, project management, and soft skills used. May be displayed using "tags" akin to social media tags; these may alternate in color.
+  - Treehouse projects will also have "View on GitHub" button.
   (Thumbnail may just feature Project title and type. Clicking on project panel may bring up modal with further details and link to see project.)
 
 Deep-Page Navigation:
@@ -78,4 +79,6 @@ I'm a front-end web developer in the process of learning the back-end. I'm putti
 
 I initially began learning user interface design, HTML, CSS, and Twitter Bootstrap as part of my master of science program in instructional technology, with an emphasis in eLearning development. But after completing some front-end web development projects, I was hooked.
 
-Deciding to go all the way with web development was one of the best decisions I've ever made. I wish I'd discovered my passion and talent for web development ages ago. 
+Deciding to go all the way with web development was one of the best decisions I've ever made. I wish I'd discovered my passion and talent for web development ages ago.
+
+About Me Links: These may eventually have tooltips that explains the user task (what the user will do) associated with clicking that link. For example, the LinkedIn link could say "View my complete professional  and educational background and my professional connections."
