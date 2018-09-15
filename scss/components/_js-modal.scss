@@ -137,12 +137,15 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   // background-color: $color-secondary;
   // color: $color-primary;
   // float: right;
-  font-size: 1.2em;
+  font-size: 1.4em;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   margin: 0;
   margin-bottom: 0.5em;
+  padding: 0 !important;
   align-self: flex-end;
+  width: 64px;
+  height: 64px;
 
   // &:hover,
   // &:focus {
