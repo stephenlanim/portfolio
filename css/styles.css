@@ -354,11 +354,6 @@ a {
 footer {
   grid-area: footer; }
 
-.clearfix {
-  content: "";
-  display: table;
-  clear: both; }
-
 /* ======================================
     Navigation Styles
    ====================================== */
@@ -630,11 +625,37 @@ h3 {
   .project-summary h4 {
     font-size: 1.2em; }
   .project-summary .button {
-    display: inline-block; }
+    display: block;
+    margin-bottom: 0; }
+
+.modal-content-window .button {
+  display: inline-block; }
 
 /* List of project details within modal */
 ul.project-info {
   padding: 0; }
+  ul.project-info .pd-acrdn-trigger {
+    background-color: #d7d9ce;
+    color: #6d1a36;
+    border: 3px solid #6d1a36;
+    border-radius: 5px;
+    padding: 0.3em;
+    margin: 0.5em 0;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in; }
+    ul.project-info .pd-acrdn-trigger:hover, ul.project-info .pd-acrdn-triggerfocus {
+      background-color: #4c1226;
+      color: #d7d9ce;
+      cursor: pointer;
+      text-decoration: none; }
+  ul.project-info .project-tasks li {
+    list-style: disc;
+    list-style-position: inside;
+    margin-left: 1em; }
   ul.project-info .skill-tags,
   ul.project-info .skill-tags li {
     display: inline-block; }

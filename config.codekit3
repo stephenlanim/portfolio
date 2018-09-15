@@ -105,6 +105,16 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
+	"\/js\/accordions.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/accordions-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/js\/alerts.js": {
 		"ft": 64,
 		"ma": 0,
