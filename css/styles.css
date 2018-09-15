@@ -488,7 +488,7 @@ footer {
    ====================================== */
 .header {
   background-color: #2274a5;
-  background-image: url(/images/markus-spiske-771011-unsplash.jpg);
+  background-image: url(https://stephenlanim.github.io/portfolio/images/markus-spiske-771011-unsplash.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left;
@@ -553,7 +553,7 @@ footer {
         width: 28px;
         height: 28px; } }
   .about-links .about-icon {
-    background-image: url(/images/treehouse_logo-white.png);
+    background-image: url(https://stephenlanim.github.io/portfolio/images/treehouse_logo-white.png);
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center -2px;
@@ -572,7 +572,7 @@ footer {
       .about-links .about-icon {
         background-position: 5px 4px; } }
     .about-links .about-icon:hover, .about-links .about-icon:focus {
-      background-image: url(/images/treehouse_logo-tertiary.png); }
+      background-image: url(https://stephenlanim.github.io/portfolio/images/treehouse_logo-tertiary.png); }
   .about-links a {
     color: inherit; }
     .about-links a:hover, .about-links afocus {
@@ -939,6 +939,8 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   margin: 120px auto;
   padding: 1em;
   width: 90%;
+  max-height: 95vh;
+  overflow: auto;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
   animation-name: modalopen;
@@ -947,7 +949,8 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   @media (min-width: 600px) {
     .modal-content-window {
-      width: 70%; } }
+      width: 70%;
+      max-height: 80vh; } }
   @media (min-width: 900px) {
     .modal-content-window {
       width: 60%; } }

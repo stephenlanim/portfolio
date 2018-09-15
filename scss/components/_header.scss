@@ -4,7 +4,7 @@
 
 .header {
   background-color: $color-tertiary; //fallback if image doesn't load
-  background-image: url(/images/markus-spiske-771011-unsplash.jpg);
+  background-image: url(https://stephenlanim.github.io/portfolio/images/markus-spiske-771011-unsplash.jpg);
   // background-image: linear-gradient(
   //   45deg,
   //   $color-primary, $color-tertiary);
@@ -83,7 +83,7 @@
   }
 
   & .about-icon {
-    background-image: url(/images/treehouse_logo-white.png);
+    background-image: url(https://stephenlanim.github.io/portfolio/images/treehouse_logo-white.png);
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center -2px;
@@ -106,7 +106,7 @@
 
     &:hover,
     &:focus {
-      background-image: url(/images/treehouse_logo-tertiary.png);
+      background-image: url(https://stephenlanim.github.io/portfolio/images/treehouse_logo-tertiary.png);
     }
   }
 
