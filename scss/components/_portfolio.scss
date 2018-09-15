@@ -55,7 +55,23 @@
 
 .project-thumb {
 
+  @include mq('sm') {
+
+  }
+
+  @include mq('med') {
+
+  }
+
   & img {
+
+    @include mq('sm') {
+
+    }
+
+    @include mq('med') {
+
+    }
 
   }
 }

@@ -512,7 +512,7 @@ footer {
    ====================================== */
 .header {
   background-color: #2274a5;
-  background-image: url(../images/markus-spiske-771011-unsplash.jpg);
+  background-image: url(../images/background/markus-spiske-771011-unsplash.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left;
@@ -577,7 +577,7 @@ footer {
         width: 28px;
         height: 28px; } }
   .about-links .about-icon {
-    background-image: url(../images/treehouse_logo-white.png);
+    background-image: url(../images/icons/treehouse_logo-white.png);
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center -2px;
@@ -596,7 +596,7 @@ footer {
       .about-links .about-icon {
         background-position: 5px 4px; } }
     .about-links .about-icon:hover, .about-links .about-icon:focus {
-      background-image: url(../images/treehouse_logo-tertiary.png); }
+      background-image: url(../images/icons/treehouse_logo-tertiary.png); }
   .about-links a {
     color: inherit; }
     .about-links a:hover, .about-links afocus {
