@@ -654,16 +654,17 @@ h3 {
   color: #6d1a36;
   width: 100%;
   padding: 1em;
+  margin-bottom: 1em;
   box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2), -10px 0px 10px 0px rgba(46, 61, 73, 0.2); }
   @media (min-width: 600px) {
     .project-card {
-      width: 50%; } }
+      width: 45%; } }
   @media (min-width: 900px) {
     .project-card {
-      width: 33%; } }
-  @media (min-width: 1200px) {
+      width: 30%; } }
+  @media (min-width: 1800px) {
     .project-card {
-      width: 25%; } }
+      width: 22%; } }
   .project-card h2,
   .project-card h3,
   .project-card h4 {

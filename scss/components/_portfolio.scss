@@ -30,20 +30,26 @@
   color: $project-text-color;
   width: 100%;
   padding: 1em;
+  margin-bottom: 1em;
 
   @include shadow;
 
   @include mq('sm') {
-    width: 50%;
+    width: 45%;
   }
 
   @include mq('med') {
-    width: 33%;
+    width: 30%;
   }
 
   @include mq('lg') {
-    width: 25%;
+    // width: 22%;
   }
+
+  @include mq('xl') {
+    width: 22%;
+  }
+
 
   & h2,
   & h3,
