@@ -35,7 +35,7 @@ function alertMessage(alertType, appendTo, message) {
 }
 
 /* ===== Visitor Message ===== */
-const visitorMsg1 = '<span><strong>Note:</strong> The clients at UNC-Wilmington have temporarily shut down their servers in preparation for Hurricane Florence. The web pages for these projects are not currently viewable.</span> <span class="close-x">&times;</span>';
+const visitorMsg1 = '<span><strong>Note:</strong> The clients at UNC-Wilmington have temporarily shut down their servers in preparation for Hurricane Florence. The web pages for these projects will once again be viewable when the servers are restored.</span> <span class="close-x">&times;</span>';
 
 // Create an alert message box, place it before the gallery of client projects, and insert the above alert message.
 alertMessage('warning', 'clientProjectAlerts', visitorMsg1);

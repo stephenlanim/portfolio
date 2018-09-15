@@ -63,7 +63,11 @@
 
   }
 
-  & img {
+  & a {
+    display: block;
+    padding: 1em;
+    margin: 0;
+    text-align: center;
 
     @include mq('sm') {
 
@@ -71,6 +75,25 @@
 
     @include mq('med') {
 
+    }
+  }
+
+  & i {
+    color: $project-text-color;
+    font-size: 8em;
+    @include transition($tim: $cub-bez);
+
+    @include mq('sm') {
+
+    }
+
+    @include mq('med') {
+
+    }
+
+    &:hover,
+    &focus {
+      transform: scale(1.2);
     }
 
   }
@@ -83,6 +106,7 @@
 
   & h4 {
     font-size: 1.2em;
+    margin: 0.25em 0;
   }
 
   & > .modal-trigger {

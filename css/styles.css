@@ -669,12 +669,28 @@ h3 {
   .project-card h4 {
     color: #6d1a36; }
 
+.project-thumb a {
+  display: block;
+  padding: 1em;
+  margin: 0;
+  text-align: center; }
+
+.project-thumb i {
+  color: #6d1a36;
+  font-size: 8em;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5); }
+  .project-thumb i:hover, .project-thumb ifocus {
+    transform: scale(1.2); }
+
 /* Project summary within project card */
 .project-summary {
   line-height: 1.4;
   font-size: 1.2em; }
   .project-summary h4 {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin: 0.25em 0; }
   .project-summary > .modal-trigger {
     display: block;
     margin-bottom: 0; }
