@@ -64,7 +64,52 @@
 }
 
 .about-links {
+  @include flexbox($dir:row, $just: space-evenly);
+  align-items: center;
+  // position: relative;
+  width: 90%;
 
+  @include mq('sm') {
+    width: 50%;
+  }
+
+  & i {
+    font-size: 40px;
+
+    @include mq('sm') {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  & .about-icon {
+    background-image: url(/images/treehouse_logo-white.png);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center -2px;
+    background-size: 56px 56px;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+
+    @include mq('sm') {
+      background-position: 5px 6px;
+      background-size: 58px 58px;
+      width: 58px;
+      height: 58px;
+      margin: 0 -15px;
+    }
+  }
+
+  // & img {
+  //   display: inline-block;
+  //   width: 28px;
+  //   // position: absolute;
+  //   top: -5;
+  //   @include mq('sm') {
+  //     width: 28px;
+  //   }
+  // }
 }
 
 .credit {

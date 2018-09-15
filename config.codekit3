@@ -98,6 +98,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/images\/treehouse_logo-black.png": {
+		"ft": 32768,
+		"iS": 59076,
+		"oA": 0,
+		"oAP": "\/images\/treehouse_logo-black.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/treehouse_logo-white.png": {
+		"ft": 32768,
+		"iS": 59076,
+		"oA": 0,
+		"oAP": "\/images\/treehouse_logo-white.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/index.html": {
 		"cB": 0,
 		"ft": 8192,
