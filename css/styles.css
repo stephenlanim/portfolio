@@ -371,7 +371,6 @@ footer {
   transition-timing-function: ease-in;
   display: flex;
   flex-direction: column;
-  height: auto;
   align-items: center;
   height: fit-content;
   height: -moz-fit-content;
@@ -472,7 +471,6 @@ footer {
 
 .nav-list {
   display: none;
-  align-items: center;
   list-style: none;
   text-align: center;
   margin: 0; }
