@@ -69,6 +69,10 @@
     margin: 0;
     text-align: center;
 
+    // Alternative style for icon's background
+    // border-radius: 5px;
+    // background-color: $project-text-color;
+
     @include mq('sm') {
 
     }
@@ -80,6 +84,8 @@
 
   & i {
     color: $project-text-color;
+    // Alternative icon color for when wrapper link has background color
+    // color: $project-card-color;
     font-size: 8em;
     @include transition($tim: $cub-bez);
 
