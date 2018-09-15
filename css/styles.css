@@ -563,11 +563,20 @@ footer {
     height: 56px; }
     @media (min-width: 600px) {
       .about-links .about-icon {
-        background-position: 5px 6px;
+        background-position: 5px 3px;
         background-size: 58px 58px;
         width: 58px;
         height: 58px;
         margin: 0 -15px; } }
+    @media (min-width: 1200px) {
+      .about-links .about-icon {
+        background-position: 5px 4px; } }
+    .about-links .about-icon:hover, .about-links .about-icon:focus {
+      background-image: url(/images/treehouse_logo-tertiary.png); }
+  .about-links a {
+    color: inherit; }
+    .about-links a:hover, .about-links afocus {
+      color: #2274a5; }
 
 .credit {
   display: none;
