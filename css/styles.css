@@ -651,7 +651,7 @@ h3 {
   font-size: 1.2em; }
   .project-summary h4 {
     font-size: 1.2em; }
-  .project-summary > .button {
+  .project-summary > .modal-trigger {
     display: block;
     margin-bottom: 0; }
 
