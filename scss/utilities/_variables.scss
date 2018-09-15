@@ -72,7 +72,7 @@ $error-color: #b92c5c;
 $warning-color: #2393a7;
 $nav-icon-color: #a6a6b9;
 $link-color-active: $color-secondary;
-$background-color: #d7d9ce;
+$background-color: $color-secondary;
 $border-color: darken($background-color, 20);
 
 $btn-color-default: $color-primary;

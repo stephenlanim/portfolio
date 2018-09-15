@@ -31,7 +31,7 @@
   padding: 0 0.5em;
 
 
-  @include mq('sm'){
+  @include mq('med'){
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
@@ -63,11 +63,58 @@
     margin: 1em;
   }
 
+  // & h1 {
+  //
+  //
+  //   @include mq('med') {
+  //
+  //   }
+  // }
+}
+
+.brand-titles {
+  @include flexbox($dir:column);
+  align-items: center;
+  // margin-top: 0;
+
+  @include mq('med') {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   & h1 {
     font-size: 1.5em;
+    margin-top: 0.25em;
+    // margin-bottom: 20px;
 
-    @include mq('sm') {
+    @include mq('med') {
       font-size: 2em;
+      margin-top: 0.2em;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  & :first-child {
+    // margin-top: 0.25em;
+    margin-bottom: 0;
+  }
+
+  & :last-child {
+    border-top: 3px solid $color-secondary;
+    font-weight: 300;
+    padding-top: 0.25em;
+    // margin-top: 0.25em;
+    margin-bottom: 0.25em;
+
+    @include mq('med') {
+      border: none;
+      border-left: 3px solid $color-secondary;
+      padding-top: inherit;
+      // margin-top: auto;
+      // margin-bottom: 0;
+      margin-bottom: inherit;
+      margin-left: 0.5em;
+      padding-left: 0.5em;
     }
   }
 }
@@ -81,7 +128,7 @@
   // height: 48px;
   // transition: all 0.25s;
 
-  @include mq('sm') {
+  @include mq('med') {
     display: none;
   }
 
@@ -130,7 +177,7 @@
   text-align: center;
   margin: 0;
 
-  @include mq('sm'){
+  @include mq('med'){
     @include flexbox($dir:row);
     // flex-direction: row;
     justify-content: space-evenly;
@@ -162,7 +209,7 @@
       color: $light-text-color;
     }
 
-    @include mq('sm') {
+    @include mq('med') {
       background-color: inherit;
       color: $color-secondary;
       border: none;
