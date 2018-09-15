@@ -375,11 +375,13 @@ footer {
   align-items: center;
   height: fit-content;
   height: -moz-fit-content;
-  width: 100%; }
+  width: 100%;
+  padding: 0 0.5em; }
   @media (min-width: 600px) {
     .navbar {
       flex-direction: row;
-      justify-content: space-evenly; } }
+      justify-content: space-evenly;
+      padding: 0; } }
   .navbar a {
     color: #d7d9ce; }
 
@@ -399,6 +401,12 @@ footer {
   width: 50px;
   height: 50px;
   margin: 1em; }
+
+.brand h1 {
+  font-size: 1.5em; }
+  @media (min-width: 600px) {
+    .brand h1 {
+      font-size: 2em; } }
 
 /* Hamburger */
 .hamburger {
@@ -490,7 +498,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  padding: 0; }
   @media (min-width: 600px) {
     .header {
       background-position: center center;
@@ -505,8 +514,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1em;
-  width: 90%;
+  width: 100%;
   z-index: 1; }
   @media (min-width: 600px) {
     .about {
@@ -559,28 +567,6 @@ h3 {
   padding: 1em; }
 
 /* ======================================
-    Buttons Styles
-   ====================================== */
-.button {
-  background-color: #6d1a36;
-  color: #d7d9ce;
-  border: none;
-  border-radius: 5px;
-  padding: 1em;
-  margin: 1em 0 0.5em 0;
-  width: fit-content;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in; }
-  .button:hover, .buttonfocus {
-    background-color: #4c1226;
-    color: #d7d9ce;
-    cursor: pointer;
-    text-decoration: none; }
-
-/* ======================================
     Portfolio Styles
    ====================================== */
 .portfolio h2,
@@ -624,12 +610,33 @@ h3 {
   font-size: 1.2em; }
   .project-summary h4 {
     font-size: 1.2em; }
-  .project-summary .button {
+  .project-summary > .button {
     display: block;
     margin-bottom: 0; }
 
-.modal-content-window .button {
-  display: inline-block; }
+.modal-content-window .view-btn {
+  background-color: #6d1a36;
+  color: #d7d9ce;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  display: inline-block;
+  margin: 0.5em 0; }
+  .modal-content-window .view-btn:hover, .modal-content-window .view-btnfocus {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
+  @media (min-width: 600px) {
+    .modal-content-window .view-btn {
+      padding: 1em; } }
 
 /* List of project details within modal */
 ul.project-info {
@@ -731,11 +738,15 @@ footer {
   line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 20px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #2274a5;
   color: #fff; }
+  @media (min-width: 600px) {
+    .alert {
+      align-items: center;
+      width: calc(100% - 100px); } }
   .alert:hover .close-x,
   .alertfocus .close-x {
     background-color: #fff;
@@ -747,10 +758,14 @@ footer {
   line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 20px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #32aaf1; }
+  @media (min-width: 600px) {
+    .confirmation {
+      align-items: center;
+      width: calc(100% - 100px); } }
   .confirmation:hover .close-x,
   .confirmationfocus .close-x {
     background-color: #fff;
@@ -762,10 +777,14 @@ footer {
   line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 20px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #b92c5c; }
+  @media (min-width: 600px) {
+    .error {
+      align-items: center;
+      width: calc(100% - 100px); } }
   .error:hover .close-x,
   .errorfocus .close-x {
     background-color: #fff;
@@ -777,10 +796,14 @@ footer {
   line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 20px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #2393a7; }
+  @media (min-width: 600px) {
+    .warning {
+      align-items: center;
+      width: calc(100% - 100px); } }
   .warning:hover .close-x,
   .warningfocus .close-x {
     background-color: #fff;
@@ -806,6 +829,28 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Regular modal trigger button */
+.modal-trigger {
+  background-color: #6d1a36;
+  color: #d7d9ce;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in; }
+  .modal-trigger:hover, .modal-triggerfocus {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
+  @media (min-width: 600px) {
+    .modal-trigger {
+      padding: 1em; } }
+
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
 .vid-modal-trigger {
   background-color: #fff;
@@ -881,22 +926,55 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 /* The container housing the modal-title and close button. */
 .modal-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center; }
+  @media (min-width: 600px) {
+    .modal-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
 
 /* The title in the modal content window. */
 .modal-title {
   color: #d7d9ce;
   font-size: 2.0em;
   margin: 0; }
+  @media (min-width: 600px) {
+    .modal-title {
+      order: 0; } }
 
 /* The close button within the modal content window. */
 .close-btn {
+  background-color: #6d1a36;
+  color: #d7d9ce;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
   font-size: 1.2em;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 0.5em;
+  align-self: flex-end; }
+  .close-btn:hover, .close-btnfocus {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
+  @media (min-width: 600px) {
+    .close-btn {
+      padding: 1em; } }
+  @media (min-width: 600px) {
+    .close-btn {
+      order: 1; } }
 
 /* ========================================
   iframe Styles

@@ -37,9 +37,10 @@ HTML Object Requirements Per Modal
 
       <!-- Header section for modal content -->
       <div class="modal-header">
-        <h4 class="modal-title">[Project Title]</h2>
         <!-- Close Button -->
         <button class="close-btn">&#10006; Close</button>
+        <!-- Modal Title -->
+        <h4 class="modal-title">[Project Title]</h2>
       </div>
 
       <!-- Embedded Object -->

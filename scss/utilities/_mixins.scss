@@ -85,6 +85,34 @@
   margin-bottom: auto;
 }
 
+// == Buttons ==
+@mixin button {
+  background-color: $btn-color-default;
+  color: $btn-text-color;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  // text-transform: uppercase;
+  @include transition($dur: 0.2s);
+
+  &:hover,
+  &focus {
+    background-color: darken($btn-color-default, 8);
+    // background-color: lighten($btn-color-default, 5);
+    color: $btn-text-color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  @include mq('sm') {
+    padding: 1em;
+  }
+}
+
 // == Alert Messages ==
 @mixin alert {
   color: white;
@@ -92,8 +120,13 @@
   line-height: 1.4;
   padding: 0.5em;
   margin: 2em auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 20px);
 
   @include flexbox;
-  align-items: center;
+  align-items: flex-start;
+
+  @include mq('sm') {
+    align-items: center;
+    width: calc(100% - 100px);
+  }
 }

@@ -21,18 +21,9 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Regular modal trigger button */
- // button.modal-trigger {
- //   // border-radius: 5px;
- //   background-color: $color-secondary;
- //   color: $color-primary;
- //
- //   &:hover,
- //   &focus {
- //     background-color: darken($color-secondary, 20);
- //     color: $color-primary;
- //     cursor: pointer;
- //   }
- // }
+ .modal-trigger {
+   @include button;
+ }
 
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
 .vid-modal-trigger {
@@ -119,8 +110,14 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* The container housing the modal-title and close button. */
 .modal-header {
-  @include flexbox($dir:row, $just:space-between);
+  @include flexbox($dir:column, $just:space-between);
   align-items: center;
+
+  @include mq('sm') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* The title in the modal content window. */
@@ -128,10 +125,15 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   color: $color-secondary;
   font-size: 2.0em;
   margin: 0;
+
+  @include mq('sm') {
+    order: 0;
+  }
 }
 
 /* The close button within the modal content window. */
 .close-btn {
+  @include button;
   // background-color: $color-secondary;
   // color: $color-primary;
   // float: right;
@@ -139,6 +141,8 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   margin: 0;
+  margin-bottom: 0.5em;
+  align-self: flex-end;
 
   // &:hover,
   // &:focus {
@@ -148,6 +152,9 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   //   // transform: scale(1.1);
   //   text-decoration: none;
   // }
+  @include mq('sm') {
+    order: 1;
+  }
 }
 
 

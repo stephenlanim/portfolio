@@ -69,15 +69,17 @@
     font-size: 1.2em;
   }
 
-  & .button {
+  & > .button {
     display: block;
     margin-bottom: 0;
   }
 }
 
 .modal-content-window {
-  & .button {
+  & .view-btn {
+    @include button;
     display: inline-block;
+    margin: 0.5em 0;
   }
 }
 
