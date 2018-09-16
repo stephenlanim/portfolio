@@ -2,25 +2,15 @@
     Navigation Styles
    ====================================== */
 
-
-
 .navbar {
   font-size: 1.2em;
   background-color: $color-primary;
-  // background-color: $color-secondary;
-  // color: $dark-text-color;
   color: $color-secondary;
-  // color: $light-text-color;
-  // border-bottom: 5px double $color-secondary;
   border-bottom: 5px solid $color-secondary;
-  // box-shadow: 10px 10px 10px 0px rgba(46,61,73,0.4),
-  //   -10px 0px 10px 0px rgba(46,61,73,0.4);
   box-shadow: 5px 5px 10px 0px rgba(46,61,73,0.4),
     -5px 0px 10px 0px rgba(46,61,73,0.4);
-  // border-style: ;
   @include sticky-top;
   overflow: visible;
-  // height: auto;
 
   @include transition($dur:0.1s);
 
@@ -179,24 +169,20 @@
 
   @include mq('med'){
     @include flexbox($dir:row);
-    // flex-direction: row;
     justify-content: space-evenly;
     margin-left: auto;
   }
 
   & li {
-    // background-color: #fff;
     margin: .25em 0;
     padding: 0.5em;
   }
 
   & a {
     background-color: $color-secondary;
-    // border: 3px solid $link-color-active;
     border-radius: 5px;
     padding: 1em;
     color: $color-primary;
-    // color: $light-text-color;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
