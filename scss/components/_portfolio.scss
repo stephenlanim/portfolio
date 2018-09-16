@@ -9,15 +9,17 @@
     color: $portfolio-heading-color;
   }
 
-  & h2 {
+  & .port-heading > h2 {
+    // font-size: 2.25em;
     text-align: center;
   }
 }
 
 .client-projects,
-.treehouse-projects {
+.practice-projects {
 
   & > h3 {
+    font-size: 1.8em;
     margin-bottom: 1em;
   }
 
@@ -125,7 +127,7 @@
   font-size: 1.2em;
 
   & h4 {
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin: 0.25em 0;
   }
 
@@ -133,7 +135,7 @@
     text-align: center;
 
     & ~ p {
-
+      font-size: 1.2em;
     }
   }
 
@@ -147,6 +149,7 @@
 .modal-content-window {
   & .view-btn {
     @include button;
+    font-size: 1.2em;
     display: inline-block;
     margin: 0.5em 0;
   }
@@ -180,6 +183,13 @@ ul.project-info {
     }
   }
 
+  & li {
+    font-size: 1.3em;
+  }
+  & li > ul > li {
+    font-size: 1.1em;
+  }
+
   & .project-tasks li {
     list-style: disc;
     list-style-position: inside;
@@ -194,6 +204,7 @@ ul.project-info {
     border-radius: 6px;
     background: $color-tertiary;
     color: $light-text-color;
+    // font-size: 1.1em;
     padding: 5px 10px;
     margin: 2px;
   }

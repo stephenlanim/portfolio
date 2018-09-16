@@ -38,6 +38,10 @@
   @include flexbox($dir: row, $just:space-between);
   align-items: center;
   width: 96%;
+
+  @include mq('med') {
+    width: 80%;
+  }
 }
 
 .brand {
@@ -47,7 +51,7 @@
   }
 
   & .avatar {
-    border: 4px double $color-secondary;
+    border: 8px double $color-secondary;
     border-radius: 50%;
     display: none;
     width: 60px;
@@ -168,6 +172,7 @@
   margin: 0;
 
   @include mq('med'){
+    font-size: 1.2em;
     @include flexbox($dir:row);
     justify-content: space-evenly;
     margin-left: auto;
@@ -199,6 +204,7 @@
       background-color: inherit;
       color: $color-secondary;
       border: none;
+      padding: 0.5em;
       width: auto;
 
       &:hover,
