@@ -361,6 +361,8 @@ footer {
   font-size: 1.2em;
   background-color: #6d1a36;
   color: #d7d9ce;
+  border-bottom: 5px solid #d7d9ce;
+  box-shadow: 5px 5px 10px 0px rgba(46, 61, 73, 0.4), -5px 0px 10px 0px rgba(46, 61, 73, 0.4);
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -822,6 +824,7 @@ ul.project-info {
 footer {
   background-color: #6d1a36;
   color: #d7d9ce;
+  border-top: 5px solid #d7d9ce;
   display: flex;
   flex-direction: row;
   justify-content: center;

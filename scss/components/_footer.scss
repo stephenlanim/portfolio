@@ -5,6 +5,7 @@
 footer {
   background-color: $color-primary;
   color: $footer-text-color;
+  border-top: 5px solid $color-secondary;
   @include flexbox($dir:row, $just:center);
   align-items: center;
   height: fit-content;

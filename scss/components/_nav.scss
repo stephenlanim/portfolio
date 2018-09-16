@@ -11,6 +11,13 @@
   // color: $dark-text-color;
   color: $color-secondary;
   // color: $light-text-color;
+  // border-bottom: 5px double $color-secondary;
+  border-bottom: 5px solid $color-secondary;
+  // box-shadow: 10px 10px 10px 0px rgba(46,61,73,0.4),
+  //   -10px 0px 10px 0px rgba(46,61,73,0.4);
+  box-shadow: 5px 5px 10px 0px rgba(46,61,73,0.4),
+    -5px 0px 10px 0px rgba(46,61,73,0.4);
+  // border-style: ;
   @include sticky-top;
   overflow: visible;
   // height: auto;
