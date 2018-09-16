@@ -17,6 +17,10 @@
 .client-projects,
 .treehouse-projects {
 
+  & > h3 {
+    margin-bottom: 1em;
+  }
+
 }
 
 .project-gallery {
