@@ -74,7 +74,7 @@ const $modalContent = $("div.modal-content-window");
 // Function for when user clicks modal trigger button
 $($modalTrigger).click(function(){
   // Open the modal corresponding to the clicked trigger
-  $(this).parent().find(".modal-overlay").css({"display": "block"});
+  $(this).parent().parent().find(".modal-overlay").css({"display": "block"});
   // $(this).parent().find(".modal-overlay").toggle('scale', 300);
 });
 

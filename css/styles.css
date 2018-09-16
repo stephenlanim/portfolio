@@ -678,6 +678,8 @@ h3 {
   width: 100%;
   padding: 1em;
   margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
   box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2), -10px 0px 10px 0px rgba(46, 61, 73, 0.2); }
   @media (min-width: 600px) {
     .project-card {
@@ -710,13 +712,19 @@ h3 {
 
 /* Project summary within project card */
 .project-summary {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   line-height: 1.4;
   font-size: 1.2em; }
   .project-summary h4 {
     font-size: 1.2em;
     margin: 0.25em 0; }
+  .project-summary > h4 {
+    text-align: center; }
   .project-summary > .modal-trigger {
     display: block;
+    margin-top: auto;
     margin-bottom: 0; }
 
 .modal-content-window .view-btn {
@@ -1047,10 +1055,12 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 .modal-title {
   color: #d7d9ce;
   font-size: 2.0em;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }
   @media (min-width: 600px) {
     .modal-title {
-      order: 0; } }
+      order: 0;
+      width: 80%; } }
 
 /* The close button within the modal content window. */
 .close-btn {

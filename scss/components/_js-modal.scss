@@ -131,9 +131,11 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   color: $color-secondary;
   font-size: 2.0em;
   margin: 0;
+  width: 100%;
 
   @include mq('sm') {
     order: 0;
+    width: 80%;
   }
 }
 
