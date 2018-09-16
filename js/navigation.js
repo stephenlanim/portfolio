@@ -39,6 +39,9 @@ $('.nav-list a').click( function(e) {
 
 });
 
+/* === Anchor Link Activator === */
+// 09-16-2018: I need to create a function that makes an achor link active not upon clicking but upon the user scrolling to that section of the page, regardless of whether or not they clicked the anchor link to get there.
+
 
 /* === Nav Link Activator === */
 // 09-15-2018: Not currently in use because all links are currently anchors. But I'm keeping this code for if I decide to create more pages within this website.

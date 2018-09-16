@@ -16,3 +16,8 @@
   90% {transform: rotate(10deg);}
   100% {transform: rotate(0deg);}
 }
+
+/* Rotate counter clockwise by 90 degrees */
+.rotateCCW90 {
+  transform: rotate(-90deg);
+}
