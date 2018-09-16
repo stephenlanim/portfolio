@@ -320,6 +320,346 @@ a {
   a:hover, a:active {
     color: #555; }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This stylesheet can be used for any page that uses JavaScript modals.
+
+Use this document in conjunction with js-modal.js for the scripts that open and close the modal and stop a video inside the modal from playing.
+
+This set of code is a very modified version of the methods used in "Create a Modal With HTML, CSS & JavaScript" by Brad Traversy at https://www.youtube.com/watch?v=6ophW7Ask_0.
+
+You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraversy/pen/zEOrPp to play around with Brad's code on a live page in real time.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ======================================
+  Modal Trigger/Object Styles
+========================================= */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  The styles here are just for styling different types of objects used to trigger a modal.
+
+  The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Regular modal trigger button */
+.modal-trigger {
+  background-color: #6d1a36;
+  color: #d7d9ce;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in; }
+  .modal-trigger:hover, .modal-triggerfocus {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
+  @media (min-width: 600px) {
+    .modal-trigger {
+      padding: 1em; } }
+
+/* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
+.vid-modal-trigger {
+  background-color: #fff;
+  position: relative;
+  /* margin: 0 auto; */
+  margin-bottom: 10px;
+  /* overflow: hidden; */
+  border: solid 2px #007073;
+  border-radius: 5px;
+  color: #007073;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1.25em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-duration: 0.3s; }
+
+.vid-modal-trigger:hover,
+.vid-modal-trigger:focus {
+  box-shadow: #007073 0px 0px 8px;
+  text-decoration: none;
+  transform: scale(1.05); }
+
+/* ======================================
+  Modal Window Styles
+========================================= */
+/* The entire modal overlay including its transparent background. */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/* Just the content window within the modal. */
+.modal-content-window {
+  background-color: #d7d9ce;
+  border-radius: 5px;
+  margin: 120px auto;
+  padding: 1em;
+  width: 90%;
+  max-height: 95vh;
+  overflow: auto;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
+  animation-name: modalopen;
+  /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  @media (min-width: 600px) {
+    .modal-content-window {
+      width: 70%;
+      max-height: 80vh; } }
+  @media (min-width: 900px) {
+    .modal-content-window {
+      width: 60%; } }
+  @media (min-width: 1200px) {
+    .modal-content-window {
+      width: 50%; } }
+
+/* === .modal-content-window animation === */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: scale(0.5); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+/* The container housing the modal-title and close button. */
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  @media (min-width: 600px) {
+    .modal-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
+
+/* The title in the modal content window. */
+.modal-title {
+  color: #d7d9ce;
+  font-size: 2.0em;
+  margin: 0;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .modal-title {
+      order: 0;
+      width: 80%; } }
+
+/* The close button within the modal content window. */
+.close-btn {
+  background-color: #6d1a36;
+  color: #d7d9ce;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  font-size: 1.4em;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 0 !important;
+  align-self: flex-end;
+  width: 64px;
+  height: 64px; }
+  .close-btn:hover, .close-btnfocus {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
+  @media (min-width: 600px) {
+    .close-btn {
+      padding: 1em; } }
+  @media (min-width: 600px) {
+    .close-btn {
+      order: 1; } }
+
+/* ========================================
+  iframe Styles
+=========================================== */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Widths and heights are at 16:9 aspect ratio.
+  Dimensions have been sized to fit within a three-column content section on a UNCW web page.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  === All screen sizes ===  */
+iframe {
+  border: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  /* max-width: 100%; */
+  /* max-height: 100vh; */
+  margin-bottom: 10px; }
+
+/*  === For smartphone only ===  */
+@media only screen and (max-width: 599px) {
+  iframe {
+    width: 448px;
+    height: 252px; } }
+
+/* End of smartphone media query) */
+/*  === For tablet portrait only ===  */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  iframe {
+    width: 512px;
+    height: 288px; } }
+
+/* End of tablet portrait media query */
+/* For  === tablet landscape only ===  */
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  iframe {
+    width: 672px;
+    height: 378px; } }
+
+/* End of tablet landscape media query */
+/*  === For desktop up ===  */
+@media only screen and (min-width: 1200px) {
+  iframe {
+    width: 720px;
+    height: 405px; } }
+
+/* End of desktop media query */
+/* ======================================
+  Modal Window Add-On Classes
+========================================= */
+.width-auto {
+  width: auto; }
+
+.width-90prcnt {
+  width: 90%; }
+
+.width-98prcnt {
+  width: 98%; }
+
+.height-80prcnt {
+  height: 80%; }
+
+.height-90prcnt {
+  height: 90%; }
+
+.height-98prcnt {
+  height: 98%; }
+
+.height-auto {
+  height: auto; }
+
+/* ======================================
+    Page Notifications Styles
+   ====================================== */
+.close-x {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in; }
+
+.alert {
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 0.5em;
+  margin: 2em auto;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: flex-start;
+  background-color: #2274a5;
+  color: #fff; }
+  @media (min-width: 600px) {
+    .alert {
+      align-items: center;
+      width: calc(100% - 100px); } }
+  .alert:hover .close-x,
+  .alertfocus .close-x {
+    background-color: #fff;
+    color: #2274a5; }
+
+.confirmation {
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 0.5em;
+  margin: 2em auto;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: flex-start;
+  background-color: #32aaf1; }
+  @media (min-width: 600px) {
+    .confirmation {
+      align-items: center;
+      width: calc(100% - 100px); } }
+  .confirmation:hover .close-x,
+  .confirmationfocus .close-x {
+    background-color: #fff;
+    color: #32aaf1; }
+
+.error {
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 0.5em;
+  margin: 2em auto;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: flex-start;
+  background-color: #b92c5c; }
+  @media (min-width: 600px) {
+    .error {
+      align-items: center;
+      width: calc(100% - 100px); } }
+  .error:hover .close-x,
+  .errorfocus .close-x {
+    background-color: #fff;
+    color: #b92c5c; }
+
+.warning {
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  line-height: 1.4;
+  padding: 0.5em;
+  margin: 2em auto;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: flex-start;
+  background-color: #2393a7; }
+  @media (min-width: 600px) {
+    .warning {
+      align-items: center;
+      width: calc(100% - 100px); } }
+  .warning:hover .close-x,
+  .warningfocus .close-x {
+    background-color: #fff;
+    color: #2393a7; }
+
 /* ======================================
     Grid Styles
    ====================================== */
@@ -672,6 +1012,10 @@ h2 {
 .portfolio .port-heading > h2 {
   text-align: center; }
 
+.portfolio h4 {
+  font-size: 32px;
+  margin: 0.25em 0; }
+
 .client-projects > h3,
 .practice-projects > h3 {
   font-size: 1.8em;
@@ -708,6 +1052,9 @@ h2 {
   .project-card h4 {
     color: #6d1a36; }
 
+.project-thumb ~ h4 {
+  text-align: center; }
+
 .project-thumb a {
   display: block;
   padding: 1em;
@@ -730,9 +1077,6 @@ h2 {
   flex-grow: 1;
   line-height: 1.4;
   font-size: 1.2em; }
-  .project-summary h4 {
-    font-size: 1.6em;
-    margin: 0.25em 0; }
   .project-summary > h4 {
     text-align: center; }
     .project-summary > h4 ~ p {
@@ -759,10 +1103,11 @@ h2 {
     .project-summary .results-acrdn-trigger i {
       margin-left: 5px;
       transition: transform .2s ease-out; }
-  .project-summary > .modal-trigger {
-    display: block;
-    margin-top: auto;
-    margin-bottom: 0; }
+
+.modal-trigger {
+  display: block;
+  margin-top: auto;
+  margin-bottom: 0; }
 
 .modal-content-window .view-btn {
   background-color: #6d1a36;
@@ -884,345 +1229,5 @@ footer {
   height: fit-content;
   height: -moz-fit-content;
   width: 100%; }
-
-/* ======================================
-    Page Notifications Styles
-   ====================================== */
-.close-x {
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 2em;
-  font-weight: bold;
-  margin-left: auto;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  transition-property: all;
-  transition-duration: 0.25s;
-  transition-timing-function: ease-in; }
-
-.alert {
-  color: white;
-  border-radius: 5px;
-  font-size: 1.2em;
-  line-height: 1.4;
-  padding: 0.5em;
-  margin: 2em auto;
-  width: calc(100% - 20px);
-  display: flex;
-  align-items: flex-start;
-  background-color: #2274a5;
-  color: #fff; }
-  @media (min-width: 600px) {
-    .alert {
-      align-items: center;
-      width: calc(100% - 100px); } }
-  .alert:hover .close-x,
-  .alertfocus .close-x {
-    background-color: #fff;
-    color: #2274a5; }
-
-.confirmation {
-  color: white;
-  border-radius: 5px;
-  font-size: 1.2em;
-  line-height: 1.4;
-  padding: 0.5em;
-  margin: 2em auto;
-  width: calc(100% - 20px);
-  display: flex;
-  align-items: flex-start;
-  background-color: #32aaf1; }
-  @media (min-width: 600px) {
-    .confirmation {
-      align-items: center;
-      width: calc(100% - 100px); } }
-  .confirmation:hover .close-x,
-  .confirmationfocus .close-x {
-    background-color: #fff;
-    color: #32aaf1; }
-
-.error {
-  color: white;
-  border-radius: 5px;
-  font-size: 1.2em;
-  line-height: 1.4;
-  padding: 0.5em;
-  margin: 2em auto;
-  width: calc(100% - 20px);
-  display: flex;
-  align-items: flex-start;
-  background-color: #b92c5c; }
-  @media (min-width: 600px) {
-    .error {
-      align-items: center;
-      width: calc(100% - 100px); } }
-  .error:hover .close-x,
-  .errorfocus .close-x {
-    background-color: #fff;
-    color: #b92c5c; }
-
-.warning {
-  color: white;
-  border-radius: 5px;
-  font-size: 1.2em;
-  line-height: 1.4;
-  padding: 0.5em;
-  margin: 2em auto;
-  width: calc(100% - 20px);
-  display: flex;
-  align-items: flex-start;
-  background-color: #2393a7; }
-  @media (min-width: 600px) {
-    .warning {
-      align-items: center;
-      width: calc(100% - 100px); } }
-  .warning:hover .close-x,
-  .warningfocus .close-x {
-    background-color: #fff;
-    color: #2393a7; }
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This stylesheet can be used for any page that uses JavaScript modals.
-
-Use this document in conjunction with js-modal.js for the scripts that open and close the modal and stop a video inside the modal from playing.
-
-This set of code is a very modified version of the methods used in "Create a Modal With HTML, CSS & JavaScript" by Brad Traversy at https://www.youtube.com/watch?v=6ophW7Ask_0.
-
-You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraversy/pen/zEOrPp to play around with Brad's code on a live page in real time.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ======================================
-  Modal Trigger/Object Styles
-========================================= */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  The styles here are just for styling different types of objects used to trigger a modal.
-
-  The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* Regular modal trigger button */
-.modal-trigger {
-  background-color: #6d1a36;
-  color: #d7d9ce;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em;
-  margin: 1em 0 0.5em 0;
-  width: fit-content;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in; }
-  .modal-trigger:hover, .modal-triggerfocus {
-    background-color: #4c1226;
-    color: #d7d9ce;
-    cursor: pointer;
-    text-decoration: none; }
-  @media (min-width: 600px) {
-    .modal-trigger {
-      padding: 1em; } }
-
-/* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
-.vid-modal-trigger {
-  background-color: #fff;
-  position: relative;
-  /* margin: 0 auto; */
-  margin-bottom: 10px;
-  /* overflow: hidden; */
-  border: solid 2px #007073;
-  border-radius: 5px;
-  color: #007073;
-  display: block;
-  padding: 0;
-  overflow: hidden;
-  font-size: 1.25em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition-duration: 0.3s; }
-
-.vid-modal-trigger:hover,
-.vid-modal-trigger:focus {
-  box-shadow: #007073 0px 0px 8px;
-  text-decoration: none;
-  transform: scale(1.05); }
-
-/* ======================================
-  Modal Window Styles
-========================================= */
-/* The entire modal overlay including its transparent background. */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); }
-
-/* Just the content window within the modal. */
-.modal-content-window {
-  background-color: #d7d9ce;
-  border-radius: 5px;
-  margin: 120px auto;
-  padding: 1em;
-  width: 90%;
-  max-height: 95vh;
-  overflow: auto;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
-  animation-name: modalopen;
-  /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
-  animation-duration: 0.75s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  @media (min-width: 600px) {
-    .modal-content-window {
-      width: 70%;
-      max-height: 80vh; } }
-  @media (min-width: 900px) {
-    .modal-content-window {
-      width: 60%; } }
-  @media (min-width: 1200px) {
-    .modal-content-window {
-      width: 50%; } }
-
-/* === .modal-content-window animation === */
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: scale(0.5); }
-  to {
-    opacity: 1;
-    transform: scale(1); } }
-
-/* The container housing the modal-title and close button. */
-.modal-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-  @media (min-width: 600px) {
-    .modal-header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center; } }
-
-/* The title in the modal content window. */
-.modal-title {
-  color: #d7d9ce;
-  font-size: 2.0em;
-  margin: 0;
-  width: 100%; }
-  @media (min-width: 600px) {
-    .modal-title {
-      order: 0;
-      width: 80%; } }
-
-/* The close button within the modal content window. */
-.close-btn {
-  background-color: #6d1a36;
-  color: #d7d9ce;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em;
-  margin: 1em 0 0.5em 0;
-  width: fit-content;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in;
-  font-size: 1.4em;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-  margin: 0;
-  margin-bottom: 0.5em;
-  padding: 0 !important;
-  align-self: flex-end;
-  width: 64px;
-  height: 64px; }
-  .close-btn:hover, .close-btnfocus {
-    background-color: #4c1226;
-    color: #d7d9ce;
-    cursor: pointer;
-    text-decoration: none; }
-  @media (min-width: 600px) {
-    .close-btn {
-      padding: 1em; } }
-  @media (min-width: 600px) {
-    .close-btn {
-      order: 1; } }
-
-/* ========================================
-  iframe Styles
-=========================================== */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  Widths and heights are at 16:9 aspect ratio.
-  Dimensions have been sized to fit within a three-column content section on a UNCW web page.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/*  === All screen sizes ===  */
-iframe {
-  border: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  /* max-width: 100%; */
-  /* max-height: 100vh; */
-  margin-bottom: 10px; }
-
-/*  === For smartphone only ===  */
-@media only screen and (max-width: 599px) {
-  iframe {
-    width: 448px;
-    height: 252px; } }
-
-/* End of smartphone media query) */
-/*  === For tablet portrait only ===  */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-  iframe {
-    width: 512px;
-    height: 288px; } }
-
-/* End of tablet portrait media query */
-/* For  === tablet landscape only ===  */
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
-  iframe {
-    width: 672px;
-    height: 378px; } }
-
-/* End of tablet landscape media query */
-/*  === For desktop up ===  */
-@media only screen and (min-width: 1200px) {
-  iframe {
-    width: 720px;
-    height: 405px; } }
-
-/* End of desktop media query */
-/* ======================================
-  Modal Window Add-On Classes
-========================================= */
-.width-auto {
-  width: auto; }
-
-.width-90prcnt {
-  width: 90%; }
-
-.width-98prcnt {
-  width: 98%; }
-
-.height-80prcnt {
-  height: 80%; }
-
-.height-90prcnt {
-  height: 90%; }
-
-.height-98prcnt {
-  height: 98%; }
-
-.height-auto {
-  height: auto; }
 
 /*# sourceMappingURL=styles.css.map */

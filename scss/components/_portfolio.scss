@@ -13,6 +13,11 @@
     // font-size: 2.25em;
     text-align: center;
   }
+
+  & h4 {
+    font-size: 32px;
+    margin: 0.25em 0;
+  }
 }
 
 .client-projects,
@@ -65,6 +70,7 @@
     color: $project-text-color;
   }
 
+
 }
 
 .project-thumb {
@@ -75,6 +81,10 @@
 
   @include mq('med') {
 
+  }
+
+  & ~ h4 {
+    text-align: center;
   }
 
   & a {
@@ -126,10 +136,10 @@
   line-height: 1.4;
   font-size: 1.2em;
 
-  & h4 {
-    font-size: 1.6em;
-    margin: 0.25em 0;
-  }
+  // & h4 {
+  //   font-size: 1.6em;
+  //   margin: 0.25em 0;
+  // }
 
   & > h4 {
     text-align: center;
@@ -144,11 +154,12 @@
     @include accordion-trigger;
   }
 
-  & > .modal-trigger {
-    display: block;
-    margin-top: auto;
-    margin-bottom: 0;
-  }
+}
+
+.modal-trigger {
+  display: block;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .modal-content-window {
