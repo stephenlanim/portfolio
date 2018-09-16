@@ -45,11 +45,11 @@
   }
 
   @include mq('med') {
-    width: 30%;
+    // width: 30%;
   }
 
   @include mq('lg') {
-    // width: 22%;
+    width: 30%;
   }
 
   @include mq('xl') {

@@ -684,7 +684,7 @@ h3 {
   @media (min-width: 600px) {
     .project-card {
       width: 45%; } }
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     .project-card {
       width: 30%; } }
   @media (min-width: 1800px) {
