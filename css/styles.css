@@ -1074,7 +1074,6 @@ h2 {
   .project-thumb i:hover, .project-thumb ifocus {
     transform: scale(1.2); }
 
-/* Project summary within project card */
 .modal-trigger {
   display: block;
   margin-top: auto;
@@ -1143,11 +1142,7 @@ ul.project-info {
   width: 100%;
   transition-property: all;
   transition-duration: 0.2s;
-  transition-timing-function: ease-in;
-  position: sticky;
-  position: -moz-sticky;
-  position: -webkit-sticky;
-  top: 0px; }
+  transition-timing-function: ease-in; }
   .summary-trigger:hover, .summary-trigger.active,
   .tasks-trigger:hover,
   .tasks-trigger.active,
@@ -1157,6 +1152,14 @@ ul.project-info {
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
+  @media (min-width: 600px) {
+    .summary-trigger.active,
+    .tasks-trigger.active,
+    .results-trigger.active {
+      position: sticky;
+      position: -moz-sticky;
+      position: -webkit-sticky;
+      top: 0px; } }
   .summary-trigger i,
   .tasks-trigger i,
   .results-trigger i {

@@ -135,6 +135,15 @@
     text-decoration: none;
   }
 
+  @include mq('sm') {
+    &.active {
+      position: sticky;
+      position: -moz-sticky;
+      position: -webkit-sticky;
+      top: 0px;
+    }
+  }
+  
   & i {
     margin-left: 5px;
     transition: transform .2s ease-out;
