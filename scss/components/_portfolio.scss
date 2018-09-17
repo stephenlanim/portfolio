@@ -177,10 +177,6 @@ ul.project-info {
   padding: 0;
   // text-align: center;
 
-  & .task-acrdn-trigger {
-    @include accordion-trigger;
-  }
-
   & li {
     font-size: 1.3em;
     margin-bottom: 0.5em;
@@ -189,13 +185,13 @@ ul.project-info {
     font-size: 1.1rem;
   }
 
-  & .project-tasks li {
-    font-size: 1.3rem;
-    line-height: 1.3;
-    list-style: disc;
-    list-style-position: outside;
-    margin-left: 2em;
-  }
+  // & .project-tasks li {
+  //   font-size: 1.3rem;
+  //   line-height: 1.3;
+  //   list-style: disc;
+  //   list-style-position: outside;
+  //   margin-left: 2em;
+  // }
 
   & .skill-tags {
     margin-left: 0.5em;
@@ -219,9 +215,22 @@ ul.project-info {
   }
 }
 
-.results-acrdn-trigger {
+/* === Accordion Triggers and Content === */
+
+.summary-trigger,
+.tasks-trigger,
+.results-trigger {
   @include accordion-trigger;
 }
+
+.project-tasks li {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 2em;
+}
+
 
 .project-results {
   padding: 0 0.5em;

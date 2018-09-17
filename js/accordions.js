@@ -37,7 +37,7 @@ function accordionByIndex(triggerClass, contentClass) {
         // Toggle open/close the content that matches the clicked trigger's index number
         $accordionContent.eq(i).toggle(200);
         // Rotate arrow in clicked trigger
-        $clickedTrigger.parent().find('i').toggleClass('rotateCCW90');
+        $clickedTrigger.find('i').toggleClass('rotateCCW90');
       } // end of if statement
 
     } // end of for loop
@@ -69,12 +69,19 @@ function btnAccordion(triggerClass, contentClass) {
   Project Results Scripts
 =========================================== */
 
-// btnAccordion(".results-acrdn-trigger", ".project-results");
-accordionByIndex(".results-acrdn-trigger", ".project-results");
+// btnAccordion(".results-trigger", ".project-results");
+accordionByIndex(".results-trigger", ".project-results");
+
+/* ========================================
+  Project Summary Scripts
+=========================================== */
+
+// btnAccordion(".tasks-trigger", ".project-tasks");
+accordionByIndex(".summary-trigger", ".project-summary");
 
 /* ========================================
   Project Tasks Scripts
 =========================================== */
 
-// btnAccordion(".task-acrdn-trigger", ".project-tasks");
-accordionByIndex(".task-acrdn-trigger", ".project-tasks");
+// btnAccordion(".tasks-trigger", ".project-tasks");
+accordionByIndex(".tasks-trigger", ".project-tasks");

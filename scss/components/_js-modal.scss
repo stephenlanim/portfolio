@@ -23,6 +23,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 /* Regular modal trigger button */
  .modal-trigger {
    @include button;
+   font-size: 1.2rem;
  }
 
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
