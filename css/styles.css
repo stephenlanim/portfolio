@@ -1016,6 +1016,10 @@ h2 {
   font-size: 32px;
   margin: 0.25em 0; }
 
+.portfolio p {
+  font-size: 1.2em;
+  margin: 0 0 0.5em 0; }
+
 .client-projects > h3,
 .practice-projects > h3 {
   font-size: 1.8em;
@@ -1079,30 +1083,6 @@ h2 {
   font-size: 1.2em; }
   .project-summary > h4 {
     text-align: center; }
-    .project-summary > h4 ~ p {
-      font-size: 1.2em;
-      margin: 0.5em 0; }
-  .project-summary .results-acrdn-trigger {
-    background-color: #d7d9ce;
-    color: #6d1a36;
-    border: 3px solid #6d1a36;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    width: fit-content;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in; }
-    .project-summary .results-acrdn-trigger:hover, .project-summary .results-acrdn-trigger:focus {
-      background-color: #4c1226;
-      color: #d7d9ce;
-      cursor: pointer;
-      text-decoration: none; }
-    .project-summary .results-acrdn-trigger i {
-      margin-left: 5px;
-      transition: transform .2s ease-out; }
 
 .modal-trigger {
   display: block;
@@ -1144,13 +1124,13 @@ ul.project-info {
     border-radius: 5px;
     padding: 0.5em;
     margin: 0.5em 0;
-    width: fit-content;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     transition-property: all;
     transition-duration: 0.2s;
     transition-timing-function: ease-in; }
-    ul.project-info .task-acrdn-trigger:hover, ul.project-info .task-acrdn-trigger:focus {
+    ul.project-info .task-acrdn-trigger:hover, ul.project-info .task-acrdn-trigger.active {
       background-color: #4c1226;
       color: #d7d9ce;
       cursor: pointer;
@@ -1182,6 +1162,31 @@ ul.project-info {
     margin: 2px; }
   ul.project-info .skill-tags li:nth-child(even) {
     background: #13505b; }
+
+.results-acrdn-trigger {
+  background-color: #d7d9ce;
+  color: #6d1a36;
+  border: 3px solid #6d1a36;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in; }
+  .results-acrdn-trigger:hover, .results-acrdn-trigger.active {
+    background-color: #4c1226;
+    color: #d7d9ce;
+    cursor: pointer;
+    text-decoration: none; }
+  .results-acrdn-trigger i {
+    margin-left: 5px;
+    transition: transform .2s ease-out; }
+
+.project-results {
+  padding: 0 0.5em; }
 
 /* ======================================
     Animations

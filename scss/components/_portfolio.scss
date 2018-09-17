@@ -18,6 +18,11 @@
     font-size: 32px;
     margin: 0.25em 0;
   }
+
+  & p {
+    font-size: 1.2em;
+    margin: 0 0 0.5em 0;
+  }
 }
 
 .client-projects,
@@ -145,13 +150,9 @@
     text-align: center;
 
     & ~ p {
-      font-size: 1.2em;
-      margin: 0.5em 0;
+      // font-size: 1.2em;
+      // margin: 0 0 0.5em 0;
     }
-  }
-
-  & .results-acrdn-trigger {
-    @include accordion-trigger;
   }
 
 }
@@ -216,4 +217,12 @@ ul.project-info {
   & .skill-tags li:nth-child(even) {
     background: $color-accent;
   }
+}
+
+.results-acrdn-trigger {
+  @include accordion-trigger;
+}
+
+.project-results {
+  padding: 0 0.5em;
 }

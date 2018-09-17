@@ -12,7 +12,40 @@ These scripts can be used to turn an HTML object into a trigger for an accordion
 // So here are my options:
 // 1) Match the trigger and content by ID, which will require turning all triggers into <a> tags with hrefs and giving an ID to every content object.
 // 2) Loop through the triggers and add an event listener that oly activates on the content object that has the same index number. This will require less HTML markup going forward, and I can mimic the code I used in the Dashboard App project. I may still use classes to match up the TYPES of triggers and contents.
+// I should also write a script to toggle class "active."
 
+function accordionByIndex(triggerClass, contentClass) {
+  // Get accordion triggers
+  const $accordionTriggers = $(`${triggerClass}`);
+  // Get content objects
+  const $accordionContent = $(`${contentClass}`);
+
+  // Initially hide accordion content of indicated class
+  $accordionContent.hide();
+
+  // When trigger is clicked...
+  $accordionTriggers.click(function(e){
+    // Get the clicked trigger object
+    const $clickedTrigger = $(e.target);
+
+    // Loop through triggers of this class
+    for (let i = 0; i < $(`${triggerClass}`).length; i++) {
+      // If the current trigger is the clicked trigger
+      if ($clickedTrigger.eq(i)) {
+        // Toggle class "active"
+        $clickedTrigger.toggleClass('active');
+        // Toggle open/close the content that matches the clicked trigger's index number
+        $accordionContent.eq(i).toggle(200);
+        // Rotate arrow in clicked trigger
+        $clickedTrigger.parent().find('i').toggleClass('rotateCCW90');
+      } // end of if statement
+
+    } // end of for loop
+
+  }); // end of click function
+}
+
+// This version uses DOM traveral and only works if a trigger-content pair is the only one in the container.
 function btnAccordion(triggerClass, contentClass) {
 
   // Initially hide accordion content
@@ -22,6 +55,8 @@ function btnAccordion(triggerClass, contentClass) {
   $(`${triggerClass}`).click(function(e){
     const $clickedTrigger = $(e.target);
 
+    // Toggle class "active"
+    $clickedTrigger.toggleClass('active');
     // show accordion content if hidden, close if shown
     $clickedTrigger.parent().find(`${contentClass}`).toggle(200);
     // rotate arrow in trigger
@@ -34,10 +69,12 @@ function btnAccordion(triggerClass, contentClass) {
   Project Results Scripts
 =========================================== */
 
-btnAccordion(".results-acrdn-trigger", ".project-results");
+// btnAccordion(".results-acrdn-trigger", ".project-results");
+accordionByIndex(".results-acrdn-trigger", ".project-results");
 
 /* ========================================
   Project Tasks Scripts
 =========================================== */
 
-btnAccordion(".task-acrdn-trigger", ".project-tasks");
+// btnAccordion(".task-acrdn-trigger", ".project-tasks");
+accordionByIndex(".task-acrdn-trigger", ".project-tasks");
