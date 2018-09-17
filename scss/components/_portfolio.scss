@@ -217,6 +217,8 @@ ul.project-info {
 
 /* === Accordion Triggers and Content === */
 
+// May also add a "lessons learned" accordion panel
+
 .summary-trigger,
 .tasks-trigger,
 .results-trigger {
@@ -231,7 +233,7 @@ ul.project-info {
   margin-left: 2em;
 }
 
-
+.project-summary,
 .project-results {
   padding: 0 0.5em;
 }
