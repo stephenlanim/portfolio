@@ -24,18 +24,18 @@ function accordionByIndex(triggerClass, contentClass) {
   $accordionContent.hide();
 
   // When trigger is clicked...
-  $accordionTriggers.click(function(e){
+  $accordionTriggers.on('click', function(e){
     // Get the clicked trigger object
     const $clickedTrigger = $(e.target);
 
-    // Loop through triggers of this class
-    for (let i = 0; i < $(`${triggerClass}`).length; i++) {
-      // If the current trigger is the clicked trigger
-      if ($clickedTrigger.eq(i)) {
-        // Toggle class "active"
+    // Loop through all content objects of this class
+    for (let i = 0; i < $accordionContent.length; i++) {
+      // If the index of the clicked trigger matches the current content object
+      if ($accordionTriggers.index(e.target) === i) {
+        // Toggle class "active" on the matched trigger
         $clickedTrigger.toggleClass('active');
-        // Toggle open/close the content that matches the clicked trigger's index number
-        $accordionContent.eq(i).toggle(200);
+        // Toggle open/close the matched content object
+        $accordionContent.eq(i).slideToggle(200);
         // Rotate arrow in clicked trigger
         $clickedTrigger.find('i').toggleClass('rotateCCW90');
       } // end of if statement
