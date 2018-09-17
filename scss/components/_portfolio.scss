@@ -20,7 +20,7 @@
   }
 
   & p {
-    font-size: 1.2em;
+    // font-size: 1.2em;
     margin: 0 0 0.5em 0;
   }
 }
@@ -136,24 +136,24 @@
 
 /* Project summary within project card */
 .project-summary {
-  @include flexbox($dir: column);
-  flex-grow: 1;
-  line-height: 1.4;
-  font-size: 1.2em;
+  // @include flexbox($dir: column);
+  // flex-grow: 1;
+  // line-height: 1.4;
+  // font-size: 24px;
 
   // & h4 {
   //   font-size: 1.6em;
   //   margin: 0.25em 0;
   // }
 
-  & > h4 {
-    text-align: center;
-
-    & ~ p {
-      // font-size: 1.2em;
-      // margin: 0 0 0.5em 0;
-    }
-  }
+  // & > h4 {
+  //   text-align: center;
+  //
+  //   & ~ p {
+  //     // font-size: 1.2em;
+  //     // margin: 0 0 0.5em 0;
+  //   }
+  // }
 
 }
 
@@ -223,17 +223,23 @@ ul.project-info {
 .tasks-trigger,
 .results-trigger {
   @include accordion-trigger;
+  position: sticky;
+  position: -moz-sticky;
+  position: -webkit-sticky;
+  top: 0px;
 }
 
 .project-tasks li {
-  font-size: 1.3rem;
+  font-size: 22px;
   line-height: 1.3;
   list-style: disc;
   list-style-position: outside;
   margin-left: 2em;
 }
 
-.project-summary,
-.project-results {
+.project-summary p,
+.project-results p {
+  font-size: 22px;
+  line-height: 1.4;
   padding: 0 0.5em;
 }
