@@ -82,3 +82,10 @@ I initially began learning user interface design, HTML, CSS, and Twitter Bootstr
 Deciding to go all the way with web development was one of the best decisions I've ever made. I wish I'd discovered my passion and talent for web development ages ago.
 
 About Me Links: These may eventually have tooltips that explains the user task (what the user will do) associated with clicking that link. For example, the LinkedIn link could say "View my complete professional  and educational background and my professional connections."
+
+
+
+Future Improvements:
+- Refactor modal scripts to work via index number like accordion scripts.
+- Functionality for going to next and previous modal while modal is still open. Animate if possible.
+- Widget or other feature to let users know what I'm currently learning (but NOT a blog).
