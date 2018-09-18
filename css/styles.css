@@ -890,11 +890,11 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 0; }
+  padding: 0.5em 0; }
   @media (min-width: 600px) {
     .header {
       background-position: center center;
-      padding: 2em 1em; } }
+      padding: 2em 0.5em; } }
   @media (min-width: 900px) {
     .header {
       padding: 4em 1em; } }
@@ -909,7 +909,7 @@ footer {
   z-index: 1; }
   @media (min-width: 600px) {
     .about {
-      width: 80%; } }
+      width: 90%; } }
   @media (min-width: 900px) {
     .about {
       width: 75%; } }
@@ -930,46 +930,28 @@ footer {
   .blurb p {
     font-size: 1.4em; }
 
-.about-links {
+.contact-links {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   width: 90%; }
   @media (min-width: 600px) {
-    .about-links {
+    .contact-links {
+      width: 60%; } }
+  @media (min-width: 600px) {
+    .contact-links {
       width: 50%; } }
-  .about-links i {
-    font-size: 40px; }
-    @media (min-width: 600px) {
-      .about-links i {
-        width: 28px;
-        height: 28px; } }
-  .about-links .about-icon {
-    background-image: url(../images/icons/treehouse_logo-white.png);
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-position: center -2px;
-    background-size: 56px 56px;
-    display: inline-block;
+  .contact-links .contact-icon {
+    fill: #fff;
     width: 56px;
     height: 56px; }
     @media (min-width: 600px) {
-      .about-links .about-icon {
-        background-position: 5px 3px;
-        background-size: 58px 58px;
-        width: 58px;
-        height: 58px;
-        margin: 0 -15px; } }
-    @media (min-width: 1200px) {
-      .about-links .about-icon {
-        background-position: 5px 4px; } }
-    .about-links .about-icon:hover, .about-links .about-icon:focus {
-      background-image: url(../images/icons/treehouse_logo-tertiary.png); }
-  .about-links a {
-    color: inherit; }
-    .about-links a:hover, .about-links afocus {
-      color: #2274a5; }
+      .contact-links .contact-icon {
+        width: 42px;
+        height: 42px; } }
+    .contact-links .contact-icon:hover, .contact-links .contact-icon:focus {
+      fill: #2274a5; }
 
 .credit {
   display: none;
@@ -1182,7 +1164,14 @@ ul.project-info {
 /* ======================================
     Animations
    ====================================== */
-/* Animation for shaking a chosen letter */
+/* Animation for coloring SVG icon */
+@keyframes fill-color {
+  0% {
+    fill: #fff; }
+  100% {
+    fill: #2274a5; } }
+
+/* Animation for shaking an object */
 @keyframes shake {
   0% {
     transform: rotate(0deg); }
@@ -1207,7 +1196,7 @@ ul.project-info {
   100% {
     transform: rotate(0deg); } }
 
-/* Rotate counter clockwise by 90 degrees */
+/* Rotate object counter clockwise by 90 degrees */
 .rotateCCW90 {
   transform: rotate(-90deg); }
 

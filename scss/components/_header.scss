@@ -18,11 +18,11 @@
   align-items: center;
 
   position: relative;
-  padding: 0;
+  padding: 0.5em 0;
 
   @include mq('sm'){
     background-position: center center;
-    padding: 2em 1em;
+    padding: 2em 0.5em;
   }
 
   @include mq('med'){
@@ -39,7 +39,7 @@
   z-index: 1;
 
   @include mq("sm") {
-    width: 80%;
+    width: 90%;
   }
   @include mq("med") {
     width: 75%;
@@ -67,71 +67,36 @@
   }
 }
 
-.about-links {
+.contact-links {
   @include flexbox($dir:row, $just: space-evenly);
   align-items: center;
-  // position: relative;
   width: 90%;
+
+  @include mq('sm') {
+    width: 60%;
+  }
 
   @include mq('sm') {
     width: 50%;
   }
 
-  & i {
-    font-size: 40px;
-
-    @include mq('sm') {
-      width: 28px;
-      height: 28px;
-    }
-  }
-
-  & .about-icon {
-    background-image: url(../images/icons/treehouse_logo-white.png);
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-position: center -2px;
-    background-size: 56px 56px;
-    display: inline-block;
+  & .contact-icon {
+    fill: $about-text-color;
     width: 56px;
     height: 56px;
 
     @include mq('sm') {
-      background-position: 5px 3px;
-      background-size: 58px 58px;
-      width: 58px;
-      height: 58px;
-      margin: 0 -15px;
-    }
-
-    @include mq('lg') {
-      background-position: 5px 4px;
+      width: 42px;
+      height: 42px;
     }
 
     &:hover,
     &:focus {
-      background-image: url(../images/icons/treehouse_logo-tertiary.png);
+      fill: $color-tertiary;
     }
+
   }
 
-  & a {
-    color: inherit;
-
-    &:hover,
-    &focus {
-      color: $color-tertiary;
-    }
-  }
-
-  // & img {
-  //   display: inline-block;
-  //   width: 28px;
-  //   // position: absolute;
-  //   top: -5;
-  //   @include mq('sm') {
-  //     width: 28px;
-  //   }
-  // }
 }
 
 .credit {

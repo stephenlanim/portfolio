@@ -2,7 +2,14 @@
     Animations
    ====================================== */
 
-/* Animation for shaking a chosen letter */
+/* Animation for coloring SVG icon */
+@keyframes fill-color {
+  0% {fill: $about-text-color;}
+
+  100% {fill: $color-tertiary;}
+}
+
+/* Animation for shaking an object */
 @keyframes shake {
   0% {transform: rotate(0deg);}
   10% {transform: rotate(10deg);}
@@ -17,7 +24,7 @@
   100% {transform: rotate(0deg);}
 }
 
-/* Rotate counter clockwise by 90 degrees */
+/* Rotate object counter clockwise by 90 degrees */
 .rotateCCW90 {
   transform: rotate(-90deg);
 }
