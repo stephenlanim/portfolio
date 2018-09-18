@@ -175,27 +175,51 @@ function modalByDOMTraversal() {
 //   Modal Carousel
 // -------------------------------
 
+const $previousBtn = $('.view-previous');
+const $nextBtn = $('.view-next');
+
 function modalCarousel() {
 
   // When "Previous" button is clicked...
-
+  $previousBtn.on('click', function (e) {
     // Loop through the modal-overlays
-
+    for (let i = 0; i < $modalDiv.length; i++) {
       // If the index of the clicked button matches the current modal-overlay...
+      if ($previousBtn.index(e.target) === i) {
+
+        // Get current modal-overlay and slide it out to the right
+        $modalDiv.eq(i).toggle('slide', {direction:'right'});
 
         // Get the PREVIOUS modal-overlay and slide it in from the left
+        $modalDiv.eq(i - 1).toggle('slide', {direction:'left'});
+
+      } // end of if statement
+
+    } // end of for loop
+
+  }); // end of click function
 
   // When the "Next" button is clicked...
-
+  $nextBtn.on('click', function (e) {
     // Loop through the modal-overlays
-
+    for (let i = 0; i < $modalDiv.length; i++) {
       // If the index of the clicked button matches the current modal-overlay...
+      if ($nextBtn.index(e.target) === i) {
+
+        // Get current modal-overlay and slide it out to the left
+        $modalDiv.eq(i).toggle('slide', {direction:'left'});
 
         // Get the NEXT modal-overlay and slide it in from the right
+        $modalDiv.eq(i + 1).toggle('slide', {direction:'right'});
 
+      } // end of if statement
+
+    } // end of for loop
+
+  }); // end of click function
 }
 
-// modalCarousel();
+modalCarousel();
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
