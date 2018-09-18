@@ -345,7 +345,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
-  padding: 0.5em;
+  padding: 1em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -359,9 +359,6 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
-    .modal-trigger {
-      padding: 1em; } }
 
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
 .vid-modal-trigger {
@@ -467,7 +464,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
-  padding: 0.5em;
+  padding: 1em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -489,9 +486,6 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
-    .close-btn {
-      padding: 1em; } }
   @media (min-width: 600px) {
     .close-btn {
       order: 1; } }
@@ -1066,7 +1060,7 @@ h2 {
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
-  padding: 0.5em;
+  padding: 1em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -1082,9 +1076,16 @@ h2 {
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
-    .modal-content-window .view-btn {
-      padding: 1em; } }
+
+.view-btns-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 900px) {
+    .view-btns-div {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between; } }
 
 /* List of project details within modal */
 ul.project-info {

@@ -118,6 +118,17 @@
   }
 }
 
+.view-btns-div {
+  @include flexbox($dir:column);
+  align-items: center;
+
+  @include mq('med') {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
 /* List of project details within modal */
 ul.project-info {
   padding: 0;

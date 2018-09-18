@@ -91,7 +91,7 @@
   color: $btn-text-color;
   border: none;
   border-radius: 5px;
-  padding: 0.5em;
+  padding: 1em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -108,9 +108,6 @@
     text-decoration: none;
   }
 
-  @include mq('sm') {
-    padding: 1em;
-  }
 }
 
 @mixin accordion-trigger {
@@ -143,7 +140,7 @@
       top: 0px;
     }
   }
-  
+
   & i {
     margin-left: 5px;
     transition: transform .2s ease-out;
