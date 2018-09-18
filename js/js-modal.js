@@ -177,11 +177,25 @@ function modalByDOMTraversal() {
 
 function modalCarousel() {
 
+  // When "Previous" button is clicked...
+
+    // Loop through the modal-overlays
+
+      // If the index of the clicked button matches the current modal-overlay...
+
+        // Get the PREVIOUS modal-overlay and slide it in from the left
+
+  // When the "Next" button is clicked...
+
+    // Loop through the modal-overlays
+
+      // If the index of the clicked button matches the current modal-overlay...
+
+        // Get the NEXT modal-overlay and slide it in from the right
+
 }
 
 // modalCarousel();
-
-
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

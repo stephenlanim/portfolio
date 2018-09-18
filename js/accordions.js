@@ -60,7 +60,7 @@ function btnAccordion(triggerClass, contentClass) {
   });
 }
 
-// Future accordion = accordionById(): Match the trigger and content by ID, which will require turning all triggers into <a> tags with hrefs and giving an ID to every content object. This would allow a developer to create new accordions in just the HTML without having to name specific classes in the JS file.
+// Future accordion = accordionByID(): Match the trigger and content by ID, which will require turning all triggers into <a> tags with hrefs and giving an ID to every content object. This would allow a developer to create new accordions in just the HTML without having to name specific classes in the JS file.
 
 // Future accordion = groupAccordion(): Create a version of accordions similar to ZURB Foundation that group multiple panels in the same accordion together. When the user clicks open an panel, all others in that same accordion close.
 
