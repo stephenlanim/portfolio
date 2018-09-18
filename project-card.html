@@ -1,58 +1,71 @@
-
 <!-- Project Card -->
 <div class="project-card">
   <div class="project-thumb">
     <!-- Icon and link to live site -->
-    <a href="" target="_blank"> <i class="fas fa-laptop-code"></i> </a>
+    <a href="" target="_blank"> <i class="fas fa-calculator"></i> </a>
   </div>
 
-  <!-- Project Summary and Modal -->
-  <div class="project-summary">
-    <h4>[Project Title]</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dicta, ipsum. Sint dicta asperiores itaque voluptates nobis a cupiditate quisquam minus consequatur, rem eos veritatis culpa, odit, sed possimus quia.</p>
+  <h4>[Project Title]</h4>
 
-    <!--  Modal Trigger -->
-    <button class="modal-trigger" type="button">View Project Details</button>
+  <ul class="project-info">
+    <li><strong>Client:</strong> [Client]</li>
+    <li><strong>Date:</strong> [Beginning and Ending Month and Year]</li>
+    <li><strong>My Role:</strong> [Job Role]</li>
+    <li><strong>Skills &amp; Tools:</strong>
+      <ul class="skill-tags">
+        <li>skill</li>
+        <li>skill</li>
+        <li>tool</li>
+        <li>tool</li>
+      </ul>
+    </li>
+  </ul>
 
-  </div> <!-- /.project-summary -->
+  <!--  Modal Trigger -->
+  <button class="modal-trigger" type="button">More Project Details</button>
 
   <!-- Entire Modal Overlay (w/ transparent background) -->
   <div class="modal-overlay">
 
-      <!-- Container Housing Modal Content (light background) -->
-      <div class="modal-content-window">
-        <!-- Header section for modal content -->
-        <div class="modal-header">
-          <!-- Close Button -->
-          <button class="close-btn" type="button"><i class="fas fa-times"></i></button>
-          <!-- <button class="close-btn" type="button">&#10006;</button> -->
-          <!-- Modal Title -->
-          <h4 class="modal-title">[Project Title]</h4>
-        </div>
+    <!-- Container Housing Modal Content (opaque background) -->
+    <div class="modal-content-window">
+      <!-- Header section for modal content -->
+      <div class="modal-header">
+        <!-- Close Button -->
+        <button class="close-btn" type="button"><i class="fas fa-times"></i></button>
 
-        <ul class="project-info">
-          <li>Client: </li>
-          <li>Date: </li>
-          <li>Project Type: </li>
-          <li>Skills &amp; Tools:
-            <ul class="skill-tags">
-              <li>skill</li>
-              <li>tool</li>
-            </ul>
-          </li>
-          <li><button class="pd-acrdn-trigger" type="button">Project Tasks</button>
-            <ul class="project-tasks">
-              <li>Task</li>
-              <li>Task</li>
-            </ul>
-          </li>
-        </ul>
-        <div class="view-btns-div">
-          <a class="view-btn" href="" target="_blank">View Live <i class="fas fa-external-link-alt"></i></a>
-          <a class="view-btn" href="" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
-        </div>
+        <!-- Modal Title -->
+        <h4 class="modal-title">[Project Title]</h4>
+      </div>
 
-      </div> <!-- /.modal-content-window -->
-    </div> <!-- /.modal-overlay -->
+      <!-- Project Summary Accordion Trigger-->
+      <button class="summary-trigger">Project Summary <i class="fas fa-caret-left"></i></button>
+      <!-- Project Summary Content -->
+      <div class="project-summary">
+        <p>[Summary]</p>
+      </div> <!-- /.project-summary -->
+
+      <!-- Project Tasks Accordion Trigger -->
+      <button class="tasks-trigger" type="button">Project Tasks <i class="fas fa-caret-left"></i></button>
+      <!-- Project Tasks Content -->
+      <ul class="project-tasks">
+        <li>Task</li>
+        <li>Task</li>
+      </ul>
+
+      <!-- Project Results Accordion Trigger -->
+      <button class="results-trigger" type="button">Results <i class="fas fa-caret-left"></i></button>
+      <!-- Project Results Content -->
+      <div class="project-results">
+        <p>[Results]</p>
+      </div>
+
+      <div class="view-btns-div">
+        <a class="view-btn" href="" target="_blank">View Live <i class="fas fa-external-link-alt"></i></a>
+        <a class="view-btn" href="https://github.com/stephenlanim/fewd-techdegree-project-7" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+      </div>
+
+    </div> <!-- /.modal-content-window -->
+  </div> <!-- /.modal-overlay -->
 
 </div> <!-- /.project-card -->

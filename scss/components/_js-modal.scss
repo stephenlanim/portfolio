@@ -33,9 +33,9 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   /* margin: 0 auto; */
   margin-bottom: 10px;
   /* overflow: hidden; */
-  border: solid 2px #007073;
+  border: solid 2px $color-primary;
   border-radius: 5px;
-  color: #007073;
+  color: $color-primary;
   display: block;
   padding: 0;
   overflow: hidden;
@@ -48,7 +48,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 .vid-modal-trigger:hover,
 .vid-modal-trigger:focus {
-  box-shadow: #007073 0px 0px 8px;
+  box-shadow: $color-primary 0px 0px 8px;
   text-decoration: none;
   transform: scale(1.05);
 }

@@ -8,12 +8,7 @@ These scripts can be used to turn an HTML object into a trigger for an accordion
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-// 09-16-2018: I'm gonna need to redo how the accordions work. Right now they work using DOM traversal on classes, but that only works well if there is only one trigger-content pair within a container. With multiple content objects in the same container, a given trigger in that container will open ALL the content objects.
-// So here are my options:
-// 1) Match the trigger and content by ID, which will require turning all triggers into <a> tags with hrefs and giving an ID to every content object.
-// 2) Loop through the triggers and add an event listener that oly activates on the content object that has the same index number. This will require less HTML markup going forward, and I can mimic the code I used in the Dashboard App project. I may still use classes to match up the TYPES of triggers and contents.
-// I should also write a script to toggle class "active."
-
+// Function to open accordions by matching index number of trigger and content
 function accordionByIndex(triggerClass, contentClass) {
   // Get accordion triggers
   const $accordionTriggers = $(`${triggerClass}`);
@@ -30,7 +25,7 @@ function accordionByIndex(triggerClass, contentClass) {
 
     // Loop through all content objects of this class
     for (let i = 0; i < $accordionContent.length; i++) {
-      // If the index of the clicked trigger matches the current content object
+      // If the index of the clicked trigger matches the current content object in the loop
       if ($accordionTriggers.index(e.target) === i) {
         // Toggle class "active" on the matched trigger
         $clickedTrigger.toggleClass('active');
@@ -64,6 +59,12 @@ function btnAccordion(triggerClass, contentClass) {
 
   });
 }
+
+// Future accordion = accordionById(): Match the trigger and content by ID, which will require turning all triggers into <a> tags with hrefs and giving an ID to every content object. This would allow a developer to create new accordions in just the HTML without having to name specific classes in the JS file.
+
+// Future accordion = groupAccordion(): Create a version of accordions similar to ZURB Foundation that group multiple panels in the same accordion together. When the user clicks open an panel, all others in that same accordion close.
+
+// Better Idea = accordionGroupByID(): Combine accordionByIndex with by ID. Wrap each set of accordion panels in an accordion with an ID. Then continue having the triggers and content be matched by index number but by only looping WITHIN the accordion of the parent ID.
 
 /* ========================================
   Project Results Scripts
