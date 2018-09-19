@@ -99,10 +99,9 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 
   /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
-  // animation-name:modalopen; /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
-  // animation-duration:0.75s;
-  // animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  // transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-name:modalopen; /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  animation-duration:0.75s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* === .modal-content-window animation === */

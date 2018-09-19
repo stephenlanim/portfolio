@@ -80,8 +80,8 @@ function modalByIndex() {
       if ($modalTrigger.index(e.target) === i) {
 
         // Open the modal corresponding to the clicked trigger
-        // $modalDiv.eq(i).css({"display": "block"});
-        $modalDiv.eq(i).toggle('scale', 400, {easing:'linear'});
+        $modalDiv.eq(i).css({"display": "block"});
+        // $modalDiv.eq(i).toggle('scale', 400, {easing:'linear'});
 
       } // end of if statement
 
@@ -131,6 +131,81 @@ function modalByIndex() {
 modalByIndex();
 
 // -------------------------------
+//   Modal Slide Show
+// -------------------------------
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+These scripts grab the modals in sequence and make them appear as a slideshow when a "previous" and "next" button are clicked.
+
+Because each modal is in a separate container, the animation for the slideshow does not have the same appearance as a slideshow/carousel in which all elements are in the same container. So I had to make the sliding in and out of the elements overlap a bit using the jQuery delay() method.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+const $previousBtn = $('.view-previous');
+const $nextBtn = $('.view-next');
+
+function modalSlideShow() {
+
+  // When "Previous" button is clicked...
+  $previousBtn.on('click', function (e) {
+    // Loop through the modal-overlays
+    for (let i = 0; i < $modalDiv.length; i++) {
+      // If the index of the clicked button matches the current modal-overlay...
+      if ($previousBtn.index(this) === i) {
+        // Note: I used "this" here and in the "next" button click function to induce event bubbling on the chevron inside the button.
+
+        // Get current modal-overlay and slide it out to the right after a short delay
+        $modalDiv.eq(i).delay(050).toggle('slide', {direction:'right', easing:'swing'}, 600);
+
+        // Show the PREVIOUS modal-overlay in the sequence
+        $modalDiv.eq(i - 1).show();
+
+      } // end of if statement
+
+    } // end of for loop
+
+  }); // end of click function
+
+  // When the "Next" button is clicked...
+  $nextBtn.on('click', function (e) {
+
+    // Loop through the modal-overlays
+    for (let i = 0; i < $modalDiv.length; i++) {
+
+      // If the clicked button is the last in the sequence...
+      if ($nextBtn.index(this) === $nextBtn.length -1) {
+        // Note: I had to subtract 1 because the .length property counts differently from index property.
+
+        // Get the last modal-overlay and slide it out to the left after a short delay
+        $modalDiv.eq($modalDiv.length - 1).delay(050).toggle('slide', {direction:'left', easing:'swing'}, 600);
+
+        // Show the first modal-overlay in the sequence
+        $modalDiv.eq(0).show();
+
+        // End the loop immediately, gosh darn it. Your job is done!
+        break
+      } // end of if statement
+
+      // else if the index of the clicked button matches the current modal-overlay...
+      else if ($nextBtn.index(this) === i) {
+
+        // Get current modal-overlay and slide it out to the left
+        $modalDiv.eq(i).delay(050).toggle('slide', {direction:'left', easing:'swing'}, 600);
+
+        // Show the NEXT modal-overlay in the sequence
+        $modalDiv.eq(i + 1).show();
+
+      } // end of else if statement
+
+    } // end of for loop
+
+  }); // end of click function
+}
+
+modalSlideShow();
+
+
+// -------------------------------
 //   Modal by DOM Traversal
 // -------------------------------
 
@@ -172,84 +247,10 @@ function modalByDOMTraversal() {
 
 // modalByDOMTraversal();
 
-// -------------------------------
-//   Modal Slide Show
-// -------------------------------
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-These scripts grab the modals in sequence and make them appear as a slideshow when a "previous" and "next" button are clicked.
-
-Because each modal is in a separate container, the animation for the slideshow does not have the same appearance as a slideshow/carousel in which all elements are in the same container. So I had to make the sliding in and out of the elements overlap a bit using the jQuery delay() method.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-const $previousBtn = $('.view-previous');
-const $nextBtn = $('.view-next');
-
-function modalSlideShow() {
-
-  // When "Previous" button is clicked...
-  $previousBtn.on('click', function (e) {
-    // Loop through the modal-overlays
-    for (let i = 0; i < $modalDiv.length; i++) {
-      // If the index of the clicked button matches the current modal-overlay...
-      if ($previousBtn.index(this) === i) {
-        // Note: I used "this" here and in the "next" button click function to induce event bubbling on the chevron inside the button.
-
-        // Get current modal-overlay and slide it out to the right after a short delay
-        $modalDiv.eq(i).delay(050).toggle('slide', {direction:'right', easing:'swing'});
-
-        // Get the PREVIOUS modal-overlay and slide it in from the left
-        $modalDiv.eq(i - 1).toggle('slide', {direction:'left', easing:'swing'});
-
-      } // end of if statement
-
-    } // end of for loop
-
-  }); // end of click function
-
-  // When the "Next" button is clicked...
-  $nextBtn.on('click', function (e) {
-
-    // Loop through the modal-overlays
-    for (let i = 0; i < $modalDiv.length; i++) {
-
-      // If the clicked button is the last in the sequence...
-      if ($nextBtn.index(this) === $nextBtn.length -1) {
-        // Note: I had to subtract 1 because the .length property counts differently from index property.
-
-        // Get the last modal-overlay and slide it out to the left after a short delay
-        $modalDiv.eq($modalDiv.length - 1).delay(050).toggle('slide', {direction:'left', easing:'swing'});
-
-        // Get the first modal-overlay and slide it in from the right
-        $modalDiv.eq(0).toggle('slide', {direction:'right', easing:'swing'});
-
-        // End the loop immediately, gosh darn it. Your job is done!
-        break
-      } // end of if statement
-
-      // else if the index of the clicked button matches the current modal-overlay...
-      else if ($nextBtn.index(this) === i) {
-        console.log("else if function");
-        // Get current modal-overlay and slide it out to the left
-        $modalDiv.eq(i).delay(050).toggle('slide', {direction:'left', easing:'swing'});
-
-        // Get the NEXT modal-overlay and slide it in from the right
-        $modalDiv.eq(i + 1).delay(000).toggle('slide', {direction:'right', easing:'swing'});
-
-      } // end of else if statement
-
-    } // end of for loop
-
-  }); // end of click function
-}
-
-modalSlideShow();
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The above scripts are very modified versions of the methods used in "Create a Modal With HTML, CSS & JavaScript" by Brad Traversy at https://www.youtube.com/watch?v=6ophW7Ask_0.
+The above scripts for displaying modals (but not the slide show scripts) are very modified versions of the methods used in "Create a Modal With HTML, CSS & JavaScript" by Brad Traversy at https://www.youtube.com/watch?v=6ophW7Ask_0.
 
 You can also visit Brad's simplemodal CodePen at https://codepen.io/bradtraversy/pen/zEOrPp to play around with Brad's code on a live page in real time.
 
