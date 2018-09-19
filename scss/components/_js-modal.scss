@@ -68,13 +68,14 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   width: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.5);
+
 }
 
 /* Just the content window within the modal. */
 .modal-content-window {
   background-color: $project-card-color;
   border-radius: 5px;
-  margin: 120px auto;
+  margin: 120px auto 10px auto;
   padding: 1em;
   width: 90%;
   max-height: 80vh;
@@ -131,7 +132,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 .modal-title {
   color: $color-secondary;
   font-size: 2.0em;
-  margin: 0;
+  margin: 0 !important;
   width: 100%;
 
   @include mq('sm') {
@@ -148,7 +149,6 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   margin: 0;
-  margin-bottom: 0.5em;
   padding: 0 !important;
   align-self: flex-end;
   width: 64px;
@@ -156,14 +156,6 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
   order: 1;
 
-  // &:hover,
-  // &:focus {
-  //   background-color: darken($color-secondary, 20);
-  //   color: $color-primary;
-  //   cursor: pointer;
-  //   // transform: scale(1.1);
-  //   text-decoration: none;
-  // }
   @include mq('sm') {
     order: 1;
   }
