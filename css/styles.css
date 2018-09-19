@@ -345,7 +345,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0.75em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -359,6 +359,9 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
+  @media (min-width: 600px) {
+    .modal-trigger {
+      padding: 1em; } }
 
 /* The .vid-modal-trigger is a screenshot of a video and is used to open the modal for that video. */
 .vid-modal-trigger {
@@ -438,7 +441,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 /* The container housing the modal-title and close button. */
 .modal-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center; }
   @media (min-width: 600px) {
@@ -464,7 +467,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0.75em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -480,12 +483,16 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   padding: 0 !important;
   align-self: flex-end;
   width: 64px;
-  height: 64px; }
+  height: 64px;
+  order: 1; }
   .close-btn:hover, .close-btnfocus {
     background-color: #4c1226;
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
+  @media (min-width: 600px) {
+    .close-btn {
+      padding: 1em; } }
   @media (min-width: 600px) {
     .close-btn {
       order: 1; } }
@@ -990,8 +997,11 @@ h2 {
   text-align: center; }
 
 .portfolio h4 {
-  font-size: 32px;
+  font-size: 28px;
   margin: 0.25em 0; }
+  @media (min-width: 600px) {
+    .portfolio h4 {
+      font-size: 32px; } }
 
 .portfolio p {
   margin: 0 0 0.5em 0; }
@@ -1060,7 +1070,7 @@ h2 {
   color: #d7d9ce;
   border: none;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0.75em;
   margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
@@ -1070,12 +1080,15 @@ h2 {
   transition-timing-function: ease-in;
   font-size: 1.2em;
   display: inline-block;
-  margin: 0.5em 0; }
+  margin: 0.2em 0; }
   .modal-content-window .view-btn:hover, .modal-content-window .view-btnfocus {
     background-color: #4c1226;
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
+  @media (min-width: 600px) {
+    .modal-content-window .view-btn {
+      padding: 1em; } }
 
 .view-btns-div {
   display: flex;
@@ -1086,6 +1099,14 @@ h2 {
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between; } }
+
+.view-external-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 600px) {
+    .view-external-links {
+      display: block; } }
 
 /* List of project details within modal */
 ul.project-info {

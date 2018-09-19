@@ -14,8 +14,12 @@
   }
 
   & h4 {
-    font-size: 32px;
+    font-size: 28px;
     margin: 0.25em 0;
+
+    @include mq('sm') {
+      font-size: 32px;
+    }
   }
 
   & p {
@@ -114,7 +118,7 @@
     @include button;
     font-size: 1.2em;
     display: inline-block;
-    margin: 0.5em 0;
+    margin: 0.2em 0;
   }
 }
 
@@ -126,6 +130,15 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+}
+
+.view-external-links {
+  @include flexbox($dir:column);
+  align-items: center;
+
+  @include mq ('sm') {
+    display: block;
   }
 }
 

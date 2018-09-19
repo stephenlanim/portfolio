@@ -117,7 +117,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 
 /* The container housing the modal-title and close button. */
 .modal-header {
-  @include flexbox($dir:column, $just:space-between);
+  @include flexbox($dir:row, $just:space-between);
   align-items: center;
 
   @include mq('sm') {
@@ -143,9 +143,7 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
 /* The close button within the modal content window. */
 .close-btn {
   @include button;
-  // background-color: $color-secondary;
-  // color: $color-primary;
-  // float: right;
+
   font-size: 1.4em;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -155,6 +153,8 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
   align-self: flex-end;
   width: 64px;
   height: 64px;
+
+  order: 1;
 
   // &:hover,
   // &:focus {
