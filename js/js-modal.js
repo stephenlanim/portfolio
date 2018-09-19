@@ -80,8 +80,7 @@ function modalByIndex() {
       if ($modalTrigger.index(e.target) === i) {
 
         // Open the modal corresponding to the clicked trigger
-        $modalDiv.eq(i).css({"display": "block"});
-        // $modalDiv.eq(i).toggle('scale', 400, {easing:'linear'});
+        $modalDiv.eq(i).show();
 
       } // end of if statement
 
@@ -183,7 +182,7 @@ function modalSlideShow() {
         $modalDiv.eq(0).show();
 
         // End the loop immediately, gosh darn it. Your job is done!
-        break
+        break;
       } // end of if statement
 
       // else if the index of the clicked button matches the current modal-overlay...
