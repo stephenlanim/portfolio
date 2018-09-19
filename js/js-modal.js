@@ -80,7 +80,8 @@ function modalByIndex() {
       if ($modalTrigger.index(e.target) === i) {
 
         // Open the modal corresponding to the clicked trigger
-        $modalDiv.eq(i).css({"display": "block"});
+        // $modalDiv.eq(i).css({"display": "block"});
+        $modalDiv.eq(i).toggle('scale', 400, {easing:'linear'});
 
       } // end of if statement
 
@@ -172,26 +173,34 @@ function modalByDOMTraversal() {
 // modalByDOMTraversal();
 
 // -------------------------------
-//   Modal Carousel
+//   Modal Slide Show
 // -------------------------------
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+These scripts grab the modals in sequence and make them appear as a slideshow when a "previous" and "next" button are clicked.
+
+Because each modal is in a separate container, the animation for the slideshow does not have the same appearance as a slideshow/carousel in which all elements are in the same container. So I had to make the sliding in and out of the elements overlap a bit using the jQuery delay() method.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 const $previousBtn = $('.view-previous');
 const $nextBtn = $('.view-next');
 
-function modalCarousel() {
+function modalSlideShow() {
 
   // When "Previous" button is clicked...
   $previousBtn.on('click', function (e) {
     // Loop through the modal-overlays
     for (let i = 0; i < $modalDiv.length; i++) {
       // If the index of the clicked button matches the current modal-overlay...
-      if ($previousBtn.index(e.target) === i) {
+      if ($previousBtn.index(this) === i) {
+        // Note: I used "this" here and in the "next" button click function to induce event bubbling on the chevron inside the button.
 
-        // Get current modal-overlay and slide it out to the right
-        $modalDiv.eq(i).toggle('slide', {direction:'right'});
+        // Get current modal-overlay and slide it out to the right after a short delay
+        $modalDiv.eq(i).delay(050).toggle('slide', {direction:'right', easing:'swing'});
 
         // Get the PREVIOUS modal-overlay and slide it in from the left
-        $modalDiv.eq(i - 1).toggle('slide', {direction:'left'});
+        $modalDiv.eq(i - 1).toggle('slide', {direction:'left', easing:'swing'});
 
       } // end of if statement
 
@@ -201,25 +210,41 @@ function modalCarousel() {
 
   // When the "Next" button is clicked...
   $nextBtn.on('click', function (e) {
+
     // Loop through the modal-overlays
     for (let i = 0; i < $modalDiv.length; i++) {
-      // If the index of the clicked button matches the current modal-overlay...
-      if ($nextBtn.index(e.target) === i) {
 
+      // If the clicked button is the last in the sequence...
+      if ($nextBtn.index(this) === $nextBtn.length -1) {
+        // Note: I had to subtract 1 because the .length property counts differently from index property.
+
+        // Get the last modal-overlay and slide it out to the left after a short delay
+        $modalDiv.eq($modalDiv.length - 1).delay(050).toggle('slide', {direction:'left', easing:'swing'});
+
+        // Get the first modal-overlay and slide it in from the right
+        $modalDiv.eq(0).toggle('slide', {direction:'right', easing:'swing'});
+
+        // End the loop immediately, gosh darn it. Your job is done!
+        break
+      } // end of if statement
+
+      // else if the index of the clicked button matches the current modal-overlay...
+      else if ($nextBtn.index(this) === i) {
+        console.log("else if function");
         // Get current modal-overlay and slide it out to the left
-        $modalDiv.eq(i).toggle('slide', {direction:'left'});
+        $modalDiv.eq(i).delay(050).toggle('slide', {direction:'left', easing:'swing'});
 
         // Get the NEXT modal-overlay and slide it in from the right
-        $modalDiv.eq(i + 1).toggle('slide', {direction:'right'});
+        $modalDiv.eq(i + 1).delay(000).toggle('slide', {direction:'right', easing:'swing'});
 
-      } // end of if statement
+      } // end of else if statement
 
     } // end of for loop
 
   }); // end of click function
 }
 
-modalCarousel();
+modalSlideShow();
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
