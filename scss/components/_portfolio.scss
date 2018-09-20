@@ -54,7 +54,7 @@
 
   @include shadow;
 
-  @include mq('sm') {
+  @include mq('med') {
     width: 45%;
   }
 
@@ -137,8 +137,9 @@
   @include flexbox($dir:column);
   align-items: center;
 
-  @include mq ('sm') {
+  @include mq ('med') {
     display: block;
+    width: 70%;
   }
 }
 

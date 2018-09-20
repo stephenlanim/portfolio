@@ -71,10 +71,10 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .modal-content-window {
   background-color: $project-card-color;
   border-radius: 5px;
-  margin: 120px auto 10px auto;
+  margin: 75px auto 10px auto;
   padding: 1em;
   width: 90%;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow: auto;
   box-shadow:
     0 5px 8px 0 rgba(0,0,0,0.2),
@@ -87,6 +87,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   }
 
   @include mq('med') {
+    margin-top: 120px;
     width: 60%;
   }
 
@@ -115,7 +116,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 /* The container housing the modal-title and close button. */
 .modal-header {
   @include flexbox($dir:row, $just:space-between);
-  align-items: center;
+  align-items: flex-start;
 
   @include mq('sm') {
     flex-direction: row;
@@ -146,7 +147,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   transition-timing-function: ease-in-out;
   margin: 0;
   padding: 0 !important;
-  align-self: flex-end;
+  // align-self: flex-end;
   width: 64px;
   height: 64px;
 

@@ -7,11 +7,20 @@ $font-stack: "Nunito", sans-serif;
 
 // Breakpoints (Sass map)
 $breakpoints: (
-  "xs": 599px, // smartphone width; not in use due to mobile-first design
-  "sm": 600px, // tablet portrait
-  "med": 900px, // tablet landscape
-  "lg": 1200px, // desktop
-  "xl": 1800px // large desktop
+  // Breakpoints updated 09-20-2018, since smartphone landscape and desktop split-screen were previously not considered.
+  "xs": 549px, // smartphone portrait; not in use due to mobile-first design
+  "sm": 550px, // smartphone landscape
+  "med": 750px, // tablet portrait
+  "med-1/2": 900px, // desktop split-screen; may not use often
+  "lg": 1200px, // desktop/tablet landscape
+  "xl": 2100px // large desktop
+
+// Old breakpoints
+  // "xs": 599px, // smartphone width; not in use due to mobile-first design
+  // "sm": 600px, // tablet portrait
+  // "med": 900px, // tablet landscape
+  // "lg": 1200px, // desktop
+  // "xl": 1800px // large desktop
 );
 
 // Colors

@@ -107,7 +107,7 @@
     padding-top: 0.25em;
     margin-bottom: 0.25em;
 
-    @include mq('med') {
+    @include mq('lg') {
       display: block;
       border: none;
       border-left: 3px solid $color-secondary;

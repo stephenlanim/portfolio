@@ -354,7 +354,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .modal-trigger {
       padding: 1em; } }
 
@@ -402,10 +402,10 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .modal-content-window {
   background-color: #d7d9ce;
   border-radius: 5px;
-  margin: 120px auto 10px auto;
+  margin: 75px auto 10px auto;
   padding: 1em;
   width: 90%;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow: auto;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
@@ -413,12 +413,13 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
   animation-duration: 0.75s;
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .modal-content-window {
       width: 70%;
       max-height: 80vh; } }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .modal-content-window {
+      margin-top: 120px;
       width: 60%; } }
   @media (min-width: 1200px) {
     .modal-content-window {
@@ -438,8 +439,8 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
-  @media (min-width: 600px) {
+  align-items: flex-start; }
+  @media (min-width: 550px) {
     .modal-header {
       flex-direction: row;
       justify-content: space-between;
@@ -451,7 +452,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   font-size: 2.0em;
   margin: 0 !important;
   width: 100%; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .modal-title {
       order: 0;
       width: 80%; } }
@@ -475,7 +476,6 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   transition-timing-function: ease-in-out;
   margin: 0;
   padding: 0 !important;
-  align-self: flex-end;
   width: 64px;
   height: 64px;
   order: 1; }
@@ -484,10 +484,10 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .close-btn {
       padding: 1em; } }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .close-btn {
       order: 1; } }
 
@@ -542,7 +542,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   align-items: flex-start;
   background-color: #2274a5;
   color: #fff; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .alert {
       align-items: center;
       width: calc(100% - 100px); } }
@@ -562,7 +562,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   display: flex;
   align-items: flex-start;
   background-color: #32aaf1; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .confirmation {
       align-items: center;
       width: calc(100% - 100px); } }
@@ -582,7 +582,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   display: flex;
   align-items: flex-start;
   background-color: #b92c5c; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .error {
       align-items: center;
       width: calc(100% - 100px); } }
@@ -602,7 +602,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   display: flex;
   align-items: flex-start;
   background-color: #2393a7; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .warning {
       align-items: center;
       width: calc(100% - 100px); } }
@@ -669,7 +669,7 @@ footer {
   height: -moz-fit-content;
   width: 100%;
   padding: 0 0.5em; }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .navbar {
       flex-direction: row;
       justify-content: space-evenly;
@@ -683,11 +683,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 96%; }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .submenu {
       width: 80%; } }
 
-@media (min-width: 600px) {
+@media (min-width: 550px) {
   .brand {
     display: flex;
     flex-direction: row;
@@ -705,7 +705,7 @@ footer {
   transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5); }
   .brand .avatar:hover, .brand .avatarfocus {
     transform: scale(1.2); }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .brand .avatar {
       display: inline-block;
       margin-left: 0.75em; } }
@@ -717,14 +717,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .brand-titles {
       flex-direction: row;
       flex-wrap: nowrap; } }
   .brand-titles h1 {
     font-size: 1.5em;
     margin-top: 0.25em; }
-    @media (min-width: 900px) {
+    @media (min-width: 750px) {
       .brand-titles h1 {
         font-size: 2em;
         margin-top: 0.2em;
@@ -737,7 +737,7 @@ footer {
     font-weight: 300;
     padding-top: 0.25em;
     margin-bottom: 0.25em; }
-    @media (min-width: 900px) {
+    @media (min-width: 1200px) {
       .brand-titles :last-child {
         display: block;
         border: none;
@@ -750,7 +750,7 @@ footer {
 /* Hamburger */
 .hamburger {
   display: inline-block; }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .hamburger {
       display: none; } }
 
@@ -788,7 +788,7 @@ footer {
   list-style: none;
   text-align: center;
   margin: 0; }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .nav-list {
       font-size: 1.2em;
       display: flex;
@@ -810,7 +810,7 @@ footer {
     .nav-list a:hover, .nav-list a:active, .nav-list a.active {
       background-color: #2274a5;
       color: #fff; }
-    @media (min-width: 900px) {
+    @media (min-width: 750px) {
       .nav-list a {
         background-color: inherit;
         color: #d7d9ce;
@@ -840,11 +840,11 @@ footer {
   align-items: center;
   position: relative;
   padding: 0.5em 0; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .header {
       background-position: center center;
       padding: 2em 0.5em; } }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .header {
       padding: 4em 1em; } }
 
@@ -856,10 +856,10 @@ footer {
   text-align: center;
   width: 100%;
   z-index: 1; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .about {
       width: 90%; } }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .about {
       width: 75%; } }
   .about h4 {
@@ -870,10 +870,10 @@ footer {
   text-align: center;
   padding: 0 1em;
   width: 90%; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .blurb {
       width: 80%; } }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .blurb {
       width: 70%; } }
   .blurb p {
@@ -885,17 +885,17 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   width: 90%; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .contact-links {
       width: 60%; } }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .contact-links {
       width: 50%; } }
   .contact-links .contact-icon {
     fill: #fff;
     width: 56px;
     height: 56px; }
-    @media (min-width: 600px) {
+    @media (min-width: 550px) {
       .contact-links .contact-icon {
         width: 42px;
         height: 42px; } }
@@ -947,7 +947,7 @@ h2 {
 .portfolio h4 {
   font-size: 28px;
   margin: 0.25em 0; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .portfolio h4 {
       font-size: 32px; } }
 
@@ -976,13 +976,13 @@ h2 {
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2), -10px 0px 10px 0px rgba(46, 61, 73, 0.2); }
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
     .project-card {
       width: 45%; } }
   @media (min-width: 1200px) {
     .project-card {
       width: 30%; } }
-  @media (min-width: 1800px) {
+  @media (min-width: 2100px) {
     .project-card {
       width: 22%; } }
   .project-card h2,
@@ -1034,7 +1034,7 @@ h2 {
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .modal-content-window .view-btn {
       padding: 1em; } }
 
@@ -1042,7 +1042,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (min-width: 900px) {
+  @media (min-width: 750px) {
     .view-btns-div {
       flex-direction: row;
       flex-wrap: nowrap;
@@ -1052,9 +1052,10 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media (min-width: 600px) {
+  @media (min-width: 750px) {
     .view-external-links {
-      display: block; } }
+      display: block;
+      width: 70%; } }
 
 /* List of project details within modal */
 ul.project-info {
@@ -1104,7 +1105,7 @@ ul.project-info {
     color: #d7d9ce;
     cursor: pointer;
     text-decoration: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 550px) {
     .summary-trigger.active,
     .tasks-trigger.active,
     .results-trigger.active {
