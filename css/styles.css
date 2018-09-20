@@ -850,7 +850,7 @@ footer {
     .header {
       background-position: center center;
       padding: 4em 1em; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     .header {
       background-attachment: fixed; } }
 
