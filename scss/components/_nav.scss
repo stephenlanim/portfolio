@@ -64,9 +64,6 @@
       transform: scale(1.2);
     }
 
-    @include mq('sm') {
-      display: inline-block;
-    }
     @include mq('med') {
       display: inline-block;
       margin-left: 0.75em;
@@ -104,12 +101,14 @@
   }
 
   & :last-child {
+    display: none;
     border-top: 3px solid $color-secondary;
     font-weight: 300;
     padding-top: 0.25em;
     margin-bottom: 0.25em;
 
     @include mq('med') {
+      display: block;
       border: none;
       border-left: 3px solid $color-secondary;
       padding-top: inherit;

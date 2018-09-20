@@ -705,9 +705,6 @@ footer {
   transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5); }
   .brand .avatar:hover, .brand .avatarfocus {
     transform: scale(1.2); }
-  @media (min-width: 600px) {
-    .brand .avatar {
-      display: inline-block; } }
   @media (min-width: 900px) {
     .brand .avatar {
       display: inline-block;
@@ -735,12 +732,14 @@ footer {
   .brand-titles :first-child {
     margin-bottom: 0; }
   .brand-titles :last-child {
+    display: none;
     border-top: 3px solid #d7d9ce;
     font-weight: 300;
     padding-top: 0.25em;
     margin-bottom: 0.25em; }
     @media (min-width: 900px) {
       .brand-titles :last-child {
+        display: block;
         border: none;
         border-left: 3px solid #d7d9ce;
         padding-top: inherit;
