@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -326,10 +325,6 @@ This stylesheet can be used for any page that uses JavaScript modals.
 
 Use this document in conjunction with js-modal.js for the scripts that open and close the modal and stop a video inside the modal from playing.
 
-This set of code is a very modified version of the methods used in "Create a Modal With HTML, CSS & JavaScript" by Brad Traversy at https://www.youtube.com/watch?v=6ophW7Ask_0.
-
-You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraversy/pen/zEOrPp to play around with Brad's code on a live page in real time.
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ======================================
   Modal Trigger/Object Styles
@@ -496,73 +491,28 @@ You can also visit Brad’s simplemodal CodePen at https://codepen.io/bradtraver
     .close-btn {
       order: 1; } }
 
-/* ========================================
-  iframe Styles
-=========================================== */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  Widths and heights are at 16:9 aspect ratio.
-  Dimensions have been sized to fit within a three-column content section on a UNCW web page.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/*  === All screen sizes ===  */
-iframe {
-  border: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  /* max-width: 100%; */
-  /* max-height: 100vh; */
-  margin-bottom: 10px; }
-
-/*  === For smartphone only ===  */
-@media only screen and (max-width: 599px) {
-  iframe {
-    width: 448px;
-    height: 252px; } }
-
-/* End of smartphone media query) */
-/*  === For tablet portrait only ===  */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-  iframe {
-    width: 512px;
-    height: 288px; } }
-
-/* End of tablet portrait media query */
-/* For  === tablet landscape only ===  */
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
-  iframe {
-    width: 672px;
-    height: 378px; } }
-
-/* End of tablet landscape media query */
-/*  === For desktop up ===  */
-@media only screen and (min-width: 1200px) {
-  iframe {
-    width: 720px;
-    height: 405px; } }
-
-/* End of desktop media query */
 /* ======================================
   Modal Window Add-On Classes
 ========================================= */
-.width-auto {
+.w-auto {
   width: auto; }
 
-.width-90prcnt {
+.w-90prcnt {
   width: 90%; }
 
-.width-98prcnt {
+.w-98prcnt {
   width: 98%; }
 
-.height-80prcnt {
+.h-80prcnt {
   height: 80%; }
 
-.height-90prcnt {
+.h-90prcnt {
   height: 90%; }
 
-.height-98prcnt {
+.h-98prcnt {
   height: 98%; }
 
-.height-auto {
+.h-auto {
   height: auto; }
 
 /* ======================================

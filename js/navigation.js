@@ -69,3 +69,6 @@ $('.nav-list a').each( function (index, navURL) {
    $(this).removeClass('active');
  }
 });
+
+/* === Courteous NavBar === */
+// 09-19-2018: I would like to make the sticky navbar disappear with someone scrolls downward but reappear when someone scrolls up. This will especially be useful on mobile screens, since the navbar takes up so much real estate.
