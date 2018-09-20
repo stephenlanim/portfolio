@@ -829,7 +829,7 @@ footer {
 .header {
   background-color: #2274a5;
   background-image: url(../images/background/markus-spiske-771011-unsplash-1024x683.jpg);
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -848,7 +848,12 @@ footer {
       padding: 2em 0.5em; } }
   @media (min-width: 750px) {
     .header {
+      background-attachment: fixed;
+      background-position: center center;
       padding: 4em 1em; } }
+  @media (min-width: 1200px) {
+    .header {
+      background-attachment: fixed; } }
 
 .about {
   display: flex;
