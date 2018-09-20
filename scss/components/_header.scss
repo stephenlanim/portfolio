@@ -15,7 +15,6 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-  // background-size: auto 100%;
   color: $about-text-color;
 
   @include flexbox($dir:column, $just:center);
@@ -25,20 +24,16 @@
   padding: 0.5em 0;
 
   @include mq('sm'){
-    // background-position: center center;
     padding: 2em 0.5em;
   }
 
   @include mq('med'){
-    // background-attachment: fixed;
     background-position: center center;
-    // background-size: cover;
     padding: 4em 1em;
   }
 
-  @include mq('lg-1/2'){
+  @include mq('lg'){
     background-attachment: fixed;
-    // background-position: center center;
   }
 
 }
