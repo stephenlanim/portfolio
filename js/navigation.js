@@ -3,6 +3,7 @@
    ====================================== */
 
 /* === Hamburger Menu === */
+// Funciton to open and close a hamburger menu.
 
 // When hamburger menu icon is clicked...
 $('.hamburger').click(function(){
@@ -14,6 +15,7 @@ $('.hamburger').click(function(){
 });
 
 /* === Anchor Scroll === */
+// Function to animate scrolling down to an anchor tag when its nav link is clicked
 
 // When a navigation anchor link is clicked...
 $('.nav-list a').click( function(e) {
@@ -44,6 +46,8 @@ $('.nav-list a').click( function(e) {
 
 
 /* === Nav Link Activator === */
+// Function to get make the nav link that matches the current URL active
+
 // 09-15-2018: Not currently in use because all links are currently anchors. But I'm keeping this code for if I decide to create more pages within this website.
 
 // Variables
@@ -70,5 +74,37 @@ $('.nav-list a').each( function (index, navURL) {
  }
 });
 
-/* === Courteous NavBar === */
-// 09-19-2018: I would like to make the sticky navbar disappear with someone scrolls downward but reappear when someone scrolls up. This will especially be useful on mobile screens, since the navbar takes up so much real estate.
+/* === Courteous Navbar === */
+// Function to make the sticky navbar disappear when user scrolls down and reappear when user scrolls up.
+
+// Get the navbar
+const $navbar = $('.navbar');
+
+// Set the initial scroll position as 0
+let initScrollPos = 0;
+
+// When the user scrolls...
+$(window).on('scroll', function () {
+
+  // Get the current scroll position
+  const $curScrollPos = $(this).scrollTop();
+
+  // If the current scroll position is further down the page than the initial position before scrolling (i.e. scrolling down) and the scroll position has reached passed the navbar's natural height (105px)...
+  if ($curScrollPos > initScrollPos && $curScrollPos > 105) {
+
+    // Slide the navbar out of the user's way and make sure it's invisible
+    $navbar.css({'transform': 'translateY(-100%)', 'visibility': 'hidden'});
+
+  }
+  // Else if the current scroll position is further up the page than 10 pixels from the initial position (i.e. scrolling up)...
+  else if ($curScrollPos < (initScrollPos - 10)) {
+
+    // Slide the navbar into view and make sure it's visible
+     $navbar.css({'transform': 'translateY(0)', 'visibility': 'visible'});
+  }
+  // Reset the initial scroll position to where the scrollbar is now.
+  initScrollPos = $curScrollPos;
+
+});
+
+// 09-19-2018: I should wrap each set of scripts above in functions that I can call.
