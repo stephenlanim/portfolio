@@ -86,6 +86,6 @@ About Me Links: These may eventually have tooltips that explains the user task (
 
 
 Future Improvements:
-- Refactor modal scripts to work via index number like accordion scripts.
 - Functionality for going to next and previous modal while modal is still open. Animate if possible.
 - Widget or other feature to let users know what I'm currently learning (but NOT a blog).
+- I can create scripts for modals that match the trigger and modal by ID, but I don't have to turn the triggers into <a> tags. The trigger can remain buttons if I create a "data-target" attribute for them that matches the ID in place of matching an "href" attribute's value in an <a> tag.
