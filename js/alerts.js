@@ -27,8 +27,11 @@ function alertMessage(alertType, appendTo, message) {
   // When alert message is clicked...
   $alertDiv.on('click', function(){
 
-    // Remove alert message
-    $alertDiv.remove();
+    // Slide up alert message
+    $alertDiv.slideUp(500);
+
+    // Remove alert message from DOM after 3 seconds
+    setTimeout( () => {$alertDiv.remove()}, 3000);
 
   });
 
