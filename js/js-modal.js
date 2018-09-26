@@ -148,7 +148,7 @@ function modalSlideShow() {
   // When "Previous" button is clicked...
   $previousBtn.on('click', function (e) {
     // Loop through the modal-overlays
-    for (let i = 0; i < $modalDiv.length; i++) {
+    $modalDiv.each( (i) => {
       // If the index of the clicked button matches the current modal-overlay...
       if ($previousBtn.index(this) === i) {
         // Note: I used "this" here and in the "next" button click function to induce event bubbling on the chevron inside the button.
@@ -161,7 +161,7 @@ function modalSlideShow() {
 
       } // end of if statement
 
-    } // end of for loop
+    }); // end of each() loop
 
   }); // end of click function
 
@@ -169,24 +169,22 @@ function modalSlideShow() {
   $nextBtn.on('click', function (e) {
 
     // Loop through the modal-overlays
-    for (let i = 0; i < $modalDiv.length; i++) {
+    $modalDiv.each( (i) => {
 
       // If the clicked button is the last in the sequence...
       if ($nextBtn.index(this) === $nextBtn.length -1) {
         // Note: I had to subtract 1 because the .length property counts differently from index property.
 
         // Get the last modal-overlay and slide it out to the left after a short delay
-        $modalDiv.eq($modalDiv.length - 1).delay(050).toggle('slide', {direction:'left', easing:'swing'}, 600);
+        $modalDiv.eq(this).delay(050).toggle('slide', {direction:'left', easing:'swing'}, 600);
 
         // Show the first modal-overlay in the sequence
         $modalDiv.eq(0).show();
 
-        // End the loop immediately, gosh darn it. Your job is done!
-        break;
       } // end of if statement
 
       // else if the index of the clicked button matches the current modal-overlay...
-      else if ($nextBtn.index(this) === i) {
+      if ($nextBtn.index(this) === i) {
 
         // Get current modal-overlay and slide it out to the left
         $modalDiv.eq(i).delay(050).toggle('slide', {direction:'left', easing:'swing'}, 600);
@@ -196,7 +194,7 @@ function modalSlideShow() {
 
       } // end of else if statement
 
-    } // end of for loop
+    }); // end of each() loop
 
   }); // end of click function
 }
