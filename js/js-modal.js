@@ -32,7 +32,7 @@ HTML Object Requirements Per Modal
         <!-- Close Button -->
         <button class="close-btn">&#10006; Close</button>
         <!-- Modal Title -->
-        <h4 class="modal-title">[Project Title]</h2>
+        <h4 class="modal-title">[Project Title]</h4>
       </div>
 
       <!-- Embedded Object -->
