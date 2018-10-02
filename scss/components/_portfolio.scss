@@ -25,6 +25,22 @@
   & p {
     margin: 0 0 0.5em 0;
   }
+
+  blockquote,
+  q {
+    font-style: italic;
+  }
+
+  blockquote {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  cite {
+    display: block;
+    margin-right: 0.5em;
+    text-align: right;
+  }
 }
 
 .client-projects,

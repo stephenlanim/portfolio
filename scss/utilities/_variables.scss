@@ -24,11 +24,6 @@ $breakpoints: (
 );
 
 // Colors
-$dark-text-color: #555;
-// $dark-text-color: #fff;
-
-$light-text-color: #fff;
-// $light-text-color: #555;
 
 // $color-primary: #d7d9ce;
 // $color-primary: #6d1a36;
@@ -88,11 +83,20 @@ $footer-text-color: $color-secondary;
 // $footer-text-color: $color-tertiary;
 // $footer-text-color: $color-accent;
 
+// $dark-text-color: #555;
+// $dark-text-color: #fff;
+// $dark-text-color: darken($color-primary, 8);
+// $dark-text-color: darken($color-tertiary, 8);
+
+$light-text-color: #fff;
+// $light-text-color: #555;
+
 $success-color: #32aaf1;
 $error-color: #b92c5c;
 $warning-color: #2393a7;
 $nav-icon-color: #a6a6b9;
-$link-color-active: $color-secondary;
+$link-color: $color-tertiary;
+$link-color-active: $color-accent;
 $background-color: $color-secondary;
 $border-color: darken($background-color, 20);
 

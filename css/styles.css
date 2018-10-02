@@ -315,9 +315,9 @@ p {
 
 a {
   text-decoration: none;
-  color: #555; }
+  color: #2274a5; }
   a:hover, a:active {
-    color: #555; }
+    color: #2393a7; }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -820,7 +820,7 @@ footer {
         .nav-list a:hover, .nav-list a:active, .nav-list a.active {
           background-color: inherit;
           border-radius: 0;
-          border-bottom: 3px solid #fdfff2;
+          border-bottom: 3px solid #2393a7;
           color: #fdfff2; } }
 
 /* ======================================
@@ -959,6 +959,19 @@ h2 {
 
 .portfolio p {
   margin: 0 0 0.5em 0; }
+
+.portfolio blockquote,
+.portfolio q {
+  font-style: italic; }
+
+.portfolio blockquote {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+.portfolio cite {
+  display: block;
+  margin-right: 0.5em;
+  text-align: right; }
 
 .client-projects > h3,
 .practice-projects > h3 {
@@ -1118,7 +1131,7 @@ ul.project-info {
       position: sticky;
       position: -moz-sticky;
       position: -webkit-sticky;
-      top: 0px; } }
+      top: -16px; } }
   .summary-trigger i,
   .tasks-trigger i,
   .results-trigger i {
