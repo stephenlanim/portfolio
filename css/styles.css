@@ -530,7 +530,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   transition-duration: 0.25s;
   transition-timing-function: ease-in; }
 
-.alert {
+.alert, .callout {
   color: white;
   border-radius: 5px;
   font-size: 1.2em;
@@ -543,11 +543,12 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   background-color: #2274a5;
   color: #fff; }
   @media (min-width: 550px) {
-    .alert {
+    .alert, .callout {
       align-items: center;
       width: calc(100% - 100px); } }
   .alert:hover .close-x,
-  .alertfocus .close-x {
+  .alertfocus .close-x, .callout:hover .close-x,
+  .calloutfocus .close-x {
     background-color: #fff;
     color: #2274a5; }
 
@@ -610,6 +611,9 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   .warningfocus .close-x {
     background-color: #fff;
     color: #2393a7; }
+
+.callout {
+  margin: 1rem auto; }
 
 /* ======================================
     Grid Styles
