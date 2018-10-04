@@ -65,6 +65,7 @@ function btnAccordion(triggerClass, contentClass) {
 // Future accordion = groupAccordion(): Create a version of accordions similar to ZURB Foundation that group multiple panels in the same accordion together. When the user clicks open an panel, all others in that same accordion close.
 
 // Better Idea = accordionGroupByID(): Combine accordionByIndex with by ID. Wrap each set of accordion panels in an accordion with an ID. Then continue having the triggers and content be matched by index number but by only looping WITHIN the accordion of the parent ID.
+// accordionGroupByParent() [10-04-2018]: Come to think of it, ID may not be necessary, since I'd probably use DOM traversal to get the ID of the parent wrapper for the accordion panel that was clicked. So I'd actually be using DOM traversal.
 
 /* ========================================
   Project Results Scripts

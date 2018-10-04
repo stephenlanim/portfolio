@@ -31,7 +31,7 @@ function alertMessage(alertType, appendTo, message) {
     $alertDiv.slideUp(500);
 
     // Remove alert message from DOM after 3 seconds
-    setTimeout( () => {$alertDiv.remove()}, 3000);
+    setTimeout( () => {$alertDiv.remove();}, 3000);
 
   });
 
