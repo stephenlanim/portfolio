@@ -85,7 +85,11 @@ About Me Links: These may eventually have tooltips that explains the user task (
 
 
 
-Future Improvements:
-- Functionality for going to next and previous modal while modal is still open. Animate if possible.
+Future Features & Code Improvements:
 - Widget or other feature to let users know what I'm currently learning (but NOT a blog).
 - I can create scripts for modals that match the trigger and modal by ID, but I don't have to turn the triggers into <a> tags. The trigger can remain buttons if I create a "data-target" attribute for them that matches the ID in place of matching an "href" attribute's value in an <a> tag.
+- Make content fade in and rise upon user scrolling down to it.
+- Project Search feature: I could create a database for all my projects as JSON objects and then have an API fetch the projects that match the user's search and display them on the screen. This will mimic the feature that allows uses to search the Treehouse Library of courses. The user will search by keywords, and the scripts will check the skill-tags that I've created. To get the modal slideshow to continue working show just the search results, I think I'll need to create a new array of modal objects from the search results, like I did with the FSJS Techdegree project 2, "List Pagination and Filtering."
+
+Future Content:
+- As projects increase in number, the projects section will be removed from the home page, and in its place will be a portal directing the user to the project sub-pages. I MIGHT place a "featured" projects section below the portal. There will then be a sub-page for each category of projects, each with a Professional and Practice Section: Front-End, Node.js, React & Vue.js, SQL, Python, and API. The "Projects" item in the navigation will become a dropdown to get to the sub-pages. If I learn how, and the code is easy to maintain (i.e. not one long document), I would like to have this actually be a single page where the content for the Professional and Practice Projects sections change dynamically when the user clicks the link or tab for a given project category.
