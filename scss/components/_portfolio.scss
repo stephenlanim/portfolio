@@ -202,6 +202,7 @@ ul.project-info {
   @include accordion-trigger;
 }
 
+.project-summary li,
 .project-tasks li {
   font-size: 22px;
   line-height: 1.3;

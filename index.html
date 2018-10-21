@@ -616,6 +616,7 @@
                   <li><strong>Grade:</strong> Exceeds Expectations</li>
                   <li><strong>Skills &amp; Tools:</strong>
                     <ul class="skill-tags">
+                      <li>ES2015</li>
                       <li>progressive enhancement</li>
                       <li>unobtrusive JavaScript</li>
                       <li>jQuery</li>
@@ -668,7 +669,7 @@
                       <li>Created function to select the right batch of list items when user clicks pagination buttons</li>
                       <li>Created function to dynamically add search bar.</li>
                       <li>Created function to filter page list.</li>
-                      <li>Set "Enter" key listener on search input and "click" listener on search button to call filter-list function.</li>
+                      <li>Set &ldquo;Enter&rdquo; key listener on search input and &ldquo;click&rdquo; listener on search button to call filter-list function.</li>
                       <li>Created function to display "no results" message.</li>
                       <li>Created function to reset page main content and pagination links.</li>
                       <li>Created function to reset page if user empties the search field.</li>
@@ -705,6 +706,138 @@
                       <div class="view-external-links">
                         <a class="view-btn" href="https://stephenlanim.github.io/fsjs-techdegree-project-2/" target="_blank">View Live <i class="fas fa-external-link-alt"></i></a>
                         <a class="view-btn" href="https://github.com/stephenlanim/fsjs-techdegree-project-2" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                      </div>
+
+                      <div class="view-modals">
+                        <button class="view-btn view-previous" type="button"> <i class="fas fa-chevron-left"></i> </button>
+                        <button class="view-btn view-next"> <i class="fas fa-chevron-right"></i> </button>
+                      </div>
+                    </div>
+
+                  </div> <!-- /.modal-content-window -->
+                </div> <!-- /.modal-overlay -->
+
+              </div> <!-- /.project-card -->
+
+              <!-- Project Card -->
+              <div class="project-card">
+                <div class="project-thumb">
+                  <!-- Icon and link to live site -->
+                  <a href="https://stephenlanim.github.io/fsjs-techdegree-project-1/" target="_blank"> <i class="far fa-comment"></i> </a>
+                </div>
+
+                <h4>Random Quote Generator</h4>
+
+                <ul class="project-info">
+                  <li><strong>Source:</strong> Treehouse Full-Stack JavaScript Techdegree</li>
+                  <li><strong>Date:</strong> October 2018</li>
+                  <li><strong>Grade:</strong> Exceeds Expectations</li>
+                  <li><strong>Skills &amp; Tools:</strong>
+                    <ul class="skill-tags">
+                      <li>JavaScript</li>
+                      <li>ES2015</li>
+                      <li>arrays</li>
+                      <li>objects</li>
+                      <li>tool</li>
+                      <li>Math object</li>
+                      <li>setInterval()</li>
+                      <li>template literals</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <!--  Modal Trigger -->
+                <button class="modal-trigger" type="button">More Project Details</button>
+
+                <!-- Entire Modal Overlay (w/ transparent background) -->
+                <div class="modal-overlay">
+
+                  <!-- Container Housing Modal Content (opaque background) -->
+                  <div class="modal-content-window">
+                    <!-- Header section for modal content -->
+                    <div class="modal-header">
+                      <!-- Close Button -->
+                      <button class="close-btn" type="button"><i class="fas fa-times"></i></button>
+
+                      <!-- Modal Title -->
+                      <h4 class="modal-title">Random Quote Generator</h4>
+                    </div>
+
+                    <!-- Project Summary Accordion Trigger-->
+                    <button class="summary-trigger">Instructions <i class="fas fa-caret-left"></i></button>
+                    <!-- Project Summary Content -->
+                    <div class="project-summary">
+                      <blockquote cite="https://teamtreehouse.com/projects/a-random-quote-generator">
+                        <p>In this project, you'll create an app that displays random famous quotes each time a button is clicked. You will select your own quotes from famous historical figures, artists, scientists, celebrities, etc..</p>
+                        <p>You'll use your growing knowledge of basic JavaScript syntax, variables, loops and object literals to complete this project.</p>
+                        <p><strong>Project Instructions</strong></p>
+                        <ul>
+                          <li>Open the project files in your favorite text editor and preview them in the browser.</li>
+                          <li>Create an array of objects to hold the data for your quotes.</li>
+                          <li>Add properties to the quote objects.</li>
+                          <li>Create the getRandomQuote function.</li>
+                          <li>Create the printQuote function.</li>
+                          <li>Add code comments.</li>
+                        </ul>
+                        <p><strong>Extra Credit</strong></p>
+                        <ul>
+                          <li>Add more properties to the quote object.</li>
+                          <li>Random background color.</li>
+                          <li>Auto-refresh the quote.</li>
+                        </ul>
+                      </blockquote>
+                      <cite>&copy; 2018 Treehouse Island, Inc.</cite>
+                    </div> <!-- /.project-summary -->
+
+                    <!-- Project Tasks Accordion Trigger -->
+                    <button class="tasks-trigger" type="button">Project Tasks <i class="fas fa-caret-left"></i></button>
+                    <!-- Project Tasks Content -->
+                    <ul class="project-tasks">
+                      <li>Created quote objects with quote, source, and tags.</li>
+                      <li>Placed quote objects into array.</li>
+                      <li>Created function to get a random quote from quote array.</li>
+                      <li>Create array of background colors.</li>
+                      <li>Created function to randomly change background color for each printed quote.</li>
+                      <li>Created function to insert icon based on quote tag.</li>
+                      <li>Created function to print random quote out to the screen.</li>
+                      <li>Created function to change quote every 10 seconds.</li>
+                      <li>Added &ldquo;click&rdquo; event listener to button to show new random quote and reset interval for changing quote automatically.</li>
+                    </ul>
+
+                    <!-- Project Results Accordion Trigger -->
+                    <button class="results-trigger" type="button">Reviewer Feedback <i class="fas fa-caret-left"></i></button>
+                    <!-- Project Results Content -->
+                    <div class="project-results">
+                      <p>
+                        <strong>Create Array of Objects</strong>
+                        <q>Nicely done. Your array of objects is named &ldquo;quotes&rdquo; and it contains 10 quote objects!</q>
+                      </p>
+                      <p>
+                        <strong>getRandomQuote function</strong>
+                        <q>Awesome! Your function is named getRandomQuote and it returns a random object from the quotes array!</q>
+                      </p>
+                      <p>
+                        <strong>Code Comments</strong>
+                        <q>Your code includes comments that clearly explain how your functions work. Well done.</q>
+                      </p>
+                      <p>
+                        <strong>Quote Objects</strong>
+                        <q>Your code includes comments that clearly explain how your functions work. Well done.</q>
+                      </p>
+                      <p>
+                        <strong>printQuote function</strong>
+                        <q>Nice work here! Your function is called printQuote, it calls getRandomQuote, and it prints the quote to the page using the proper format. You took your code a step further and made it so that the quote automatically changes after a certain amount of time, and the background color changes every time the quote changes.</q>
+                      </p>
+                      <p>
+                        <strong>Overall Comments</strong>
+                        <q>Really impressive work and congratulations on making it through Project 1! You pushed yourself to go for Exceeds Expectations which demonstrates a huge amount of drive and ambition. Also, you have done an awesome job by including icons. Keep it up, challenging yourself will help you to become an even stronger developer! Best of luck for your next projects and happy coding :)</q>
+                      </p>
+                    </div>
+
+                    <div class="view-btns-div">
+                      <div class="view-external-links">
+                        <a class="view-btn" href="https://stephenlanim.github.io/fsjs-techdegree-project-1/" target="_blank">View Live <i class="fas fa-external-link-alt"></i></a>
+                        <a class="view-btn" href="https://github.com/stephenlanim/fsjs-techdegree-project-1" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                       </div>
 
                       <div class="view-modals">
