@@ -201,8 +201,8 @@
 
     @include mq('med') {
       background-color: inherit;
+      border-bottom: 3px solid $color-primary;
       color: $color-secondary;
-      border: none;
       padding: 0.5em;
       width: auto;
 

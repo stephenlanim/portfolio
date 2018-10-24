@@ -29,11 +29,14 @@ $breakpoints: (
 // $color-primary: #6d1a36;
 // $color-primary: #2274a5;
 // $color-primary: #13505b;
-$color-primary: #7A1D3C;
+// $color-primary: #7A1D3C;
 // $color-primary: #9b3b5a;
 // $color-primary: #08303A;
 // $color-primary: #239AB9;
 // $color-primary: #B91A50;
+$color-primary: #FFFCFF;
+// $color-primary: #FCFFFF;
+// $color-primary: #FFFFFC;
 
 
 // $color-secondary: #d7d9ce;
@@ -41,7 +44,8 @@ $color-primary: #7A1D3C;
 // $color-secondary: #2274a5;
 // $color-secondary: #13505b;
 // $color-secondary: #fff;
-$color-secondary: #fdfff2;
+// $color-secondary: #fdfff2;
+$color-secondary: #7A1D3C;
 
 // $color-tertiary: #2274a5;
 // $color-tertiary: #6d1a36;
@@ -54,9 +58,10 @@ $color-tertiary: #2274a5;
 // $color-accent: #13505b;
 $color-accent: #2393a7;
 
-$about-text-color: #fff;
+// $about-text-color: #fff;
 // $about-text-color: #555;
 // $about-text-color: $color-secondary;
+$about-text-color: $color-primary;
 
 // $main-content-bg-color: $color-secondary;
 $main-content-bg-color: $color-primary;
@@ -68,13 +73,13 @@ $portfolio-heading-color: $color-secondary;
 // $portfolio-heading-color: $color-tertiary;
 // $portfolio-heading-color: $color-accent;
 
-$project-text-color: $color-primary;
-// $project-text-color: $color-secondary;
+// $project-text-color: $color-primary;
+$project-text-color: $color-secondary;
 // $project-text-color: $color-tertiary;
 // $project-text-color: $color-accent;
 
-// $project-card-color: $color-primary;
-$project-card-color: $color-secondary;
+$project-card-color: $color-primary;
+// $project-card-color: $color-secondary;
 // $project-card-color: $color-tertiary;
 // $project-card-color: $color-accent;
 
@@ -100,13 +105,13 @@ $link-color-active: $color-accent;
 $background-color: $color-secondary;
 $border-color: darken($background-color, 20);
 
-$btn-color-default: $color-primary;
-// $btn-color-default: $color-secondary;
+// $btn-color-default: $color-primary;
+$btn-color-default: $color-secondary;
 // $btn-color-default: $$color-tertiary;
 // $btn-color-default: $color-accent;
 
-// $btn-text-color: $color-primary;
-$btn-text-color: $color-secondary;
+$btn-text-color: $color-primary;
+// $btn-text-color: $color-secondary;
 // $btn-text-color: $color-tertiary;
 // $btn-text-color: $color-accent;
 

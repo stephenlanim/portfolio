@@ -337,7 +337,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 /* Regular modal trigger button */
 .modal-trigger {
   background-color: #7A1D3C;
-  color: #fdfff2;
+  color: #FFFCFF;
   border: none;
   border-radius: 5px;
   padding: 0.75em;
@@ -351,7 +351,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   font-size: 1.2rem; }
   .modal-trigger:hover, .modal-triggerfocus {
     background-color: #59152c;
-    color: #fdfff2;
+    color: #FFFCFF;
     cursor: pointer;
     text-decoration: none; }
   @media (min-width: 550px) {
@@ -365,9 +365,9 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   /* margin: 0 auto; */
   margin-bottom: 10px;
   /* overflow: hidden; */
-  border: solid 2px #7A1D3C;
+  border: solid 2px #FFFCFF;
   border-radius: 5px;
-  color: #7A1D3C;
+  color: #FFFCFF;
   display: block;
   padding: 0;
   overflow: hidden;
@@ -379,7 +379,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 
 .vid-modal-trigger:hover,
 .vid-modal-trigger:focus {
-  box-shadow: #7A1D3C 0px 0px 8px;
+  box-shadow: #FFFCFF 0px 0px 8px;
   text-decoration: none;
   transform: scale(1.05); }
 
@@ -400,7 +400,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 
 /* Just the content window within the modal. */
 .modal-content-window {
-  background-color: #fdfff2;
+  background-color: #FFFCFF;
   border-radius: 5px;
   margin: 75px auto 10px auto;
   padding: 1em;
@@ -448,7 +448,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 
 /* The title in the modal content window. */
 .modal-title {
-  color: #fdfff2;
+  color: #7A1D3C;
   font-size: 2.0em;
   margin: 0 !important;
   width: 100%; }
@@ -460,7 +460,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 /* The close button within the modal content window. */
 .close-btn {
   background-color: #7A1D3C;
-  color: #fdfff2;
+  color: #FFFCFF;
   border: none;
   border-radius: 5px;
   padding: 0.75em;
@@ -481,7 +481,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   order: 1; }
   .close-btn:hover, .close-btnfocus {
     background-color: #59152c;
-    color: #fdfff2;
+    color: #FFFCFF;
     cursor: pointer;
     text-decoration: none; }
   @media (min-width: 550px) {
@@ -654,9 +654,9 @@ footer {
    ====================================== */
 .navbar {
   font-size: 1.2em;
-  background-color: #7A1D3C;
-  color: #fdfff2;
-  border-bottom: 5px solid #fdfff2;
+  background-color: #FFFCFF;
+  color: #7A1D3C;
+  border-bottom: 5px solid #7A1D3C;
   box-shadow: 5px 5px 10px 0px rgba(46, 61, 73, 0.4), -5px 0px 10px 0px rgba(46, 61, 73, 0.4);
   position: sticky;
   position: -webkit-sticky;
@@ -679,7 +679,7 @@ footer {
       justify-content: space-evenly;
       padding: 0; } }
   .navbar a {
-    color: #fdfff2; }
+    color: #7A1D3C; }
 
 .submenu {
   display: flex;
@@ -698,7 +698,7 @@ footer {
     justify-content: space-between; } }
 
 .brand .avatar {
-  border: 8px double #fdfff2;
+  border: 8px double #7A1D3C;
   border-radius: 50%;
   display: none;
   width: 60px;
@@ -737,7 +737,7 @@ footer {
     margin-bottom: 0; }
   .brand-titles :last-child {
     display: none;
-    border-top: 3px solid #fdfff2;
+    border-top: 3px solid #7A1D3C;
     font-weight: 300;
     padding-top: 0.25em;
     margin-bottom: 0.25em; }
@@ -745,7 +745,7 @@ footer {
       .brand-titles :last-child {
         display: block;
         border: none;
-        border-left: 3px solid #fdfff2;
+        border-left: 3px solid #7A1D3C;
         padding-top: inherit;
         margin-bottom: inherit;
         margin-left: 0.5em;
@@ -761,7 +761,7 @@ footer {
 .hamburger .line {
   width: 50px;
   height: 5px;
-  background-color: #fdfff2;
+  background-color: #7A1D3C;
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -803,10 +803,10 @@ footer {
     margin: .25em 0;
     padding: 0.5em; }
   .nav-list a {
-    background-color: #fdfff2;
+    background-color: #7A1D3C;
     border-radius: 5px;
     padding: 1em;
-    color: #7A1D3C;
+    color: #FFFCFF;
     display: block;
     text-decoration: none;
     text-transform: uppercase;
@@ -817,22 +817,22 @@ footer {
     @media (min-width: 750px) {
       .nav-list a {
         background-color: inherit;
-        color: #fdfff2;
-        border: none;
+        border-bottom: 3px solid #FFFCFF;
+        color: #7A1D3C;
         padding: 0.5em;
         width: auto; }
         .nav-list a:hover, .nav-list a:active, .nav-list a.active {
           background-color: inherit;
           border-radius: 0;
           border-bottom: 3px solid #2393a7;
-          color: #fdfff2; } }
+          color: #7A1D3C; } }
 
 /* ======================================
     Header Styles
    ====================================== */
 .header {
   background-color: #2274a5;
-  background-image: url(../images/background/markus-spiske-771011-unsplash-1024x683.jpg);
+  background-image: url(../images/background/goran-ivos-307271-unsplash-1024x718.jpg);
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-position: left;
@@ -840,7 +840,7 @@ footer {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  color: #fff;
+  color: #FFFCFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -902,7 +902,7 @@ footer {
     .contact-links {
       width: 50%; } }
   .contact-links .contact-icon {
-    fill: #fff;
+    fill: #FFFCFF;
     width: 56px;
     height: 56px; }
     @media (min-width: 550px) {
@@ -913,14 +913,13 @@ footer {
       fill: #2274a5; }
 
 .credit {
-  display: none;
   align-self: flex-end;
   margin: 1em; }
 
 .header-overlay {
   content: "";
   background-color: #000;
-  opacity: 0.3;
+  opacity: 0.4;
   position: absolute;
   top: 0;
   right: 0;
@@ -940,7 +939,7 @@ h2 {
   font-size: 2.3em; }
 
 .main-content {
-  background-color: #7A1D3C;
+  background-color: #FFFCFF;
   color: #fff;
   padding: 1em; }
 
@@ -949,7 +948,7 @@ h2 {
    ====================================== */
 .portfolio h2,
 .portfolio h3 {
-  color: #fdfff2; }
+  color: #7A1D3C; }
 
 .portfolio .port-heading > h2 {
   text-align: center; }
@@ -990,7 +989,7 @@ h2 {
   align-items: stretch; }
 
 .project-card {
-  background-color: #fdfff2;
+  background-color: #FFFCFF;
   border-radius: 5px;
   color: #7A1D3C;
   width: 100%;
@@ -998,7 +997,7 @@ h2 {
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2), -10px 0px 10px 0px rgba(46, 61, 73, 0.2); }
+  box-shadow: 2px 2px 10px 0px rgba(46, 61, 73, 0.2), -2px 0px 10px 0px rgba(46, 61, 73, 0.2); }
   @media (min-width: 750px) {
     .project-card {
       width: 45%; } }
@@ -1038,7 +1037,7 @@ h2 {
 
 .modal-content-window .view-btn {
   background-color: #7A1D3C;
-  color: #fdfff2;
+  color: #FFFCFF;
   border: none;
   border-radius: 5px;
   padding: 0.75em;
@@ -1054,7 +1053,7 @@ h2 {
   margin: 0.2em 0; }
   .modal-content-window .view-btn:hover, .modal-content-window .view-btnfocus {
     background-color: #59152c;
-    color: #fdfff2;
+    color: #FFFCFF;
     cursor: pointer;
     text-decoration: none; }
   @media (min-width: 550px) {
@@ -1106,9 +1105,9 @@ ul.project-info {
 .summary-trigger,
 .tasks-trigger,
 .results-trigger {
-  background-color: #fdfff2;
-  color: #7A1D3C;
-  border: 3px solid #7A1D3C;
+  background-color: #7A1D3C;
+  color: #FFFCFF;
+  border: 3px solid #FFFCFF;
   border-radius: 5px;
   font-size: 24px;
   padding: 0.5em;
@@ -1125,7 +1124,7 @@ ul.project-info {
   .results-trigger:hover,
   .results-trigger.active {
     background-color: #59152c;
-    color: #fdfff2;
+    color: #FFFCFF;
     cursor: pointer;
     text-decoration: none; }
   @media (min-width: 550px) {
@@ -1162,7 +1161,7 @@ ul.project-info {
 /* Animation for coloring SVG icon */
 @keyframes fill-color {
   0% {
-    fill: #fff; }
+    fill: #FFFCFF; }
   100% {
     fill: #2274a5; } }
 
@@ -1199,9 +1198,9 @@ ul.project-info {
     Footer Styles
    ====================================== */
 footer {
-  background-color: #7A1D3C;
-  color: #fdfff2;
-  border-top: 5px solid #fdfff2;
+  background-color: #FFFCFF;
+  color: #7A1D3C;
+  border-top: 5px solid #7A1D3C;
   display: flex;
   flex-direction: row;
   justify-content: center;
