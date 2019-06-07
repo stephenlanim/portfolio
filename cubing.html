@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cubing Algorithms</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <h1>Cubing Algorithms</h1>
+        <h2>CFOP F2L Adjacent Cases</h2>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th style="width: 20%;">Case</th>
+              <th style="width: 40%;">Algorithm</th>
+              <th style="width: 40%;">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/cubing/adjacent-1.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <ul>
+                  <li>Position pieces right.</li>
+                  <li>R U2 R'</li>
+                  <li>U</li>
+                  <li>Grab and pull pieces down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-2.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <ul>
+                  <li>Position pieces left.</li>
+                  <li>L U2 L'</li>
+                  <li>U'</li>
+                  <li>Grab and pull pieces down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-3.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <h3>Top 2 Diff Colors (left side)</h3>
+                <ul>
+                  <li>Position left.</li>
+                  <li>L U L' U'</li>
+                  <li>Grab and pull down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-4.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <h3>Top 2 Diff Colors (left side)</h3>
+                <ul>
+                  <li>Position right.</li>
+                  <li>R U R' U'</li>
+                  <li>Grab and pull down.</li>
+                  <!-- <li>Lefty-alg (x4)</li>
+                  <li>U</li>
+                  <li>Turn cube right.</li>
+                  <li>Righty-placement.</li> -->
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-5.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <h3>Top 2 Same Color (left side)</h3>
+                <ul>
+                  <li>Turn cube left.</li>
+                  <li>L U L' U2</li>
+                  <li>Turn cube right.</li>
+                  <li>Grab and pull down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-6.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <h3>Top 2 Same Color (right side)</h3>
+                <ul>
+                  <li>Turn cube rightt.</li>
+                  <li>R U' R' U2</li>
+                  <li>Turn cube left.</li>
+                  <li>Grab and pull down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-7.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <ul>
+                  <li>Lefty-alg (x2)</li>
+                  <li>U</li>
+                  <li>Turn cube right.</li>
+                  <li>Righty-placement</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-8.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <ul>
+                  <li>Righty-alg (x2)</li>
+                  <li>U'</li>
+                  <li>Turn cube left</li>
+                  <li>Lefty-placement</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-9.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <ul>
+                  <li>Turn cube right.</li>
+                  <li>R U2 R'</li>
+                  <li>F' U F U'</li>
+                  <li>Grab and pull down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><img src="images/cubing/adjacent-10.svg" alt="Rubik's cube F2L case with adjacent peices."></td>
+              <td>
+                <ul>
+                  <li>Turn cube left.</li>
+                  <li>L U2 L'</li>
+                  <li>F U' F' U</li>
+                  <li>Grab and pull down.</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table> <!-- .table -->
+
+      </div> <!-- /.col-12 -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+
+  <!-- Page Styles -->
+  <style>
+    .table {
+      font-size: 1.5em;
+    }
+
+  </style>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
