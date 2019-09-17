@@ -52,8 +52,8 @@
   grid-template-columns: 1fr;
   grid-template-areas:
     "projects-heading"
-    "client-projects"
-    "treehouse-projects";
+    "practice-projects"
+    "client-projects";
 
   &.port-heading {
     grid-area: projects-heading;
@@ -68,8 +68,8 @@
   grid-area: client-projects;
 }
 
-.treehouse-projects {
-  grid-area: treehouse-projects;
+.practice-projects {
+  grid-area: practice-projects;
 }
 
 // .contact {
