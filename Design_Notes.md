@@ -89,7 +89,7 @@ Future Features & Code Improvements:
 - Widget or other feature to let users know what I'm currently learning (but NOT a blog).
 - I can create scripts for modals that match the trigger and modal by ID, but I don't have to turn the triggers into <a> tags. The trigger can remain buttons if I create a "data-target" attribute for them that matches the ID in place of matching an "href" attribute's value in an <a> tag.
 - Make content fade in and rise upon user scrolling down to it.
-- Project Search feature: I could create a database for all my projects as JSON objects and then have an API fetch the projects that match the user's search and display them on the screen. This will mimic the feature that allows uses to search the Treehouse Library of courses. The user will search by keywords, and the scripts will check the skill-tags that I've created. To get the modal slideshow to continue working show just the search results, I think I'll need to create a new array of modal objects from the search results, like I did with the FSJS Techdegree project 2, "List Pagination and Filtering."
+- Project Search feature: I could create a database for all my projects as JSON objects and then have an API fetch the projects that match the user's search and display them on the screen. This will mimic the feature that allows uses to search the Treehouse Library of courses. The user will search by keywords, and the scripts will check the skill-tags that I've created. To get the modal slideshow to continue working show just the search results, I think I'll need to create a new array of modal objects from the search results, like I did with the FSJS Techdegree project 2, "List Pagination and Filtering." ... [Update 09-16-2019]: I am more firm now on having a Featured Projects section showcasing a handful or my favorite and most impressive projects. Either in that section or below it, I will add the search feature for users to search for projects by keyword. ... I'll have to think of how I should offer users the ability to view ALL of my projects, whether there should be a separate page for all of my projects or list or gallery they can scroll through.
 - Modal Slideshow Background: I can experiment with other ways of making the displaying a single transparent black background without having to change too much of the structure of the slideshow.
 
 Future Content:
@@ -100,3 +100,13 @@ Projects to Add:
 - Projects from Modern React with Redux by Stephen Grider (Udemy) course
 - RSVP React App
 - Four in a Row App, after I've added reset functionality and perhaps score keeping.
+
+React Redesign [09-16-2019]:
+I eventually want to redesign my portfolio as a React app. As previously planned, I will likely store the information for each project in a database and have the components pull in the info.
+Components:
+- Project Card
+- ModalCard
+- Accordion
+- Button
+- Gallery (of ProjectCards)
+- ~Slideshow (of ModalCards)
