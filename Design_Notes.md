@@ -92,7 +92,8 @@ Future Features & Code Improvements:
 - Project Search feature: I could create a database for all my projects as JSON objects and then have an API fetch the projects that match the user's search and display them on the screen. This will mimic the feature that allows uses to search the Treehouse Library of courses. The user will search by keywords, and the scripts will check the skill-tags that I've created. To get the modal slideshow to continue working show just the search results, I think I'll need to create a new array of modal objects from the search results, like I did with the FSJS Techdegree project 2, "List Pagination and Filtering."
   ... [Update 09-16-2019]: I am more firm now on having a Featured Projects section showcasing a handful or my favorite and most impressive projects. Either in that section or below it, I will add the search feature for users to search for projects by keyword. ... I'll have to think of how I should offer users the ability to view ALL of my projects, whether there should be a separate page for all of my projects or list or gallery they can scroll through.
   ... [Update 10-23-2019]: I think another benefit to having just a handful of featured projects and the rest being in a searchable database is that the site may perform better. There will be far fewer lines of HTML on the index page itself.
-- Modal Slideshow Background: I can experiment with other ways of making the displaying a single transparent black background without having to change too much of the structure of the slideshow.
+- Modal Slideshow Background: I can experiment with other ways of displaying a single transparent black background without having to change too much of the structure of the slideshow.
+  ... [10-23-2019]: Actually, I think I do need to change the structure of the slideshow so that all the project modal cards are in the same overall container. I think that will improve site performance. I'd like to do that alongside using a database to populate the project cards and modal cards.
 - CSS Animations to Replace jQuery UI
 - ES2015 to replace jQuery: I believe jQuery is partially responsible for my wesite running so slowly. Replacing jQuery with vanilla JavaScript may improve performance.
 
@@ -104,6 +105,10 @@ Projects to Add:
 - Projects from Modern React with Redux by Stephen Grider (Udemy) course
 - RSVP React App
 - Four in a Row App, after I've added reset functionality and perhaps score keeping.
+
+Low Priority Projects (to remove if I need room):
+- Interactive Photo Gallery
+- React-Based Image Search (there will be more sophisticated apps in the future)
 
 Future Projects to Create:
 - eCommerce website
